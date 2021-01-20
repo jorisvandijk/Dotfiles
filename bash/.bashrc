@@ -186,7 +186,7 @@ alias u='sudo pacman -Syyu'
 alias i='sudo pacman -S'
 alias r='sudo pacman -Rs'
 alias s='pacman -Ss'
-alias fullupdate="yay -Syu --noconfirm"              # update standard pkgs and AUR pkgs
+alias fullupdate="yay -Syyu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"        # remove pacman lock
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -230,14 +230,6 @@ alias newtag='git tag -a'
 # shutdown or reboot
 alias ssn="sudo shutdown now"
 alias sr="sudo reboot"
-
-# Git command for dotfiles
-alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' 
-alias dotaddchanged='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add -u' 
-alias dotadd='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME add '
-alias dotcommit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME commit -m' 
-alias dotpush='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME push' 
-alias dotstatus='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status' 
 
 alias c='clear'
 alias vim='nvim'
