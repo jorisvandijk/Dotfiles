@@ -114,7 +114,6 @@ bindsym $mod+space exec rofi -modi drun -show drun -line-padding 4 \
 bindsym $mod+shift+space exec fsearch
 
 # Launch config
-#bindsym $mod+c $e xfce4-terminal -e "python -u /home/joris/Scripts/config.py"
 bindsym $mod+c $e leafpad ".config/i3/config"
 
 # Apps

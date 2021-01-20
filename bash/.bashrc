@@ -200,7 +200,7 @@ alias lh='exa -a | egrep "^\."' # list only hidden files and folders
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 alias top='sudo top'
 alias run='python -u ~/Scripts/all.py' 
-alias gut='python -u ~/Scripts/git.py'
+alias gut='python -u ~/Scripts/python/git.py'
 alias bat='notify-send |upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 alias server='./ssh.sh'
 
