@@ -1,6 +1,10 @@
-### Joris' i3 config file - jorisvandijk.com ###
+#
+# Usage: i3 config file
+#
+# Dotfile by Joris van Dijk | gitlab.com/jorisvandijk 
+#
+#          Published under GPL-3.0-or-later
 
-# Set: Mod, exec command, workspaces, colors
 set $mod Mod4
 set $e exec --no-startup-id
 
@@ -11,24 +15,19 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 
-# Font:
-font pango:JetBrains Mono 11
-#font pango:Quicksand 11
-
-# Messy settings:
 floating_modifier $mod
+default_border pixel 0
+workspace_layout default
+font pango:JetBrains Mono 11
 popup_during_fullscreen smart
 default_orientation horizontal
-workspace_layout default
-default_border pixel 0
+
 for_window [class="^.*"] border pixel 0, title_format "%class >> %title"
 
-# Gaps:
 gaps inner 8
 gaps outer 0
 smart_gaps on
 
-# Add the -t flag to i3bar_command i3bar -t, to set the systray to transparent.
 bar {
       i3bar_command i3bar
       status_command i3blocks -c ~/.config/i3/i3blocks.conf
@@ -37,103 +36,60 @@ bar {
       hidden_state hide
       modifier none
       tray_padding 0
-      #tray_output primary
       colors {
       background #2E3440
       statusline #88C0D0
       separator #ECEFF4
 
-        # class            border  backgr. text
-        focused_workspace  #2E3440 #2E3440 #A3BE8C
-        active_workspace   #2E3440 #2E3440 #D08770
-        inactive_workspace #2E3440 #2E3440 #4C566A
-        urgent_workspace   #BF616A #2E3440 #BF616A
-        binding_mode       #2E3440 #2E3440 #A3BE8C
+      # class            border  backgr. text
+      focused_workspace  #2E3440 #2E3440 #A3BE8C
+      active_workspace   #2E3440 #2E3440 #D08770
+      inactive_workspace #2E3440 #2E3440 #4C566A
+      urgent_workspace   #BF616A #2E3440 #BF616A
+      binding_mode       #2E3440 #2E3440 #A3BE8C
     }
 }
 
-# Get auth work with polkit-gnome
-$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-
-# Bindings:
-
-# Lock, log out, shut down
-bindsym Mod1+Escape exec i3lock -i ~/.config/i3/i3-lock-screen.png -t -f
+# Action bindings
+bindsym $mod+Escape exec i3lock -i ~/.config/i3/i3-lock-screen.png -t -f
 bindsym $mod+Shift+Home $e i3exit logout, mode "default"
 bindsym $mod+Shift+Delete $e i3exit shutdown, mode "default"
 
-# Reload the configuration file, restart i3 in place
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
-# Kill focused window
 bindsym $mod+x kill
-
-# Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# Toggle i3bar
 bindsym $mod+b bar mode toggle
-
-# Flash focussed screen
-bindsym $mod+Tab $e flash_window
-
-# Toggle floating
 bindsym $mod+Shift+f floating toggle
 
-# Volume
 bindsym XF86AudioRaiseVolume $e ~/.config/i3/scripts/volumeControl.sh up
 bindsym XF86AudioLowerVolume $e ~/.config/i3/scripts/volumeControl.sh down
-#bindsym $mod+Up $e ~/.config/i3/scripts/volumeControl.sh up
-#bindsym $mod+Down $e ~/.config/i3/scripts/volumeControl.sh down
+bindsym XF86AudioMute $e ~/.config/i3/scripts/volumeControl.sh mute
 bindsym F10 $e ~/.config/i3/scripts/volumeControl.sh up
 bindsym F9 $e ~/.config/i3/scripts/volumeControl.sh down
-bindsym XF86AudioMute $e ~/.config/i3/scripts/volumeControl.sh mute
 
-# Backlight
 bindsym XF86MonBrightnessUp $e ~/.config/i3/scripts/brightnessControl.sh up
 bindsym XF86MonBrightnessDown $e ~/.config/i3/scripts/brightnessControl.sh down
 
-# Switching GPU
+bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
+
 bindsym $mod+shift+i $e optimus-manager --switch intel --no-confirm
 bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
-# Switching keyboard layout
-bindsym $mod+Escape exec setxkbmap -layout us
-bindsym $mod+Shift+Escape exec setxkbmap -layout workman
-
-# Screenshot
-bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-
-# Rofi fancy menu
-bindsym $mod+space exec rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "JetBrains Mono 12"
-
-# FSearch
+bindsym $mod+space exec rofi -modi drun -show drun  
+bindsym Mod1+Tab exec rofi -show window
 bindsym $mod+shift+space exec fsearch
 
-# Launch config
 bindsym $mod+c $e leafpad ".config/i3/config"
 
-# Apps
+# App bindings
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e nemo
 bindsym $mod+y $e freetube-bin
-#bindsym $mod+m $e evolution
-bindsym $mod+s $e steam
-#bindsym $mod+o $e obsidian
-#bindsym $mod+p $e code-oss
-#bindsym $mod+n $e xfce4-terminal -e newsboat
 bindsym $mod+a $e feh --randomize --bg-scale ~/Pictures/wallpapers/*
-
-# Semi temporary Dragon Quest kill shortcut
 bindsym $mod+q $e pkill -9 DRAGON\ QUEST\ XI
-
-# Resize window
-bindsym $mod+minus resize shrink width  10 px or 1 ppt
-bindsym $mod+equal resize grow   width  10 px or 1 ppt
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -142,10 +98,6 @@ bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
-
-# Alt tab workspace switching
-bindsym Mod1+Tab workspace next
-bindsym Mod1+Shift+Tab workspace prev
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -161,75 +113,29 @@ bindsym $Mod+j focus down
 bindsym $Mod+k focus up
 bindsym $Mod+l focus right
 
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
-
 # Move focused window
 bindsym $Mod+Shift+h move left  10px
 bindsym $Mod+Shift+j move down  10px
 bindsym $Mod+Shift+k move up    10px
 bindsym $Mod+Shift+l move right 10px
 
-# Size
-bindsym Mod1+k resize shrink height 10 px or 1 ppt
-bindsym Mod1+j resize grow   height 10 px or 1 ppt
-bindsym Mod1+l resize shrink width  10 px or 1 ppt
-bindsym Mod1+h resize grow   width  10 px or 1 ppt
-
 # Set floating for apps needing it
-for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-for_window [class="Yad" instance="yad"] floating enable
-for_window [class="Xsane" instance="xsane"] floating enable
-for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-for_window [class="qt5ct" instance="qt5ct"] floating enable
-for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
-for_window [class="Pamac-manager"] floating enable
 for_window [class="Fsearch"] floating enable
 for_window [class="^Steam$" title="Steam - News"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
-for_window [class="^Steam$" title=".* - event started"] floating enable
-for_window [class="^Steam$" title=".* CD key"] floating enable
-for_window [class="^Steam$" title="^Steam - Self Updater$"] floating enable
-for_window [class="^Steam$" title="^Screenshot Uploader$"] floating enable
-for_window [class="^Steam$" title="^Steam Guard - Computer Authorization Required$"] floating enable
 for_window [class="VirtualBox Manager"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
-# Autostart:
 
-# Systray
+# Autostart:
 $e nm-applet
 $e xfce4-power-manager
-#$e clipit
-
-# Notifications, hide mouse, disable touchpad, disable CAPS
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e touchpad-indicator
-$e xmodmap -e "keycode 66 = BackSpace" #caps lock is now backspace
-$e xmodmap -e "clear lock" #disable caps lock switch
-
-# Wallpaper
-
-# random
-$e feh --randomize --bg-scale ~/Pictures/wallpapers/*
-# static
-#$e nitrogen --restore
-
-# Powersavings for display
-$e xset s 480 dpms 600 600 600
-
-# Compton / Picom
+$e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
+$e xmodmap -e "clear lock" 		# disable caps lock switch
+$e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
+#$e nitrogen --restore # switch to static wallpaper
 $e picom --config ~/.config/picom/picom.conf
-
-# Autotiling
+$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id autotiling
-
-# Flashfocus
-#exec_always --no-startup-id flashfocus
-
-# ProtonVPN
-#exec_always --no-startup-id protonvpn-tray
