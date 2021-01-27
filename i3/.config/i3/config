@@ -8,16 +8,20 @@
 set $mod Mod4
 set $e exec --no-startup-id
 
-set $ws1 "1"
-set $ws2 "2"
-set $ws3 "3"
-set $ws4 "4"
-set $ws5 "5"
-set $ws6 "6"
+set $ws1 "1" 
+set $ws2 "2" 
+set $ws3 "3" 
+set $ws4 "4" 
+set $ws5 "5" 
+set $ws6 "6" 
+set $ws7 "7" 
+set $ws8 "8" 
 
 floating_modifier $mod
 font pango:JetBrains Mono 11
+
 for_window [class="^.*"] border pixel 0, title_format "%class >> %title"
+for_window [class="Spotify"] move to workspace $ws8
 
 gaps inner 8
 gaps outer 4
@@ -27,7 +31,7 @@ bar {
       i3bar_command i3bar
       status_command i3blocks -c ~/.config/i3/i3blocks.conf
       position top
-      mode hide
+      mode dock
       hidden_state hide
       modifier none
       tray_padding 0
@@ -76,7 +80,7 @@ bindsym $mod+shift+i $e optimus-manager --switch intel --no-confirm
 bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym $mod+space exec rofi -modi drun -show drun  
-bindsym Mod1+Tab exec rofi -show window
+bindsym $mod+Tab exec rofi -show window
 bindsym $mod+shift+space exec fsearch
 
 bindsym $mod+c $e leafpad ".config/i3/config"
@@ -95,6 +99,8 @@ bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -103,6 +109,8 @@ bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
 
 # Change focus
 bindsym $Mod+h focus left
