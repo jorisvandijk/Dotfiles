@@ -61,6 +61,8 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+b bar mode toggle
 bindsym $mod+Shift+f floating toggle
 
+bindsym $mod+a $e ~/Scripts/bash/wallpaper.sh new
+
 bindsym XF86AudioRaiseVolume $e ~/Scripts/bash/volumeControl.sh up
 bindsym XF86AudioLowerVolume $e ~/Scripts/bash/volumeControl.sh down
 bindsym XF86AudioMute $e ~/Scripts/bash/volumeControl.sh mute
@@ -144,5 +146,5 @@ $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
-exec_always --no-startup-id ~/Scripts/bash/wallpaper.sh new
 exec_always --no-startup-id autotiling
+exec --no-startup-id ~/Scripts/bash/wallpaper.sh boot
