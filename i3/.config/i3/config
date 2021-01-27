@@ -51,7 +51,6 @@ bar {
 }
 
 # Action bindings
-bindsym $mod+Escape exec i3lock -i ~/.config/i3/i3-lock-screen.png -t -f
 bindsym $mod+Shift+Home $e i3exit logout, mode "default"
 bindsym $mod+Shift+Delete $e i3exit shutdown, mode "default"
 
@@ -63,14 +62,14 @@ bindsym $mod+f fullscreen toggle
 bindsym $mod+b bar mode toggle
 bindsym $mod+Shift+f floating toggle
 
-bindsym XF86AudioRaiseVolume $e ~/.config/i3/scripts/volumeControl.sh up
-bindsym XF86AudioLowerVolume $e ~/.config/i3/scripts/volumeControl.sh down
-bindsym XF86AudioMute $e ~/.config/i3/scripts/volumeControl.sh mute
-bindsym F10 $e ~/.config/i3/scripts/volumeControl.sh up
-bindsym F9 $e ~/.config/i3/scripts/volumeControl.sh down
+bindsym XF86AudioRaiseVolume $e ~/Scripts/bash/volumeControl.sh up
+bindsym XF86AudioLowerVolume $e ~/Scripts/bash/volumeControl.sh down
+bindsym XF86AudioMute $e ~/Scripts/bash/volumeControl.sh mute
+bindsym F10 $e ~/Scripts/bash/volumeControl.sh up
+bindsym F9 $e ~/Scripts/bash/volumeControl.sh down
 
-bindsym XF86MonBrightnessUp $e ~/.config/i3/scripts/brightnessControl.sh up
-bindsym XF86MonBrightnessDown $e ~/.config/i3/scripts/brightnessControl.sh down
+bindsym XF86MonBrightnessUp $e ~/Scripts/bash/brightnessControl.sh up
+bindsym XF86MonBrightnessDown $e ~/Scripts/bash/brightnessControl.sh down
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 
@@ -129,13 +128,15 @@ for_window [class="VirtualBox Machine"] floating enable
 # Autostart:
 $e nm-applet
 $e xfce4-power-manager
+$e touchpad-indicator
+
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
-$e touchpad-indicator
+#$e picom --config ~/.config/picom/picom.conf
+$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
 $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
-$e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
-#$e nitrogen --restore # switch to static wallpaper
-$e picom --config ~/.config/picom/picom.conf
-$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+
+exec_always --no-startup-id ~/Scripts/bash/wallpaper.sh new
 exec_always --no-startup-id autotiling
