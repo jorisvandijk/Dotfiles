@@ -166,6 +166,12 @@ alias u='sudo pacman -Syyu'
 alias i='sudo pacman -S'
 alias r='sudo pacman -Rs'
 alias s='pacman -Ss'
+
+alias yu='yay -Syyu'
+alias yi='yay -S'
+alias yr='yay -Rs'
+alias ys='yay -Ss'
+
 alias fullupdate="yay -Syyu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"        # remove pacman lock
 alias ..='cd ..'
@@ -182,7 +188,6 @@ alias top='sudo top'
 alias run='python -u ~/Scripts/all.py' 
 alias gut='python -u ~/Scripts/python/git.py'
 alias bat='notify-send |upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
-alias server='./ssh.sh'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
@@ -197,19 +202,11 @@ alias free='free -m'                      # show sizes in MB
 # git
 alias add='git add -u'
 alias addall='git add .'
-alias branch='git branch'
-alias checkout='git checkout'
 alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
-alias tag='git tag'
-alias newtag='git tag -a'
-
-# shutdown or reboot
-alias ssn="sudo shutdown now"
-alias sr="sudo reboot"
 
 alias c='clear'
 alias vim='nvim'
