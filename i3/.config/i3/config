@@ -87,7 +87,6 @@ bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e nemo
 bindsym $mod+y $e freetube-bin
-bindsym $mod+a $e feh --randomize --bg-scale ~/Pictures/wallpapers/*
 bindsym $mod+q $e pkill -9 DRAGON\ QUEST\ XI
 
 # Switch to workspace
