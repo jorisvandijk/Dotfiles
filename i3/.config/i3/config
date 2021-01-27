@@ -31,7 +31,7 @@ bar {
       i3bar_command i3bar
       status_command i3blocks -c ~/.config/i3/i3blocks.conf
       position top
-      mode dock
+      mode hide
       hidden_state hide
       modifier none
       tray_padding 0
