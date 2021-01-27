@@ -1,15 +1,3 @@
-rofi.show-icons:            	true
 rofi.modi:                  	drun,run,window,ssh
-rofi.lines:                 	7
-rofi.line-padding:          	4
-#rofi.matching:              	fuzzy
-rofi.bw:                    	0
-rofi.padding:               	50
-rofi.separator-style:       	none
-rofi.hide-scrollbar:        	true
-rofi.line-margin:           	0
 rofi.font:                  	JetBrains Mono 12
-rofi.theme: 		   	.config/rofi/nord.rasi
-rofi.columns:			2
-hide-scrollbar:			true
-show-icons:			false
+rofi.theme: 		        	.config/rofi/nord.rasi
