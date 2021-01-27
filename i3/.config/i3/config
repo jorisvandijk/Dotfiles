@@ -16,16 +16,11 @@ set $ws5 "5"
 set $ws6 "6"
 
 floating_modifier $mod
-default_border pixel 0
-workspace_layout default
 font pango:JetBrains Mono 11
-popup_during_fullscreen smart
-default_orientation horizontal
-
 for_window [class="^.*"] border pixel 0, title_format "%class >> %title"
 
 gaps inner 8
-gaps outer 0
+gaps outer 4
 smart_gaps on
 
 bar {
@@ -131,7 +126,7 @@ $e touchpad-indicator
 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
-#$e picom --config ~/.config/picom/picom.conf
+$e picom --config ~/.config/picom/picom.conf
 $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
