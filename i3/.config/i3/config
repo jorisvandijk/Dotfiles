@@ -66,6 +66,10 @@ bindsym F9 $e ~/Scripts/bash/volumeControl.sh down
 bindsym XF86MonBrightnessUp $e ~/Scripts/bash/brightnessControl.sh up
 bindsym XF86MonBrightnessDown $e ~/Scripts/bash/brightnessControl.sh down
 
+bindsym $mod+Down $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym $mod+Left $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+Right $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 
 bindsym $mod+shift+i $e optimus-manager --switch intel --no-confirm
