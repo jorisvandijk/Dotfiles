@@ -89,9 +89,9 @@ bindsym $mod+c $e leafpad ".config/i3/config"
 
 # App bindings
 bindsym $mod+Mod1+c $e code -n
-bindsym $mod+Mod1+b $e code -r /home/joris/Scripts/bash/
-bindsym $mod+Mod1+p $e code -r /home/joris/Scripts/python/
+bindsym $mod+Mod1+s $e code -r /home/joris/Scripts/
 bindsym $mod+Mod1+d $e code -r /home/joris/Dotfiles/
+bindsym $mod+Mod1+a $e code -r /home/joris/
 
 bindsym $mod+Up $e spotify
 bindsym $mod+Return $e xfce4-terminal
