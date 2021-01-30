@@ -93,6 +93,7 @@ bindsym $mod+Mod1+b $e code -r /home/joris/Scripts/bash/
 bindsym $mod+Mod1+p $e code -r /home/joris/Scripts/python/
 bindsym $mod+Mod1+d $e code -r /home/joris/Dotfiles/
 
+bindsym $mod+Up $e spotify
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e nemo
