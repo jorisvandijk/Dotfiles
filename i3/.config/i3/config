@@ -120,18 +120,6 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 
-# Change focus
-bindsym $Mod+h focus left
-bindsym $Mod+j focus down
-bindsym $Mod+k focus up
-bindsym $Mod+l focus right
-
-# Move focused window
-bindsym $Mod+Shift+h move left  10px
-bindsym $Mod+Shift+j move down  10px
-bindsym $Mod+Shift+k move up    10px
-bindsym $Mod+Shift+l move right 10px
-
 # Set floating for apps needing it
 for_window [class="Fsearch"] floating enable
 for_window [class="^Steam$" title="Steam - News"] floating enable
