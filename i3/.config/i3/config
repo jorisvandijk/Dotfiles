@@ -98,6 +98,7 @@ $e xfce4-power-manager
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
+$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
