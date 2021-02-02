@@ -35,8 +35,6 @@ bindsym $mod+x kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 
-bindsym $mod+a $e ~/Scripts/bash/wallpaper.sh new
-
 bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume 0 +5% 
 bindsym $mod+Next exec --no-startup-id pactl set-sink-volume 0 -5% 
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
@@ -95,6 +93,7 @@ for_window [class="VirtualBox Machine"] floating enable
 $e xfce4-power-manager
 #$e touchpad-indicator
 
+$e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
@@ -104,4 +103,3 @@ $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
 exec_always --no-startup-id autotiling
-exec_always --no-startup-id ~/Scripts/bash/wallpaper.sh boot
