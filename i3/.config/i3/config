@@ -27,28 +27,6 @@ gaps inner 8
 gaps outer 4
 smart_gaps on
 
-bar {
-      i3bar_command i3bar
-      status_command i3blocks -c ~/.config/i3/i3blocks.conf
-      position top
-      mode hide
-      hidden_state hide
-      modifier none
-      tray_padding 0
-      colors {
-      background #2E3440
-      statusline #88C0D0
-      separator #ECEFF4
-
-      # class            border  backgr. text
-      focused_workspace  #2E3440 #2E3440 #A3BE8C
-      active_workspace   #2E3440 #2E3440 #D08770
-      inactive_workspace #2E3440 #2E3440 #4C566A
-      urgent_workspace   #BF616A #2E3440 #BF616A
-      binding_mode       #2E3440 #2E3440 #A3BE8C
-    }
-}
-
 # Action bindings
 bindsym $mod+Shift+Home $e i3exit logout, mode "default"
 bindsym $mod+Shift+Delete $e i3exit shutdown, mode "default"
@@ -142,3 +120,25 @@ $e xmodmap -e "clear lock" 		# disable caps lock switch
 
 exec_always --no-startup-id autotiling
 exec --no-startup-id ~/Scripts/bash/wallpaper.sh boot
+
+bar {
+      i3bar_command i3bar
+      status_command i3blocks -c ~/.config/i3/i3blocks.conf
+      position top
+      mode hide
+      hidden_state hide
+      modifier none
+      tray_padding 0
+      colors {
+      background #2E3440
+      statusline #88C0D0
+      separator #ECEFF4
+
+      # class            border  backgr. text
+      focused_workspace  #2E3440 #2E3440 #A3BE8C
+      active_workspace   #2E3440 #2E3440 #D08770
+      inactive_workspace #2E3440 #2E3440 #4C566A
+      urgent_workspace   #BF616A #2E3440 #BF616A
+      binding_mode       #2E3440 #2E3440 #A3BE8C
+    }
+}
