@@ -14,8 +14,6 @@ set $ws3 "3"
 set $ws4 "4" 
 set $ws5 "5" 
 set $ws6 "6" 
-set $ws7 "7" 
-set $ws8 "8" 
 
 floating_modifier $mod
 font pango:JetBrains Mono 11
@@ -100,7 +98,6 @@ $e xfce4-power-manager
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
-#$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
