@@ -20,8 +20,8 @@ font pango:JetBrains Mono 11
 
 for_window [class="^.*"] border pixel 0, title_format "%class >> %title"
 
-gaps inner 4
-gaps outer 4
+gaps inner 10
+gaps outer 0
 smart_gaps on
 
 # Action bindings
