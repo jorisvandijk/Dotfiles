@@ -61,11 +61,11 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 1
 
     # Defines color of the frame around the notification window.
     #frame_color = "#7f3fbf"
-     frame_color = "#ffffff"
+    #frame_color = "#ffffff"
     # Define a color for the separator.
     # possible values are:
     #  * auto: dunst tries to find a color fitting to the background;
@@ -167,7 +167,7 @@
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-    icon_path= /usr/share/icons/Arc-X-D/status/:/usr/share/icons/Arc-X-D/devices/:/usr/share/icons/Arc-X-D/apps/:/usr/share/icons/Arc-X-D/actions/:/usr/share/icons/Arc-X-D/categories/:/usr/share/icons/Arc-X-D/status/symbolic/
+    #icon_path= /usr/share/icons/Arc-X-D/status/:/usr/share/icons/Arc-X-D/devices/:/usr/share/icons/Arc-X-D/apps/:/usr/share/icons/Arc-X-D/actions/:/usr/share/icons/Arc-X-D/categories/:/usr/share/icons/Arc-X-D/status/symbolic/
 
     ### History ###
 
@@ -214,7 +214,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 3
+    corner_radius = 0
 
     ### Legacy
 
@@ -272,25 +272,25 @@
 
     # Context menu.
     context = ctrl+shift+period
-
+    
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#A3BE8C"
-foreground = "#D8DEE9"
-background = "#2E3440"
+frame_color = "#eceff4"
+foreground = "#eceff4"
+background = "#2e3440"
 #timeout = 1
 
 [urgency_normal]
-frame_color = "#5E81AC"
-foreground = "#D8DEE9"
-background = "#4C566A"
+frame_color = "#eceff4"
+foreground = "#eceff4"
+background = "#2e3440"
 #timeout = 2
 
 [urgency_critical]
-frame_color = "#D08770"
-foreground = "#ECEFF4"
-background = "#BF616A"
+frame_color = "#bf616a"
+foreground = "#eceff4"
+background = "#2e3440"
 #timeout = 2
 
 # Every section that isn't one of the above is interpreted as a rules to
