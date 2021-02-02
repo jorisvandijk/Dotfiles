@@ -106,4 +106,4 @@ $e xmodmap -e "keycode 66 = BackSpace" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
 exec_always --no-startup-id autotiling
-exec --no-startup-id ~/Scripts/bash/wallpaper.sh boot
+exec_always --no-startup-id ~/Scripts/bash/wallpaper.sh boot

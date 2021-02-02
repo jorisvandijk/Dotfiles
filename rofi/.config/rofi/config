@@ -1,3 +1,2 @@
 rofi.modi:                  	drun,run,window,ssh
-rofi.font:                  	JetBrains Mono 12
-rofi.theme: 		        	.config/rofi/nord.rasi
+rofi.theme: 		        .config/rofi/joris.rasi
