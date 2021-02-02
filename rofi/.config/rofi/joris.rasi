@@ -36,7 +36,7 @@ configuration {
     backlight:   #ccffeedd;
     background-color:  transparent;
     
-    highlight:     underline bold #eceff4;
+    highlight:     underline bold #bf616a;
 
     transparent: rgba(46,52,64,0);
 }
