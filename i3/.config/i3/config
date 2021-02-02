@@ -62,7 +62,7 @@ bindsym $mod+c $e leafpad ".config/i3/config"
 # App bindings
 bindsym $mod+Mod1+c $e code -r ~/
 
-bindsym $mod+Up $e spotify
+bindsym $mod+Up $e spotify --no-zygote
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
