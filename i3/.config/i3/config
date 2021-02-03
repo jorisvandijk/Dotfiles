@@ -52,11 +52,6 @@ bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+a $e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
 bindsym $mod+c $e leafpad ".config/i3/config"
 
-for_window [class="Spotify"] move to workspace $ws6
-bindsym $mod+Down $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym $mod+Left $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym $mod+Right $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-
 # App bindings
 bindsym $mod+Mod1+c $e code -r ~/
 
@@ -65,6 +60,10 @@ bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
 bindsym $mod+y $e freetube-bin
+
+bindsym $mod+Down $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym $mod+Left $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+Right $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -82,16 +81,15 @@ bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 
-# Set floating for apps needing it
+# Set window class rules
+for_window [class="Spotify"] move to workspace $ws6
 for_window [class="^Steam$" title="Steam - News"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
 for_window [class="VirtualBox Manager"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
 
 # Autostart:
-#$e nm-applet
 $e xfce4-power-manager
-#$e touchpad-indicator
 
 $e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
 $e /usr/bin/dunst
