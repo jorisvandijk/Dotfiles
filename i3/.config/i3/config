@@ -49,6 +49,8 @@ bindsym $mod+Right $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spo
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 
+bindsym $mod+a $e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
+
 bindsym $mod+shift+i $e optimus-manager --switch intel --no-confirm
 bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
