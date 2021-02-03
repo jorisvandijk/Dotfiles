@@ -39,8 +39,8 @@ bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym $mod+Next exec --no-startup-id pactl set-sink-volume 0 -5% 
 bindsym $mod+End exec --no-startup-id pactl set-sink-mute 0 toggle 
 
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 
+bindsym XF86MonBrightnessUp exec light -A 10 
+bindsym XF86MonBrightnessDown exec light -U 10
 
 for_window [class="Spotify"] move to workspace $ws6
 bindsym $mod+Down $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
