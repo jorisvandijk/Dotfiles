@@ -12,7 +12,7 @@
 
 configuration {
 
-	font: "JetBrains Mono 12";
+	font: "Comfortaa 12";
 	width: 40;
 	line-margin: 10;
 	lines: 8;

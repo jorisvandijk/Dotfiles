@@ -16,7 +16,7 @@ set $ws5 "5"
 set $ws6 "6" 
 
 floating_modifier $mod
-font pango:JetBrains Mono 11
+font pango:Comfortaa 11
 
 for_window [class="^.*"] border pixel 0, title_format "%class >> %title"
 
