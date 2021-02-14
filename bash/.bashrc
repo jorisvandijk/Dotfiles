@@ -170,6 +170,8 @@ alias i='sudo pacman -S'
 alias r='sudo pacman -Rs'
 alias s='pacman -Ss'
 
+alias nano='micro'
+
 alias yu='yay -Syyu'
 alias yi='yay -S'
 alias yr='yay -Rs'
