@@ -55,7 +55,7 @@ bindsym $mod+c $e leafpad ".config/i3/config"
 
 # App bindings
 bindsym $mod+Mod1+c $e code -r ~/
-
+bindsym $mod+n $e xfce4-terminal -e "nmtui" #wifi/network
 bindsym $mod+Up $e spotify --no-zygote
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
