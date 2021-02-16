@@ -25,7 +25,6 @@ gaps outer 0
 smart_gaps on
 
 # Action bindings
-bindsym $mod+b bar mode toggle
 bindsym $mod+Shift+Home $e kill -9 -1
 bindsym $mod+Shift+Delete $e systemctl poweroff -i, mode "default"  
 bindsym $mod+Shift+c reload
@@ -41,7 +40,7 @@ bindsym $mod+End $e pactl set-sink-mute 0 toggle
 bindsym XF86MonBrightnessUp exec light -A 10 
 bindsym XF86MonBrightnessDown exec light -U 10
 
-bindsym $mod+Shift+w $e xfce4-terminal -e "nmtui"
+bindsym $mod+n $e xfce4-terminal -e "nmtui" #network
 
 bindsym $mod+shift+i $e optimus-manager --switch intel --no-confirm
 bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
@@ -55,7 +54,6 @@ bindsym $mod+c $e leafpad ".config/i3/config"
 
 # App bindings
 bindsym $mod+Mod1+c $e code -r ~/
-bindsym $mod+n $e xfce4-terminal -e "nmtui" #wifi/network
 bindsym $mod+Up $e spotify --no-zygote
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
