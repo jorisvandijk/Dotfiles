@@ -60,6 +60,8 @@ bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
 bindsym $mod+y $e freetube-bin
 
+bindsym $mod+k $e ./Scripts/bash/kee.sh
+
 bindsym $mod+Down $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 bindsym $mod+Left $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym $mod+Right $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
