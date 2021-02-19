@@ -183,6 +183,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias sb='cd ~/Scripts/bash'
+alias sp='cd ~/Scripts/python'
+
 # Changing "ls" to "exa" 
 alias ls='exa -l --color=always --group-directories-first' # list visible files and folders
 alias la='exa -la --color=always --group-directories-first'  # list all files and folders
