@@ -9,7 +9,7 @@
 
 _set_my_PS1() {
    # PS1='[\u@\h \W]\$ '
-     PS1='[\W]\$ '
+     PS1='\W '
     if [ "$(whoami)" = "liveuser" ] ; then
         local iso_version="$(grep ^VERSION= /etc/os-release | cut -d '=' -f 2)"
         if [ -n "$iso_version" ] ; then
@@ -186,14 +186,14 @@ alias ....='cd ../../..'
 alias sb='cd ~/Scripts/bash'
 alias sp='cd ~/Scripts/python'
 
-# Changing "ls" to "exa" 
+# Changing "ls" to "exa"
 alias ls='exa -l --color=always --group-directories-first' # list visible files and folders
 alias la='exa -la --color=always --group-directories-first'  # list all files and folders
 alias lh='exa -a | egrep "^\."' # list only hidden files and folders
 
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 alias top='sudo top'
-alias run='python -u ~/Scripts/all.py' 
+alias run='python -u ~/Scripts/all.py'
 alias gut='python -u ~/Scripts/python/git.py'
 alias bat='notify-send |upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
 
