@@ -7,6 +7,7 @@
 
 set $mod Mod4
 set $e exec --no-startup-id
+set $s "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2
 
 set $ws1 "1" 
 set $ws2 "2" 
@@ -63,9 +64,9 @@ bindsym $mod+y $e freetube-bin
 
 bindsym $mod+k $e ./Scripts/bash/kee.sh
 
-bindsym $mod+Down $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym $mod+Left $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
-bindsym $mod+Right $e "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
+bindsym $mod+Down $e $s org.mpris.MediaPlayer2.Player.PlayPause"
+bindsym $mod+Left $e $s org.mpris.MediaPlayer2.Player.Previous"
+bindsym $mod+Right $e $s org.mpris.MediaPlayer2.Player.Next"
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
