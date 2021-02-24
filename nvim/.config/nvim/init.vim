@@ -28,7 +28,8 @@ set number relativenumber       " Display line numbers
 set expandtab                   " Use spaces not tabs
 set shiftwidth=4                " One tab for 4 spaces
 set tabstop=4                   " One tab for 4 spaces
-
+set textwidth=80                " Set max text width
+set colorcolumn=+1               " Add column at +1 of text width
 " Theme
 colorscheme nord
 
@@ -41,6 +42,12 @@ noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" Remapping to disable arrow keys!
+noremap <up>    <nop>
+noremap <Down>  <nop>
+noremap <Left>  <nop>
+noremap <Right> <nop>
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
