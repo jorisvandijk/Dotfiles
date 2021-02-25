@@ -183,6 +183,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias x='chmod +x'
+
 alias sb='cd ~/Scripts/bash'
 alias sp='cd ~/Scripts/python'
 
