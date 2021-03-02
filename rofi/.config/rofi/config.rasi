@@ -1,4 +1,4 @@
 configuration {
 	modi: "drun,run,window,ssh";
-	theme: ".config/rofi/joris.rasi";
+	theme: "/home/joris/.config/rofi/joris.rasi";
 }
