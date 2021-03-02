@@ -6,6 +6,10 @@
 #
 #          Published under GPL-3.0-or-later
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Set PS1
 PS1='\n\e[34m\W\e[0m '
 
 # limits recursive functions, see 'man bash'
