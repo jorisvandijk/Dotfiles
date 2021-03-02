@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 # Set PS1
-PS1='\n\e[34m\W\e[0m '
+PS1='\n\[\e[1;34m\]\W \[\e[m\]'
 
 # limits recursive functions, see 'man bash'
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          
