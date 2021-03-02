@@ -1,5 +1,3 @@
-#!/bin/bash
-#
 # Usage: .bashrc file, bash config file.
 #
 # Dotfile by Joris van Dijk | gitlab.com/jorisvandijk 
