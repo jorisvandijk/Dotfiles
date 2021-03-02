@@ -37,6 +37,9 @@ bindsym $mod+Shift+f floating toggle
 bindsym $mod+i $e ./Scripts/bash/system_info.sh
 bindsym $mod+shift+k $e ./Scripts/bash/toggle_keyboard.sh
 
+bindsym $mod+comma workspace prev
+bindsym $mod+period workspace next
+
 bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
 bindsym $mod+Next $e pactl set-sink-volume 0 -5% 
 bindsym $mod+End $e pactl set-sink-mute 0 toggle 
