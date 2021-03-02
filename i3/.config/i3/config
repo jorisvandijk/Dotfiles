@@ -34,6 +34,7 @@ bindsym $mod+x kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 bindsym $mod+i $e ./Scripts/bash/system_info.sh
+bindsym $mod+shift+k $e ./Scripts/bash/toggle_keyboard.sh
 
 bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
 bindsym $mod+Next $e pactl set-sink-volume 0 -5% 
