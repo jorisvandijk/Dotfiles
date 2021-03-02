@@ -43,6 +43,7 @@ bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
 bindsym $mod+n $e xfce4-terminal -e "nmtui" #network
+bindsym $mod+shift+w exec xfce4-terminal -e "bash -c 'curl wttr.in & read line'"
 
 bindsym $mod+shift+i $e optimus-manager --switch intel --no-confirm
 bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
