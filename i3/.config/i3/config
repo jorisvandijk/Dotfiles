@@ -55,6 +55,7 @@ bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym $mod+space exec rofi -modi drun -show drun  
 bindsym $mod+Tab exec rofi -show window
+bindsym $mod+s $e ./Scripts/bash/rofi_spotify.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+a $e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
