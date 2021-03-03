@@ -108,7 +108,7 @@ $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-$e ./Scripts/bash/disable_trackpad.sh
+$e xinput disable "UNIW0001:00 093A:1336 Touchpad"
 
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now backspace
 $e xmodmap -e "clear lock" 		# disable caps lock switch
