@@ -49,6 +49,7 @@ alias u='sudo pacman -Syyu'
 alias i='sudo pacman -S'
 alias r='sudo pacman -Rs'
 alias s='pacman -Ss'
+alias clean='pacman -Rscn $(pacman -Qdtq)' # will search for orphaned packages and delete them
 
 alias yu='yay -Syyu'
 alias yi='yay -S'
