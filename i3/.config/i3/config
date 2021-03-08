@@ -59,7 +59,7 @@ bindsym $mod+Tab exec rofi -show window
 bindsym $mod+s $e ./Scripts/bash/rofi_spotify.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-bindsym $mod+a $e feh --randomize --bg-scale ~/Pictures/wallpapers/* 
+bindsym $mod+a $e feh --r8
 bindsym $mod+c $e leafpad ".config/i3/config"
 
 # App bindings
@@ -110,7 +110,7 @@ $e picom --config ~/.config/picom/picom.conf
 $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $e xinput disable "UNIW0001:00 093A:1336 Touchpad"
 
-$e xmodmap -e "keycode 66 = Escape" 	# caps lock is now backspace
+$e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
 exec_always --no-startup-id autotiling
