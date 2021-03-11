@@ -60,7 +60,7 @@ bindsym $mod+s $e ./Scripts/bash/rofi_spotify.sh
 bindsym $mod+shift+s $e ./Scripts/bash/search.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-bindsym $mod+a $e feh --r8
+bindsym $mod+a $e feh --bg-fill --randomize ~/Pictures/wallpapers/*
 bindsym $mod+c $e leafpad ".config/i3/config"
 
 # App bindings
