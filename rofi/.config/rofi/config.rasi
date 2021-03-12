@@ -1,4 +1,115 @@
+/**
+*
+* Usage: Rofi theme
+*
+* Origionally adapted by undiabler <undiabler@gmail.com>
+*
+* Dotfile by Joris van Dijk | gitlab.com/jorisvandijk 
+*
+*          Published under GPL-3.0-or-later
+*
+*/
+
 configuration {
 	modi: "drun,run,window,ssh";
-	theme: "/home/joris/.config/rofi/joris.rasi";
+	font: "Comfortaa 12";
+	width: 40;
+	line-margin: 10;
+	lines: 8;
+	columns: 1;
+
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     false;
+}
+
+* {
+	bg: #2e3440;
+	one: #eceff4;
+	two: #eceff4;
+	fg: #81a1c1;
+
+    foreground:  @fg;
+    backlight:   #ccffeedd;
+    background-color:  transparent;
+    
+    highlight:     underline bold #bf616a;
+
+    transparent: rgba(46,52,64,0);
+}
+
+window {
+    location: center;
+    anchor:   center;
+    transparency: "screenshot";
+    padding: 0px;
+    border:  0px;
+    background-color: @bg;
+    spacing: 0;
+    children:  [mainbox];
+    orientation: horizontal;
+    
+}
+
+mainbox {
+    spacing: 0;
+    margin: 80;
+    children: [ inputbar, message, listview ];
+}
+
+message {
+    color: @bg;
+    padding: 10;
+    border-color: @foreground;
+    border:  0px 2px 2px 2px;
+    background-color: @two;
+}
+
+inputbar {
+    color: @one;
+    padding: 11px;
+    background-color: @bg;
+}
+
+entry, prompt, case-indicator {
+    text-font: inherit;
+    text-color:inherit;
+}
+
+prompt {
+    margin: 0px 0.3em 0em 0em ;
+}
+
+listview {
+    padding: 8px;
+    background-color: rgba(46,52,64,0.9);
+    dynamic: false;
+}
+
+element {
+    padding: 3px;
+    vertical-align: 0.5;
+    background-color: transparent;
+    color: @foreground;
+    text-color: rgb(216, 222, 233);
+}
+
+element selected.normal {
+	background-color: @two;
+	text-color: #2e3440;
+}
+
+button {
+    padding: 6px;
+    color: @foreground;
+    horizontal-align: 0.5;
+    border-color: @foreground;
+}
+
+button selected normal {
+    border: 2px 0px 2px 2px;
+    border-color: @foreground;
 }
