@@ -104,7 +104,7 @@ for_window [class="VirtualBox Machine"] floating enable
 # Autostart:
 $e xfce4-power-manager
 
-$e feh --randomize --bg-scale ~/allpapers/* 
+$e feh --randomize --bg-scale ~/Projects/Wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
