@@ -61,7 +61,7 @@ bindsym $mod+shift+s $e ./Projects/Bash/search.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+a $e feh --bg-fill --randomize ~/Pictures/wallpapers/*
-bindsym $mod+c $e leafpad ".config/i3/config"
+bindsym $mod+c $e xfce4-terminal -e "micro .config/i3/config"
 
 # App bindings
 bindsym $mod+Mod1+c $e code -r ~/
