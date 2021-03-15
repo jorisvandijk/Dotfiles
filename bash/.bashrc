@@ -65,9 +65,6 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias sb='cd ~/Scripts/bash'
-alias sp='cd ~/Scripts/python'
-
 # Changing "ls" to "exa"
 alias ls='exa -l --color=always --group-directories-first' # list visible files and folders
 alias la='exa -la --color=always --group-directories-first'  # list all files and folders
@@ -75,19 +72,18 @@ alias lh='exa -a | egrep "^\."' # list only hidden files and folders
 
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 alias top='sudo top'
-alias gut='python -u ~/Scripts/python/git.py'
 
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# adding flags
+# Adding flags
 alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 
-# git
+# Git
 alias add='git add -u'
 alias addall='git add .'
 alias commit='git commit -m'
@@ -96,6 +92,9 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
 
+alias gut='sh /$HOME/Projects/Bash/update_repositories'
+
+# Other
 alias c='clear'
 alias vim='nvim'
 alias vi='nvim'
