@@ -100,6 +100,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias nano='micro'
 alias x='chmod +x'
+alias spotify='ncspot'
 
 # Dracula 
 if [ "$TERM" = "linux" ]; then

@@ -312,6 +312,14 @@
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
 
+[ncspot]
+	appname = *ncspot*
+	format = "<b> Now Playing:</b>\n%s\n%b"
+	background = "#1d2021"
+	foreground = "#ebdbb2"
+	frame_color = "#1db954"
+	timeout = 5
+
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
 #
@@ -425,6 +433,6 @@
 #
 #[stack-volumes]
 #    appname = "some_volume_notifiers"
-#    set_stack_tag = "volume"
+#    set_stack_tag = "volume"	
 #
 # vim: ft=cfg
