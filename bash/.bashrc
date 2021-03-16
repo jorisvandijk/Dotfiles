@@ -92,7 +92,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
 
-alias gut='sh /$HOME/Projects/Bash/update_repositories'
+alias gut='sh /$HOME/Projects/bash/update_repositories'
 
 # Other
 alias c='clear'

@@ -34,9 +34,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+x kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
-bindsym $mod+i $e ./Projects/Bash/system_info.sh
-bindsym $mod+u $e ./Projects/Bash/check_updates.sh
-bindsym $mod+shift+k $e ./Projects/Bash/toggle_keyboard.sh
+bindsym $mod+i $e ./Projects/bash/system_info.sh
+bindsym $mod+u $e ./Projects/bash/check_updates.sh
+bindsym $mod+shift+k $e ./Projects/bash/toggle_keyboard.sh
 bindsym $mod+shift+m $e xinput enable "UNIW0001:00 093A:1336 Touchpad"
 bindsym $mod+comma workspace prev
 bindsym $mod+period workspace next
@@ -56,8 +56,8 @@ bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym $mod+space exec rofi -modi drun -show drun  
 bindsym $mod+Tab exec rofi -show window
-bindsym $mod+s $e ./Projects/Bash/rofi_spotify.sh
-bindsym $mod+shift+s $e ./Projects/Bash/search.sh
+bindsym $mod+s $e ./Projects/bash/rofi_spotify.sh
+bindsym $mod+shift+s $e ./Projects/bash/search.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+a $e feh --bg-fill --randomize ~/Pictures/wallpapers/*
@@ -72,7 +72,7 @@ bindsym $mod+t $e thunar
 bindsym $mod+y $e freetube
 bindsym $mod+m $e sylpheed
 
-bindsym $mod+k $e ./Projects/Bash/kee.sh
+bindsym $mod+k $e ./Projects/bash/kee.sh
 
 bindsym $mod+Down $e $s org.mpris.MediaPlayer2.Player.PlayPause"
 bindsym $mod+Left $e $s org.mpris.MediaPlayer2.Player.Previous"
@@ -104,7 +104,7 @@ for_window [class="VirtualBox Machine"] floating enable
 # Autostart:
 $e xfce4-power-manager
 
-$e feh --randomize --bg-scale ~/Projects/Wallpapers/* 
+$e feh --randomize --bg-scale ~/Projects/wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
