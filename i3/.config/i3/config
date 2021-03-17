@@ -1,4 +1,4 @@
-#
+	#
 # Usage: i3 config file
 #
 # Dotfile by Joris van Dijk | gitlab.com/jorisvandijk 
@@ -103,6 +103,7 @@ for_window [class="VirtualBox Machine"] floating enable
 
 # Autostart:
 $e xfce4-power-manager
+$e oneko
 
 $e feh --randomize --bg-scale ~/Projects/wallpapers/* 
 $e /usr/bin/dunst
