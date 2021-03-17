@@ -1,4 +1,4 @@
-	#
+#
 # Usage: i3 config file
 #
 # Dotfile by Joris van Dijk | gitlab.com/jorisvandijk 
@@ -72,6 +72,8 @@ bindsym $mod+t $e thunar
 bindsym $mod+y $e freetube
 bindsym $mod+m $e sylpheed
 
+bindsym $mod+o $e oneko
+bindsym $mod+shift+o $e pkill oneko
 bindsym $mod+k $e ./Projects/bash/kee.sh
 
 bindsym $mod+Down $e $s org.mpris.MediaPlayer2.Player.PlayPause"
@@ -104,7 +106,6 @@ for_window [class="VirtualBox Machine"] floating enable
 # Autostart:
 $e xfce4-power-manager
 $e oneko
-
 $e feh --randomize --bg-scale ~/Projects/wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
