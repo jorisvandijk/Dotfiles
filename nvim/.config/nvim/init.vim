@@ -5,21 +5,9 @@
 "
 "          Published under GPL-3.0-or-later
 
-" Plugins
+
 set nocompatible              	" be iMproved, required
 filetype off                  	" required
-
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'arcticicestudio/nord-vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'terryma/vim-smooth-scroll'
-
-call vundle#end()            	" required
 filetype plugin indent on    	" required
 
 " Settings
@@ -29,13 +17,19 @@ set expandtab                   " Use spaces not tabs
 set shiftwidth=4                " One tab for 4 spaces
 set tabstop=4                   " One tab for 4 spaces
 set textwidth=80                " Set max text width
-set colorcolumn=+1               " Add column at +1 of text width
-" Theme
-colorscheme nord
-
-" Lightline
-let g:lightline = {'colorscheme': 'nord'}
-set laststatus=2                " Always show statusline
+set colorcolumn=+1              " Add column at +1 of text width
+set nocompatible            	" disable compatibility to old-time vi
+set showmatch               	" show matching brackets.
+set ignorecase              	" case insensitive matching
+set mouse=v                 	" middle-click paste with mouse
+set hlsearch                	" highlight search results
+set tabstop=4               	" number of columns occupied by a tab character
+set softtabstop=4           	" see multiple spaces as tabstops so <BS> does the right thing
+set autoindent              	" indent a new line the same amount as the line just typed
+set wildmode=longest,list   	" get bash-like tab completions
+set cc=80                   	" set an 80 column border for good coding style
+filetype plugin indent on   	" allows auto-indenting depending on file type
+syntax on                   	" syntax highlighting
 
 " Remapping
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
