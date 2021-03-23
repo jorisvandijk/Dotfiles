@@ -10,6 +10,9 @@
 # Set PS1
 PS1='\n\[\e[1;34m\]\W \[\e[m\]'
 
+# Ignore upper and lowercase when TAB completion
+bind "set completion-ignore-case on"
+
 # limits recursive functions, see 'man bash'
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100          
 
@@ -48,6 +51,7 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 # Joris' aliasses
+alias pacman='pacman --color auto'
 alias u='sudo pacman -Syyu'
 alias i='sudo pacman -S'
 alias r='sudo pacman -Rs'
@@ -64,6 +68,9 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"        # remove pacman lock
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
+# Grab fastest mirrors
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 
 # Changing "ls" to "exa"
 alias ls='exa -l --color=always --group-directories-first' # list visible files and folders
@@ -101,6 +108,33 @@ alias vi='nvim'
 alias nano='micro'
 alias x='chmod +x'
 alias spotify='ncspot'
+
+# # ex = EXtractor for all kinds of archives
+# # usage: ex <file>
+ex ()
+{
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1   ;;
+      *.tar.gz)    tar xzf $1   ;;
+      *.bz2)       bunzip2 $1   ;;
+      *.rar)       unrar x $1   ;;
+      *.gz)        gunzip $1    ;;
+      *.tar)       tar xf $1    ;;
+      *.tbz2)      tar xjf $1   ;;
+      *.tgz)       tar xzf $1   ;;
+      *.zip)       unzip $1     ;;
+      *.Z)         uncompress $1;;
+      *.7z)        7z x $1      ;;
+      *.deb)       ar x $1      ;;
+      *.tar.xz)    tar xf $1    ;;
+      *.tar.zst)   unzstd $1    ;;
+      *)           echo "'$1' cannot be extracted via ex()" ;;
+    esac
+  else
+    echo "'$1' is not a valid file"
+  fi
+}
 
 # Dracula 
 if [ "$TERM" = "linux" ]; then
