@@ -28,7 +28,7 @@ smart_gaps on
 # Action bindings
 bindsym $mod+Shift+Home $e kill -9 -1
 bindsym $mod+Shift+Delete $e systemctl poweroff -i, mode "default"  
-bindsym $mod+BackSpace $e i3lock -c 000000
+bindsym $mod+BackSpace $e dm-tool lock
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+x kill
