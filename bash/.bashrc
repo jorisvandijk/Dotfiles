@@ -50,6 +50,9 @@ shopt -s autocd
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
+# Stow
+stow='cd $HOME/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
+
 # Joris' aliasses
 alias pacman='pacman --color auto'
 alias u='sudo pacman -Syyu'
