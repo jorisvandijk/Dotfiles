@@ -121,6 +121,9 @@ $e light-locker
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
+# Set keystroke repeat rate
+$e xset r rate 200 30
+
 exec_always --no-startup-id autotiling
 
 # class                 border  bground text    indicator child_border
