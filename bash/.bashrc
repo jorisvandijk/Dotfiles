@@ -110,7 +110,10 @@ alias vim='nvim'
 alias vi='nvim'
 alias nano='micro'
 alias x='chmod +x'
-alias spotify='ncspot'
+
+# Multimedia
+alias yt='newsboat'
+alias yts='ytfzf -l' 
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
