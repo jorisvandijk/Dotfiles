@@ -38,18 +38,18 @@ bindsym $mod+i $e ./Projects/bash/system_info.sh
 bindsym $mod+u $e ./Projects/bash/check_updates.sh
 bindsym $mod+shift+k $e ./Projects/bash/toggle_keyboard.sh
 bindsym $mod+shift+m $e xinput enable "UNIW0001:00 093A:1336 Touchpad"
-bindsym $mod+comma workspace prev
-bindsym $mod+period workspace next
+#bindsym $mod+comma workspace prev
+#bindsym $mod+period workspace next
 
 # PulseAudio
-#bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
-#bindsym $mod+Next $e pactl set-sink-volume 0 -5% 
-#bindsym $mod+End $e pactl set-sink-mute 0 toggle 
+bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
+bindsym $mod+Next $e pactl set-sink-volume 0 -5% 
+bindsym $mod+End $e pactl set-sink-mute 0 toggle 
 
 # Alsa
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
-bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+#bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
+#bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
+#bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym XF86MonBrightnessUp exec light -A 10 
 bindsym XF86MonBrightnessDown exec light -U 10
@@ -117,6 +117,7 @@ $e picom --config ~/.config/picom/picom.conf
 $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $e xinput disable "UNIW0001:00 093A:1336 Touchpad"
 $e light-locker
+$e spotifyd --no-daemon
 
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 		# disable caps lock switch
