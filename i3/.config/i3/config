@@ -7,7 +7,7 @@
 
 set $mod Mod4
 set $e exec --no-startup-id
-set $s "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2
+set $s "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotifyd /org/mpris/MediaPlayer2
 
 set $ws1 "1" 
 set $ws2 "2" 
@@ -107,6 +107,7 @@ for_window [class="^Steam$" title="^Settings$"] floating enable
 for_window [class="VirtualBox Manager"] floating enable
 for_window [class="VirtualBox Machine"] floating enable
 for_window [class="mpv"] fullscreen enable
+for_window [title="spotify-tui"] move to workspace $ws6
 
 # Autostart:
 $e xfce4-power-manager
