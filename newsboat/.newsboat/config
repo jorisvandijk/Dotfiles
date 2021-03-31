@@ -1,0 +1,3 @@
+show-read-feeds  yes
+refresh-on-startup  yes
+browser "mpv %u"
