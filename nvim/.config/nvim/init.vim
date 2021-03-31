@@ -42,3 +42,8 @@ noremap <Right> <nop>
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Theme
+packadd! dracula
+syntax enable
+colorscheme dracula
