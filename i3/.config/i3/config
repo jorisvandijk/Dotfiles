@@ -119,7 +119,7 @@ $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $e xinput disable "UNIW0001:00 093A:1336 Touchpad"
 $e light-locker
 $e spotifyd --no-daemon
-
+&e batsignal -d
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
