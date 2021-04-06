@@ -7,7 +7,6 @@
 
 set $mod Mod4
 set $e exec --no-startup-id
-set $s "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotifyd /org/mpris/MediaPlayer2
 
 set $ws1 "1" 
 set $ws2 "2" 
@@ -71,7 +70,6 @@ bindsym $mod+c $e xfce4-terminal -e "micro .config/i3/config"
 
 # App bindings
 bindsym $mod+Mod1+c $e code -r ~/
-bindsym $mod+Up $e spotify --no-zygote
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
@@ -79,10 +77,6 @@ bindsym $mod+y $e freetube
 bindsym $mod+m $e sylpheed
 
 bindsym $mod+k $e ./Projects/bash/kee.sh
-
-bindsym $mod+Down $e $s org.mpris.MediaPlayer2.Player.PlayPause"
-bindsym $mod+Left $e $s org.mpris.MediaPlayer2.Player.Previous"
-bindsym $mod+Right $e $s org.mpris.MediaPlayer2.Player.Next"
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -119,7 +113,7 @@ $e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $e xinput disable "UNIW0001:00 093A:1336 Touchpad"
 $e light-locker
 $e spotifyd --no-daemon
-&e batsignal -d
+$e batsignal
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 		# disable caps lock switch
 
@@ -152,4 +146,4 @@ bar {
   }
 }
 
-bindsym $mod+d $e "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'monospace-10' -p 'dmenu%'"
+bindsym $mod+d $e "dmenu_run -nf '#F8F8F2' -nb '#282A36' -sb '#6272A4' -sf '#F8F8F2' -fn 'andika-11' -p 'dmenu%'"
