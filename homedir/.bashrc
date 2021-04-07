@@ -51,7 +51,7 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 # Stow
-stow='cd $HOME/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
+dostow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
 
 # Joris' aliasses
 alias pacman='pacman --color auto'
@@ -102,7 +102,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
 
-alias gut='sh /$HOME/Projects/bash/update_repositories'
+alias gut='sh /$HOME/Git/bash/update_repositories'
 
 # Other
 alias c='clear'

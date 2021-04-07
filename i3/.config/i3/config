@@ -33,9 +33,9 @@ bindsym $mod+Shift+r restart
 bindsym $mod+x kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
-bindsym $mod+i $e ./Projects/bash/system_info.sh
-bindsym $mod+u $e ./Projects/bash/check_updates.sh
-bindsym $mod+shift+k $e ./Projects/bash/toggle_keyboard.sh
+bindsym $mod+i $e ./Git/bash/system_info.sh
+bindsym $mod+u $e ./Git/bash/check_updates.sh
+bindsym $mod+shift+k $e ./Git/bash/toggle_keyboard.sh
 bindsym $mod+shift+m $e xinput enable "UNIW0001:00 093A:1336 Touchpad"
 #bindsym $mod+comma workspace prev
 #bindsym $mod+period workspace next
@@ -61,11 +61,11 @@ bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym $mod+space exec rofi -modi drun -show drun  
 bindsym $mod+Tab exec rofi -show window
-bindsym $mod+s $e ./Projects/bash/rofi_spotify.sh
-bindsym $mod+shift+s $e ./Projects/bash/search.sh
+bindsym $mod+s $e ./Git/bash/rofi_spotify.sh
+bindsym $mod+shift+s $e ./Git/bash/search.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-bindsym $mod+a $e feh --bg-fill --randomize ~/wallpapers/*
+bindsym $mod+a $e feh --bg-fill --randomize ~/git/wallpapers/*
 bindsym $mod+c $e xfce4-terminal -e "micro .config/i3/config"
 
 # App bindings
@@ -76,7 +76,7 @@ bindsym $mod+t $e thunar
 bindsym $mod+y $e freetube
 bindsym $mod+m $e sylpheed
 
-bindsym $mod+k $e ./Projects/bash/kee.sh
+bindsym $mod+k $e ./Git/bash/kee.sh
 
 # Switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -105,7 +105,7 @@ for_window [title="spotify-tui"] move to workspace $ws6
 
 # Autostart:
 $e xfce4-power-manager
-$e feh --randomize --bg-scale ~/wallpapers/* 
+$e feh --randomize --bg-scale ~/Git/wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
@@ -115,10 +115,10 @@ $e light-locker
 $e spotifyd --no-daemon
 $e batsignal
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
-$e xmodmap -e "clear lock" 		# disable caps lock switch
+$e xmodmap -e "clear lock" 				# disable caps lock switch
 
 # Set keystroke repeat rate
-$e xset r rate 150 60
+$e xset r rate 175 60
 
 exec_always --no-startup-id autotiling
 
