@@ -38,6 +38,12 @@ bindsym $mod+i $e ./Git/bash/system_info.sh
 bindsym $mod+shift+k $e ./Git/bash/toggle_keyboard.sh
 bindsym $mod+shift+m $e xinput enable "UNIW0001:00 093A:1336 Touchpad"
 
+# Spotify-tui
+bindsym $mod+Up $e playerctl play
+bindsym $mod+Down $e playerctl pause
+bindsym $mod+Right $e playerctl next
+bindsym $mod+Left $e playerctl previous
+
 # PulseAudio
 bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
 bindsym $mod+Next $e pactl set-sink-volume 0 -5% 
@@ -102,7 +108,7 @@ $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e xinput disable "UNIW0001:00 093A:1336 Touchpad"
-$e spotifyd --no-daemon
+$e spotifyd
 $e batsignal
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
