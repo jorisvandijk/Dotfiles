@@ -51,7 +51,7 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 # Stow
-dostow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
+alias dostow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
 
 # Joris' aliasses
 alias pacman='pacman --color auto'

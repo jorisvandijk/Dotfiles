@@ -33,12 +33,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+x kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
+bindsym $mod+b bar mode toggle
 bindsym $mod+i $e ./Git/bash/system_info.sh
-bindsym $mod+u $e ./Git/bash/check_updates.sh
 bindsym $mod+shift+k $e ./Git/bash/toggle_keyboard.sh
 bindsym $mod+shift+m $e xinput enable "UNIW0001:00 093A:1336 Touchpad"
-#bindsym $mod+comma workspace prev
-#bindsym $mod+period workspace next
 
 # PulseAudio
 bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
@@ -46,9 +44,9 @@ bindsym $mod+Next $e pactl set-sink-volume 0 -5%
 bindsym $mod+End $e pactl set-sink-mute 0 toggle 
 
 # Alsa
-#bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
-#bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
-#bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 5+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 5- unmute"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym XF86MonBrightnessUp exec light -A 10 
 bindsym XF86MonBrightnessDown exec light -U 10
@@ -61,7 +59,6 @@ bindsym $mod+shift+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym $mod+space exec rofi -modi drun -show drun  
 bindsym $mod+Tab exec rofi -show window
-bindsym $mod+s $e ./Git/bash/rofi_spotify.sh
 bindsym $mod+shift+s $e ./Git/bash/search.sh
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
@@ -69,12 +66,9 @@ bindsym $mod+a $e feh --bg-fill --randomize ~/git/wallpapers/*
 bindsym $mod+c $e xfce4-terminal -e "micro .config/i3/config"
 
 # App bindings
-bindsym $mod+Mod1+c $e code -r ~/
 bindsym $mod+Return $e xfce4-terminal
 bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
-bindsym $mod+y $e freetube
-bindsym $mod+m $e sylpheed
 
 bindsym $mod+k $e ./Git/bash/kee.sh
 
@@ -95,7 +89,6 @@ bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
 
 # Set window class rules
-for_window [class="Spotify"] move to workspace $ws6
 for_window [class="^Steam$" title="Steam - News"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
 for_window [class="VirtualBox Manager"] floating enable
@@ -104,15 +97,12 @@ for_window [class="mpv"] fullscreen enable
 for_window [title="spotify-tui"] move to workspace $ws6
 
 # Autostart:
-$e xfce4-power-manager
 $e feh --randomize --bg-scale ~/Git/wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
-$e /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 $e xinput disable "UNIW0001:00 093A:1336 Touchpad"
-$e light-locker
-$e spotifyd --no-daemon
+$e spotifyd #--no-daemon
 $e batsignal
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
@@ -133,6 +123,7 @@ client.background       #F8F8F2
 
 bar {
   status_command i3status
+  mode hide
   colors {
     background #282A36
     statusline #F8F8F2
