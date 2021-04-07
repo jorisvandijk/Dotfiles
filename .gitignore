@@ -1,4 +1,4 @@
 xfce4/.config/xfce4/xfconf/
 xfce4/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
 gtk/.config/gtk-2.0/gtkfilechooser.ini
-/spotifyd/.config/spotifyd/*
+spotifyd/.config/spotifyd/
