@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Dorfromantik
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1455840
+Icon=steam_icon_1455840
+Terminal=false
+Type=Application
+Categories=Game;
