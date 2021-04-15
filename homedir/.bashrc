@@ -8,7 +8,7 @@
 [[ $- != *i* ]] && return
 
 # Set PS1
-PS1='\n\[\e[1;34m\]\W \[\e[m\]'
+PS1='\n\[\e[1;34m\] \W \[\e[m\]'
 
 # Ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
