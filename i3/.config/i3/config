@@ -78,6 +78,7 @@ bindsym $mod+t $e thunar
 bindsym $mod+r exec xfce4-terminal -e "ranger"
 bindsym $mod+m exec xfce4-terminal -e "neomutt"
 bindsym $mod+y exec xfce4-terminal -e "newsboat"
+bindsym $mod+Shift+y exec xfce4-terminal -e "ytfzf"
 bindsym $mod+k $e ./Git/bash/kee.sh
 
 # Switch to workspace
