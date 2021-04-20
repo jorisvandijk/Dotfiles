@@ -73,6 +73,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+# See where stuff is 
 alias space="ncdu"
 
 # Grab fastest mirrors
@@ -110,7 +111,7 @@ alias gut='sh /$HOME/Git/bash/update_repositories'
 # Other
 alias c='clear'
 alias vim='nvim'
-alias vi='nvim'
+alias vi='micro'
 alias nano='micro'
 alias x='chmod +x'
 

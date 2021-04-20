@@ -78,6 +78,7 @@ bindsym $mod+t $e thunar
 bindsym $mod+r exec xfce4-terminal -e "ranger"
 bindsym $mod+m exec xfce4-terminal -e "neomutt"
 bindsym $mod+y exec xfce4-terminal -e "newsboat"
+bindsym $mod+s exec xfce4-terminal -e "ncdu"
 bindsym $mod+Shift+y exec xfce4-terminal -e "ytfzf"
 bindsym $mod+k $e ./Git/bash/kee.sh
 
@@ -116,7 +117,7 @@ $e batsignal
 
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
-$e xset r rate 175 60					# Set keystroke repeat rate
+$e xset r rate 160 60					# Set keystroke repeat rate
 
 exec_always --no-startup-id autotiling
 
