@@ -12,11 +12,12 @@ general {
         separator = ""
 }
 
-order += "battery all"
 order += "tztime local"
+order += "battery all"
+
 
 battery all {
-        format = "%status %percentage  "
+        format = "%status %percentage "
         integer_battery_capacity = true
         last_full_capacity = true
         status_full ="☻"
@@ -25,5 +26,7 @@ battery all {
 }
 
 tztime local {
-        format = "%H:%M  "
+        format = "%H:%M"
+        align=center
+		min_width=1830
 }
