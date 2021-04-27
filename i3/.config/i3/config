@@ -7,7 +7,7 @@
 
 set $mod Mod4
 set $e exec --no-startup-id
-set $term xfce4-terminal
+set $term termite
 
 set $ws1 "1" 
 set $ws2 "2" 
@@ -71,6 +71,19 @@ bindsym $mod+s $e $term -e "ncdu"
 bindsym $mod+Shift+y $e $term -e "ytfzf"
 bindsym $mod+n $e $term -e "nmtui" #network
 bindsym $mod+shift+w $e $term -e "bash -c 'curl wttr.in & read line'"
+
+# Custom Rofi's
+set $mode_rofi [c]onfigs [r]epos
+bindsym $mod+shift+space mode "$mode_rofi"
+
+mode "$mode_rofi" {
+    bindsym c exec ~/.config/rofi/scripts/configs; mode "default"
+    bindsym r exec ~/.config/rofi/scripts/repos; mode "default"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+bindsym $mod+p $e 
 
 # Movement and switching
 bindsym $mod+h focus left
