@@ -71,7 +71,7 @@ bindsym $mod+s $e $term -e "ncdu"
 bindsym $mod+Shift+y $e $term -e "ytfzf"
 bindsym $mod+n $e $term -e "nmtui" #network
 bindsym $mod+shift+w $e $term -e "bash -c 'curl wttr.in & read line'"
-
+bindsym $mod+shift+s $e spotifyd --no-daemon 
 # Custom Rofi's
 set $mode_rofi [c]onfigs [r]epos
 bindsym $mod+shift+space mode "$mode_rofi"
