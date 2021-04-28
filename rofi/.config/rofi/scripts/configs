@@ -17,6 +17,7 @@ TERM=termite
 declare -A options
 options[bash]="$HOME/.bashrc"
 options[dunst]="$HOME/.config/dunst/dunstrc"
+options[email]="$HOME/.email"
 options[gtk]="$HOME/.config/gtk-3.0/settings.ini"
 options[i3]="$HOME/.config/i3/config"
 options[i3 status]="$HOME/.config/i3status/config"
