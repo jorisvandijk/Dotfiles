@@ -51,7 +51,7 @@ bindsym $mod+Up $e playerctl play
 bindsym $mod+Down $e playerctl pause
 bindsym $mod+Right $e playerctl next
 bindsym $mod+Left $e playerctl previous
-bindsym $mod+Prior $e pactl set-sink-volume 0 +5% 
+bindsym $mod+Prior $e pactl set-sink-volume 0 +5%
 bindsym $mod+Next $e pactl set-sink-volume 0 -5% 
 bindsym $mod+End $e pactl set-sink-mute 0 toggle 
 bindsym XF86AudioRaiseVolume $e "amixer -q sset Master,0 5+ unmute"
@@ -60,8 +60,8 @@ bindsym XF86AudioMute $e "amixer -q sset Master,0 toggle"
 
 # App bindings
 bindsym $mod+Return $e $term
-bindsym $mod+space $e rofi -modi drun -show drun; mode "default"
-bindsym $mod+Tab $e rofi -show window; mode "default"
+bindsym $mod+space $e rofi -modi drun -show drun -sort1
+bindsym $mod+Tab $e rofi -show window
 
 # Custom Rofis
 set $mode_rofi [c]onfigs [r]epos
