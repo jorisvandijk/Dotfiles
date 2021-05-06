@@ -6,6 +6,7 @@ allow_bold = true
 #cell_width_scale = 1.0
 clickable_url = true
 #dynamic_title = true
+#font = andika, 14
 font = Code New Roman, 14
 #fullscreen = true
 #icon_name = terminal
