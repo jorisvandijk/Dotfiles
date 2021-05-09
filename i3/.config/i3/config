@@ -9,12 +9,12 @@ set $mod Mod4
 set $e exec --no-startup-id
 set $term termite
 
-set $ws1 "q" 
-set $ws2 "w" 
-set $ws3 "e" 
-set $ws4 "r" 
-set $ws5 "t" 
-set $ws6 "y" 
+set $ws1 "1" 
+set $ws2 "2" 
+set $ws3 "3" 
+set $ws4 "4" 
+set $ws5 "5" 
+set $ws6 "6" 
 
 floating_modifier $mod
 font pango:andika 11
@@ -35,7 +35,6 @@ bindsym $mod+Escape kill
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f floating toggle
 bindsym $mod+b bar mode toggle
-bindsym $mod+i $e ./Git/bash/system_info.sh
 #bindsym $mod+mod1+k $e ./Git/bash/toggle_keyboard.sh
 bindsym $mod+shift+m $e xinput enable "UNIW0001:00 093A:1336 Touchpad"
 bindsym XF86MonBrightnessUp $e light -A 10 
@@ -60,7 +59,7 @@ bindsym XF86AudioMute $e "amixer -q sset Master,0 toggle"
 
 # App bindings
 bindsym $mod+Return $e $term
-bindsym $mod+space $e rofi -modi drun -show drun -sort1
+bindsym $mod+space $e rofi -modi drun -show drun -sort
 bindsym $mod+Tab $e rofi -show window
 
 # Custom Rofis
