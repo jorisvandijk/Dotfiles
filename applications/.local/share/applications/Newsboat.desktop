@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=xfce4-terminal -e 'newsboat'
-Type=Application
-Categories=Media
-Name=Newsboat

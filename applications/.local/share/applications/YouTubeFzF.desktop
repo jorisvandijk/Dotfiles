@@ -1,5 +1,0 @@
-[Desktop Entry]
-Exec=xfce4-terminal -e 'ytfzf'
-Type=Application
-Categories=Media
-Name=Search Youtube
