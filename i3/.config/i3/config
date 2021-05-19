@@ -112,7 +112,7 @@ $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e spotifyd
 $e batsignal
-#$e xset r rate 90 30
+$e xset r rate 200 60
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
 
