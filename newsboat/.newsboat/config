@@ -1,3 +1,15 @@
 show-read-feeds  yes
 refresh-on-startup  yes
 browser "mpv %u"
+
+# unbind keys
+unbind-key j
+unbind-key k
+unbind-key J
+unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
