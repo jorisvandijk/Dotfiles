@@ -65,7 +65,7 @@ bindsym $mod+Tab $e rofi -show window
 
 bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
-bindsym $mod+m $e $term -e "neomutt"
+bindsym $mod+e $e $term -e "neomutt"
 bindsym $mod+y $e $term -e "newsboat"
 bindsym $mos+y $e $term -e "ytfzf"
 bindsym $mod+u $e $term -e "ncdu"
@@ -73,6 +73,7 @@ bindsym $mod+n $e $term -e "nmtui" #network
 bindsym $mos+w $e $term -e "bash -c 'curl wttr.in & read line'"
 bindsym $mod+s $e $term -e "spt" 
 bindsym $mos+s $e spotifyd --no-daemon
+bindsym $mod+m $e sh ~/Git/bash/toggle_trackpad.sh
     
 bindsym $mod+h focus left
 bindsym $mod+j focus down
