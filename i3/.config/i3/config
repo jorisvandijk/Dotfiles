@@ -115,6 +115,7 @@ $e batsignal
 $e xset r rate 200 60
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
+$e xinput --disable 13
 
 exec_always --no-startup-id autotiling
 
