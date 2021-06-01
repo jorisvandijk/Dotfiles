@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=OCTOPATH TRAVELER
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/921570
+Icon=steam_icon_921570
+Terminal=false
+Type=Application
+Categories=Game;

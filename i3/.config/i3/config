@@ -62,7 +62,7 @@ bindsym XF86AudioMute $e pactl set-sink-mute 0 toggle
 bindsym $mod+Return $e $term
 bindsym $mod+space $e rofi -modi drun -show drun -sort
 bindsym $mod+Tab $e rofi -show window
-
+bindsym $mod+d $e dunstctl close-all
 bindsym $mod+w $e firefox & xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
 bindsym $mod+t $e thunar
 bindsym $mod+e $e $term -e "neomutt"
