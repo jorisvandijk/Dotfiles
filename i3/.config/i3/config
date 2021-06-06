@@ -40,8 +40,8 @@ bindsym $mos+i $e optimus-manager --switch intel --no-confirm
 bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-#bindsym $mod+a $e feh --bg-fill --randomize ~/Git/wallpapers/*
-bindsym $mod+a $e Git/bash/styli.sh -r earthporn
+bindsym $mod+a $e feh --bg-fill --randomize ~/Git/wallpapers/*
+#bindsym $mod+a $e Git/bash/styli.sh -r earthporn
 bindsym $mod+c $e $term -e "micro .config/i3/config"
 
 bindsym XF86MonBrightnessUp $e light -A 10 
@@ -108,8 +108,8 @@ for_window [class="VirtualBox*"] floating enable
 for_window [class="mpv"] fullscreen enable
 for_window [title="spt"] move to workspace $ws6
 
-$e Git/bash/styli.sh -r earthporn
-#$e feh --randomize --bg-scale ~/Git/wallpapers/* 
+#$e Git/bash/styli.sh -r earthporn
+$e feh --randomize --bg-scale ~/Git/wallpapers/* 
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
