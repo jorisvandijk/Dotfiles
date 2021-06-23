@@ -67,7 +67,7 @@ bindsym $mod+d $e dunstctl close-all
 #bindsym $mod+w $e firefox & xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
 bindsym $mod+w $e firefox
 bindsym $mod+t $e thunar
-bindsym $mod+e $e $term -e "neomutt"
+bindsym $mod+m $e geary
 bindsym $mod+y $e $term -e "newsboat"
 bindsym $mos+y $e $term -e "ytfzf"
 bindsym $mod+u $e $term -e "ncdu"
@@ -75,7 +75,6 @@ bindsym $mod+n $e $term -e "nmtui" #network
 bindsym $mos+w $e $term -e "bash -c 'curl wttr.in & read line'"
 bindsym $mod+s $e $term -e "spt" 
 bindsym $mos+s $e spotifyd --no-daemon
-bindsym $mod+m $e sh ~/Git/bash/toggle_trackpad.sh
     
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -118,7 +117,7 @@ $e batsignal
 $e xset r rate 200 60
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
-$e xinput --disable 13
+#$e xinput --disable 13
 
 exec_always --no-startup-id autotiling
 
