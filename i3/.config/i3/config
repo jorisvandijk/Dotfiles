@@ -109,7 +109,8 @@ for_window [class="mpv"] fullscreen enable
 for_window [title="spt"] move to workspace $ws6
 
 #$e Git/bash/styli.sh -r earthporn
-$e feh --randomize --bg-scale ~/Git/wallpapers/* 
+#$e feh --randomize --bg-scale ~/Git/wallpapers/* 
+$e feh --bg-scale ~/Git/wallpapers/301.jpg
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
