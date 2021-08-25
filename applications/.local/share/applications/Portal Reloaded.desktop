@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Portal Reloaded
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1255980
+Icon=steam_icon_1255980
+Terminal=false
+Type=Application
+Categories=Game;

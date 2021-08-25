@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=HITMAN™ 2
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/863550
+Icon=steam_icon_863550
+Terminal=false
+Type=Application
+Categories=Game;

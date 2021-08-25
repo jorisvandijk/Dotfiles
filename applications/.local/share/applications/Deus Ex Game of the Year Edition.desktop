@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=The Elder Scrolls V: Skyrim
+Name=Deus Ex: Game of the Year Edition
 Comment=Play this game on Steam
-Exec=steam steam://rungameid/72850
-Icon=steam_icon_72850
+Exec=steam steam://rungameid/6910
+Icon=steam_icon_6910
 Terminal=false
 Type=Application
 Categories=Game;

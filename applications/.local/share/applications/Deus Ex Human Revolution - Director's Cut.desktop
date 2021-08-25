@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Deus Ex: Human Revolution - Director's Cut
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/238010
+Icon=steam_icon_238010
+Terminal=false
+Type=Application
+Categories=Game;
