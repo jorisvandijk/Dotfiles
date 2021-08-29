@@ -86,7 +86,8 @@ c.tabs.show = 'switching'
 
 # Setting default page for when opening new tabs or new windows with
 # commands like :open -t and :open -w .
-c.url.default_page = 'https://startpage.com'
+c.url.default_page = 'https://jorisvandijk.com/start.png'
+c.url.start_pages = ["https://jorisvandijk.com/start.png"] 
 
 ## When to show the statusbar.
 ## Type: String
@@ -117,7 +118,26 @@ c.statusbar.show = 'in-mode'
 # Type: Dict
 c.url.searchengines = {'DEFAULT': 'https://www.startpage.com/search?q={}', 'aw': 'https://wiki.archlinux.org/?search={}', 'yt': 'https://www.youtube.com/results?search_query={}'}
 
+c.zoom.default = '100%'
+c.auto_save.session = False
 
+# Random nature wallpaper: c.url.start_pages = ["https://source.unsplash.com/1920x1080/?nature"] 
+
+# Bindings to use dmenu rather than qutebrowser's builtin search.
+#config.bind('o', 'spawn --userscript dmenu-open')
+#config.bind('O', 'spawn --userscript dmenu-open --tab')
+
+# Bindings for normal mode
+config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('P', 'hint links spawn mpv {hint-url} --no-video')
+config.bind('F', 'hint links spawn firefox {hint-url}')
+config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
+config.bind('t', 'set-cmd-text -s :open -t')
+config.bind('xb', 'config-cycle statusbar.show always never')
+config.bind('xt', 'config-cycle tabs.show always never')
+config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+
+# Coloring
 base00 = "#282936" 
 base01 = "#3a3c4e"
 base02 = "#4d4f68"
@@ -444,21 +464,3 @@ c.fonts.prompts = '12pt "Andika"'
 # Font used in the statusbar.
 # Type: Font
 c.fonts.statusbar = '12pt "Andika"'
-
-c.zoom.default = '100%'
-c.auto_save.session = False
-c.url.start_pages = ["https://startpage.com"] 
-
-# Bindings to use dmenu rather than qutebrowser's builtin search.
-#config.bind('o', 'spawn --userscript dmenu-open')
-#config.bind('O', 'spawn --userscript dmenu-open --tab')
-
-# Bindings for normal mode
-config.bind('M', 'hint links spawn mpv {hint-url}')
-config.bind('P', 'hint links spawn mpv {hint-url} --no-video')
-config.bind('F', 'hint links spawn firefox {hint-url}')
-config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
-config.bind('t', 'set-cmd-text -s :open -t')
-config.bind('xb', 'config-cycle statusbar.show always never')
-config.bind('xt', 'config-cycle tabs.show always never')
-config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
