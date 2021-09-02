@@ -38,8 +38,8 @@ shopt -s histappend
 PROMPT_COMMAND='history -a'
 
 # Set the default editor
-export EDITOR=micro
-export VISUAL=micro
+export EDITOR=onivim
+export VISUAL=onivim
 
 # Color theme for Micro
 export MICRO_TRUECOLOR=1
