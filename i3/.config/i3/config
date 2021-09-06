@@ -20,7 +20,6 @@ set $ws6 "6"
 set $ws7 "7" 
 set $ws8 "8" 
 
-
 gaps inner 10
 gaps outer 0
 smart_gaps on
@@ -50,8 +49,8 @@ bindsym $mod+c $e $term -e "micro .config/i3/config"
 bindsym XF86MonBrightnessUp $e light -A 10 
 bindsym XF86MonBrightnessDown $e light -U 10
 
-bindsym $mod+Up $e playerctl play
-bindsym $mod+Down $e playerctl pause
+bindsym $mod+Up $e playerctl play-pause
+bindsym $mod+Down $e playerctl play-pause
 bindsym $mod+Right $e playerctl next
 bindsym $mod+Left $e playerctl previous
 
