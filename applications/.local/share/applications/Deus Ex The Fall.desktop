@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Deus Ex: The Fall
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/258180
-Icon=steam_icon_258180
-Terminal=false
-Type=Application
-Categories=Game;
