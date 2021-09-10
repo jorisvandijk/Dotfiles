@@ -77,6 +77,7 @@ bindsym $mod+u $e $term -e "ncdu"
 bindsym $mod+n $e $term -e "nmtui" #network
 bindsym $mos+w $e $term -e "bash -c 'curl wttr.in & read line'"
 bindsym $mod+s $e $term -e "spotify" 
+bindsym $mod+i $e stacer
     
 bindsym $mod+h focus left
 bindsym $mod+j focus down
