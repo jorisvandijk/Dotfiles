@@ -118,18 +118,18 @@
 }
 #entry {
     spacing:    0;
-    text-color: @drac-cya;
+    text-color: @drac-grn;
 }
 #prompt {
     spacing:    0;
-    text-color: @drac-grn;
+    text-color: @drac-cmt;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ":";
+    str:        "";
     margin:     0px 0.3em 0em 0em ;
     text-color: @drac-grn;
 }
