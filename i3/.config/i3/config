@@ -116,7 +116,7 @@ for_window [class="mpv"] fullscreen enable
 
 #$e Git/bash/styli.sh -r earthporn
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
-$e feh --bg-scale ~/Git/wallpapers/0301.jpg
+$e feh --bg-scale ~/Git/wallpapers/0309.png
 $e /usr/bin/dunst
 $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
