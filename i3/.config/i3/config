@@ -113,6 +113,7 @@ for_window [class="^Steam$" title="^Settings$"] floating enable
 for_window [class="VirtualBox*"] floating enable
 for_window [class="mpv"] fullscreen enable
 #for_window [title="spotify"] move to workspace $ws6
+for_window [class="Netflix"] fullscreen enable
 
 #$e Git/bash/styli.sh -r earthporn
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
