@@ -109,12 +109,15 @@ bindsym $mod+y workspace $ws8
 bindsym $moa+y $e $term -e "newsboat"
 
 bindsym $mod+n workspace $ws8
-bindsym $moa+n netflix
+bindsym $moa+n $e netflix
+
+bindsym $mod+g workspace $ws8
+bindsym $moa+g $e gimp
 
 bindsym $mod+i workspace $ws9
 bindsym $moa+i $e stacer
 
-bindsym $mod+grave [title="__scratchpad"] scratchpad show
+bindsym $mos+Return [title="__scratchpad"] scratchpad show
 for_window [title="__scratchpad"] move scratchpad 
 exec --no-startup-id termite -t __scratchpad
  
@@ -147,6 +150,7 @@ for_window [class="VirtualBox*"] floating enable
 for_window [class="mpv"] fullscreen enable
 for_window [class="Netflix"] fullscreen enable
 for_window [class="firefox"] fullscreen enable
+for_window [class="libreoffice"] move to workspace $ws3 
 
 #$e Git/bash/styli.sh -r earthporn
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
