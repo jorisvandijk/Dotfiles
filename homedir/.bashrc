@@ -123,7 +123,7 @@ alias x='chmod +x'
 
 # Multimedia
 alias yt='newsboat'
-alias yts='ytfzf -l' 
+alias a='alsamixer' 
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
