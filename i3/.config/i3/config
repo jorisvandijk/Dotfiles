@@ -67,9 +67,8 @@ bindsym XF86AudioMute $e pactl set-sink-mute 0 toggle
 bindsym $mod+Return $e $term
 bindsym $mod+space $e rofi -modi drun -show drun -sort
 bindsym $mod+Tab $e rofi -show window
-bindsym $mod+d $e dunstctl close-all
-bindsym $mod+w $e firefox & xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
-#bindsym $mod+w $e firefox
+bindsym $mos+d $e dunstctl close-all
+bindsym $mod+w $e firefox
 bindsym $mod+q $e qutebrowser
 bindsym $mod+t $e thunar
 bindsym $mod+m $e geary
@@ -80,7 +79,13 @@ bindsym $mod+n $e $term -e "nmtui" #network
 bindsym $mos+w $e $term -e "bash -c 'curl wttr.in & read line'"
 bindsym $mod+s $e $term -e "spotify" 
 bindsym $mod+i $e stacer
-    
+
+# discord scratchpad
+bindsym $mod+d [class="discord"] scratchpad show
+for_window [class="discord"] move scratchpad
+for_window [class="discord"] move absolute position center
+for_window [class="discord"] resize set 1200 800 
+  
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
@@ -120,6 +125,8 @@ for_window [class="VirtualBox*"] floating enable
 for_window [class="mpv"] fullscreen enable
 #for_window [title="spotify"] move to workspace $ws6
 for_window [class="Netflix"] fullscreen enable
+for_window [class="firefox"] fullscreen enable
+for_window [class="firefox"] move to workspace $ws1
 
 #$e Git/bash/styli.sh -r earthporn
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
@@ -134,6 +141,7 @@ $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
 #$e xinput --disable 13
 $e network-manager-applet
+$e discord
 
 exec_always --no-startup-id autotiling
 
