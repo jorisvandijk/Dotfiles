@@ -22,7 +22,7 @@ set $ws5 "阮"
 set $ws6 "" 
 set $ws7 "﬐" 
 set $ws8 "" 
-set $ws9 "" 
+set $ws9 "" 
 
 set $wsa "1" 
 set $wsb "2" 
@@ -111,11 +111,9 @@ bindsym $moa+y $e $term -e "newsboat"
 bindsym $mod+n workspace $ws8
 bindsym $moa+n $e netflix
 
-bindsym $mod+g workspace $ws8
+bindsym $mod+g workspace $ws9
 bindsym $moa+g $e gimp
 
-bindsym $mod+i workspace $ws9
-bindsym $moa+i $e stacer
 
 bindsym $mos+Return [title="__scratchpad"] scratchpad show
 for_window [title="__scratchpad"] move scratchpad 
