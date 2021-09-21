@@ -48,6 +48,7 @@ bindsym $mod+Escape kill
 bindsym $mod+f fullscreen toggle
 bindsym $mos+f floating toggle
 bindsym $mod+b bar mode toggle
+bindsym $mod+i $e .config/i3/system_info.sh
 
 bindsym $mos+i $e optimus-manager --switch intel --no-confirm
 bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
