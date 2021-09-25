@@ -145,6 +145,8 @@ bindsym $mos+5 move container to workspace $wse
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 for_window [class="^Steam$" title="Steam - News"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
+for_window [window_type="dialog"] floating enable 
+for_window [window_role="Dialog"] floating enable 
 for_window [class="VirtualBox*"] floating enable
 for_window [class="mpv"] fullscreen enable
 for_window [class="Netflix"] fullscreen enable
