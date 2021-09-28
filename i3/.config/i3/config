@@ -55,7 +55,6 @@ bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+a $e feh --bg-fill --randomize ~/Git/wallpapers/*
-#bindsym $mod+a $e Git/bash/styli.sh -r earthporn
 bindsym $moc+c $e $term -e "micro .config/i3/config"
 
 bindsym XF86MonBrightnessUp $e light -A 10 
@@ -65,10 +64,6 @@ bindsym $mod+Up $e playerctl play-pause
 bindsym $mod+Down $e playerctl play-pause
 bindsym $mod+Right $e playerctl next
 bindsym $mod+Left $e playerctl previous
-
-#bindsym XF86AudioRaiseVolume $e "amixer -q sset Master,0 5+ unmute"
-#bindsym XF86AudioLowerVolume $e "amixer -q sset Master,0 5- unmute"
-#bindsym XF86AudioMute $e "amixer -q sset Master,0 toggle"
 
 bindsym XF86AudioRaiseVolume $e pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume $e pactl set-sink-volume 0 -5% 
@@ -114,11 +109,6 @@ bindsym $moa+n $e netflix
 
 bindsym $mod+g workspace $ws9
 bindsym $moa+g $e gimp
-
-
-bindsym $mos+Return [title="__scratchpad"] scratchpad show
-for_window [title="__scratchpad"] move scratchpad 
-exec --no-startup-id termite -t __scratchpad
  
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -145,15 +135,12 @@ bindsym $mos+5 move container to workspace $wse
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 for_window [class="^Steam$" title="Steam - News"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
-for_window [window_type="dialog"] floating enable 
-for_window [window_role="Dialog"] floating enable 
-for_window [class="VirtualBox*"] floating enable
+for_window [class="VirtualBox Manager"] floating enable
+for_window [class="VirtualBox Machine"] fullscreen enable
 for_window [class="mpv"] fullscreen enable
 for_window [class="Netflix"] fullscreen enable
-for_window [class="firefox"] fullscreen enable
 for_window [class="libreoffice"] move to workspace $ws3 
 
-#$e Git/bash/styli.sh -r earthporn
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
 $e feh --bg-scale ~/Git/wallpapers/0309.png
 $e /usr/bin/dunst
