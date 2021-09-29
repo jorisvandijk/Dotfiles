@@ -49,6 +49,7 @@ bindsym $mod+f fullscreen toggle
 bindsym $mos+f floating toggle
 bindsym $mod+b bar mode toggle
 bindsym $mod+i $e .config/i3/system_info.sh
+bindsym $mod+Insert $e .config/i3/toggleTrackpad.sh
 
 bindsym $mos+i $e optimus-manager --switch intel --no-confirm
 bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
@@ -151,6 +152,7 @@ $e xset r rate 200 60
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
 $e network-manager-applet
+$e .config/i3/trackpadOff.sh
 
 exec_always --no-startup-id autotiling
 
