@@ -1,5 +1,8 @@
 show-read-feeds  yes
 refresh-on-startup  yes
+auto-reload yes
+reload-threads 100
+ 
 browser "mpv %u"
 
 # unbind keys
