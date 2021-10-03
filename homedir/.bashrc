@@ -73,6 +73,8 @@ alias yi='yay -S'
 alias yr='yay -Rs'
 alias ys='yay -Ss'
 
+alias n='nano'
+
 alias fullupdate="yay -Syyu --noconfirm"              # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck"        # remove pacman lock
 alias ..='cd ..'
