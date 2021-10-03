@@ -11,7 +11,7 @@ set $moa Mod4+Mod1
 set $moc Mod4+Control
 
 set $e exec --no-startup-id
-set $term termite
+set $term kitty
 
 set $ws0 "" 
 set $ws1 ""
