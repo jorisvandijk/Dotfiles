@@ -42,7 +42,7 @@ export EDITOR=onivim
 export VISUAL=onivim
 
 # Color theme for Micro
-export MICRO_TRUECOLOR=1
+#export MICRO_TRUECOLOR=1
 
 # Term fix
 if [ "$TERM" = xterm ]; then

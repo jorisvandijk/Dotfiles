@@ -151,7 +151,7 @@ $e batsignal
 $e xset r rate 200 60
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
-$e network-manager-applet
+#$e network-manager-applet
 $e .config/i3/trackpadOff.sh
 
 exec_always --no-startup-id autotiling
