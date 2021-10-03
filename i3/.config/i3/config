@@ -79,7 +79,7 @@ bindsym $moc+n $e $term -e "nmtui" #network
 bindsym $mos+w $e $term -e "bash -c 'curl wttr.in & read line'"
 
 bindsym $mod+w workspace $ws0
-bindsym $moa+w $e firefox
+bindsym $moa+w $e firefox & xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
 
 bindsym $mod+t workspace $ws1
 bindsym $moa+t $e thunar
@@ -137,7 +137,7 @@ for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 for_window [class="^Steam$" title="Steam - News"] floating enable
 for_window [class="^Steam$" title="^Settings$"] floating enable
 for_window [class="VirtualBox Manager"] floating enable
-for_window [class="VirtualBox Machine"] fullscreen enable
+for_window [class="VirtualBox Machine"] fullscreen enable, border 0
 for_window [class="mpv"] fullscreen enable
 for_window [class="Netflix"] fullscreen enable
 for_window [class="libreoffice"] move to workspace $ws3 
