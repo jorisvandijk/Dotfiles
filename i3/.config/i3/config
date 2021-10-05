@@ -77,7 +77,6 @@ bindsym $mos+d $e dunstctl close-all
 
 bindsym $mod+u $e $term -e "ncdu"
 bindsym $moc+n $e $term -e "nmtui" #network
-bindsym $mos+w $e $term -e ".bin/weather.sh"
 
 bindsym $mod+w workspace $ws0
 bindsym $moa+w $e firefox & xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
