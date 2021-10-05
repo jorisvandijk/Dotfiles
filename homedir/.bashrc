@@ -4,9 +4,6 @@
 #
 #          Published under GPL-3.0-or-later
 
-# Set PATH
-export PATH=$PATH:$PATH/.bin
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -41,8 +38,8 @@ shopt -s histappend
 PROMPT_COMMAND='history -a'
 
 # Set the default editor
-export EDITOR=onivim
-export VISUAL=onivim
+export EDITOR=micro;
+export VISUAL=code;
 
 # Color theme for Micro
 #export MICRO_TRUECOLOR=1
@@ -121,10 +118,11 @@ alias gut='sh /$HOME/Git/bash/update_repositories'
 
 # Other
 alias c='clear'
-alias vim='nvim'
+alias vim='micro'
 alias vi='micro'
 alias nano='micro'
 alias x='chmod +x'
+alias R='ranger'
 
 # Multimedia
 alias yt='newsboat'
