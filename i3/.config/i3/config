@@ -42,7 +42,7 @@ bindsym $mos+Escape $e systemctl poweroff -i, mode "default"
 bindsym $mos+Home $e kill -9 -1
 bindsym $mos+BackSpace $e dm-tool lock
 bindsym $mod+Return $e $term
-bindsym $mos+Return $e $term --class floatme
+bindsym $mos+Return $e $term --class fullme
 
 bindsym $mos+c reload
 bindsym $mos+r restart
@@ -142,9 +142,7 @@ for_window [class="VirtualBox Machine"] fullscreen enable, border 0
 for_window [class="mpv"] fullscreen enable
 for_window [class="Netflix"] fullscreen enable
 for_window [class="libreoffice"] move to workspace $ws3 
-for_window [class="floatme"] floating enable
-for_window [class="floatme"] move position center
-for_window [class="floatme"] resize set 1024 768
+for_window [class="fullme"] fullscreen enable
 
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
 $e feh --bg-scale ~/Git/wallpapers/0309.png
