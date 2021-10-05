@@ -36,6 +36,8 @@ smart_gaps on
 floating_modifier $mod
 font pango:andika 11
 
+bindsym $moc+s $e .bin/scriptsmenu.sh
+
 bindsym $mos+Escape $e systemctl poweroff -i, mode "default" 
 bindsym $mos+Home $e kill -9 -1
 bindsym $mos+BackSpace $e dm-tool lock
@@ -48,15 +50,13 @@ bindsym $mod+Escape kill
 bindsym $mod+f fullscreen toggle
 bindsym $mos+f floating toggle
 bindsym $mod+b bar mode toggle
-bindsym $mod+i $e .config/i3/system_info.sh
-bindsym $mod+Insert $e .config/i3/toggleTrackpad.sh
+bindsym $mod+Insert $e .bin/toggle_trackpad.sh
 
 bindsym $mos+i $e optimus-manager --switch intel --no-confirm
 bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
 bindsym $mod+a $e feh --bg-fill --randomize ~/Git/wallpapers/*
-bindsym $moc+c $e $term -e "micro .config/i3/config"
 
 bindsym XF86MonBrightnessUp $e light -A 10 
 bindsym XF86MonBrightnessDown $e light -U 10
@@ -71,12 +71,13 @@ bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym $mod+space $e rofi -modi drun -show drun -sort
+bindsym $moc+c $e .bin/rofi_config_menu.sh
 bindsym $mod+Tab $e rofi -show window
 bindsym $mos+d $e dunstctl close-all
 
 bindsym $mod+u $e $term -e "ncdu"
 bindsym $moc+n $e $term -e "nmtui" #network
-bindsym $mos+w $e $term -e "bash -c 'curl wttr.in & read line'"
+bindsym $mos+w $e $term -e ".bin/weather.sh"
 
 bindsym $mod+w workspace $ws0
 bindsym $moa+w $e firefox & xdotool search --sync --onlyvisible --class "Firefox" windowactivate key F11
@@ -152,7 +153,7 @@ $e xset r rate 200 60
 $e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
 $e xmodmap -e "clear lock" 				# disable caps lock switch
 #$e network-manager-applet
-$e .config/i3/trackpadOff.sh
+$e .bin/trackpad_off.sh
 
 exec_always --no-startup-id autotiling
 

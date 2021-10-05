@@ -4,6 +4,9 @@
 #
 #          Published under GPL-3.0-or-later
 
+# Set PATH
+export PATH=$PATH:$PATH/.bin
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
