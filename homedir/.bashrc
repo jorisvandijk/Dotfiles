@@ -128,6 +128,9 @@ alias R='ranger'
 alias yt='newsboat'
 alias a='alsamixer' 
 
+# Fontys
+alias jorbuntu="ssh joris@192.168.56.3"
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
