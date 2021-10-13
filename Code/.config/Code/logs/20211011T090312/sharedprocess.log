@@ -1,0 +1,12 @@
+[2021-10-11 09:03:15.886] [sharedprocess] [info] Installing extension: streetsidesoftware.code-spell-checker
+[2021-10-11 09:03:17.191] [sharedprocess] [info] Downloaded extension: streetsidesoftware.code-spell-checker /home/joris/.config/Code/CachedExtensionVSIXs/streetsidesoftware.code-spell-checker-2.0.10
+[2021-10-11 09:03:17.472] [sharedprocess] [info] Extracted extension to /home/joris/.vscode/extensions/.ef97eda8-eb13-4c3c-97e3-a6a43ee01cd5: streetsidesoftware.code-spell-checker
+[2021-10-11 09:03:17.489] [sharedprocess] [info] Renamed to /home/joris/.vscode/extensions/streetsidesoftware.code-spell-checker-2.0.10
+[2021-10-11 09:03:17.491] [sharedprocess] [info] Extracting completed. streetsidesoftware.code-spell-checker
+[2021-10-11 09:03:17.500] [sharedprocess] [info] Extension installed successfully: streetsidesoftware.code-spell-checker
+[2021-10-11 09:03:23.661] [sharedprocess] [info] [logs cleanup]: Starting to clean up old logs.
+[2021-10-11 09:03:23.662] [sharedprocess] [info] [logs cleanup]: Removing log folders '20211007T175403, 20211007T175710'
+[2021-10-11 09:03:43.658] [sharedprocess] [info] [code cache cleanup]: Starting to clean up old code cache folders.
+[2021-10-11 09:03:43.658] [sharedprocess] [info] [storage cleanup]: Starting to clean up storage folders.
+[2021-10-11 09:03:43.659] [sharedprocess] [info] [storage cleanup]: Deleting storage folder 1633719727752.
+[2021-10-11 09:03:53.657] [sharedprocess] [info] [language pack cache cleanup]: Starting to clean up unused language packs.

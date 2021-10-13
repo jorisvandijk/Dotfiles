@@ -1,0 +1,5 @@
+[2021-10-12 09:22:42.943] [exthost] [info] extension host started
+[2021-10-12 09:22:42.944] [exthost] [info] Skipping acquiring lock for /home/joris/.config/Code/User/workspaceStorage/f48ef379b1957c6f73dfbf4fd15f0d76.
+[2021-10-12 09:22:42.978] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-10-12 09:22:42.979] [exthost] [error] [ExtHostStorage] {"code":"Unknown","name":"Canceled (FileSystemError)"}
+[2021-10-12 09:22:43.980] [exthost] [info] exiting with code 0

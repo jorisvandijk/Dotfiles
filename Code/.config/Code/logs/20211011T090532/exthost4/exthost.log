@@ -1,0 +1,39 @@
+[2021-10-11 09:13:43.088] [exthost] [info] extension host started
+[2021-10-11 09:13:43.136] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":false,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"onAuthenticationRequest:microsoft"}
+[2021-10-11 09:13:43.136] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2021-10-11 09:13:43.143] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-10-11 09:13:43.143] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/debug-auto-launch/dist/extension
+[2021-10-11 09:13:43.145] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-10-11 09:13:43.145] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/git/dist/main
+[2021-10-11 09:13:43.158] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools {"startup":true,"extensionId":{"value":"platformio.platformio-ide","_lower":"platformio.platformio-ide"},"activationEvent":"*"}
+[2021-10-11 09:13:43.158] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/joris/.vscode/extensions/ms-vscode.cpptools-1.6.0/dist/main
+[2021-10-11 09:13:43.253] [exthost] [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker {"startup":true,"extensionId":{"value":"streetsidesoftware.code-spell-checker","_lower":"streetsidesoftware.code-spell-checker"},"activationEvent":"*"}
+[2021-10-11 09:13:43.253] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/joris/.vscode/extensions/streetsidesoftware.code-spell-checker-2.0.10/packages/client/dist/extension.js
+[2021-10-11 09:13:43.333] [exthost] [info] ExtensionService#_doActivateExtension vscode.github {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-10-11 09:13:43.333] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/github/dist/extension.js
+[2021-10-11 09:13:43.336] [exthost] [info] ExtensionService#_doActivateExtension platformio.platformio-ide {"startup":true,"extensionId":{"value":"platformio.platformio-ide","_lower":"platformio.platformio-ide"},"activationEvent":"*"}
+[2021-10-11 09:13:43.336] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/joris/.vscode/extensions/platformio.platformio-ide-2.3.3/dist/extension
+[2021-10-11 09:13:43.472] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.js-debug {"startup":false,"extensionId":{"value":"ms-vscode.js-debug","_lower":"ms-vscode.js-debug"},"activationEvent":"onCommand:extension.js-debug.clearAutoAttachVariables"}
+[2021-10-11 09:13:43.472] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/ms-vscode.js-debug/src/extension.js
+[2021-10-11 09:13:43.577] [exthost] [info] eager extensions activated
+[2021-10-11 09:13:43.585] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":false,"extensionId":{"value":"vscode.emmet","_lower":"vscode.emmet"},"activationEvent":"onStartupFinished"}
+[2021-10-11 09:13:43.585] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/emmet/dist/node/emmetNodeMain
+[2021-10-11 09:13:43.590] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":false,"extensionId":{"value":"vscode.merge-conflict","_lower":"vscode.merge-conflict"},"activationEvent":"onStartupFinished"}
+[2021-10-11 09:13:43.590] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/merge-conflict/dist/mergeConflictMain
+[2021-10-11 09:13:43.603] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication {"startup":false,"extensionId":{"value":"vscode.github-authentication","_lower":"vscode.github-authentication"},"activationEvent":"onAuthenticationRequest:github"}
+[2021-10-11 09:13:43.603] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/github-authentication/dist/extension.js
+[2021-10-11 09:19:04.722] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-10-11 09:19:04.736] [exthost] [error] TypeError: Cannot read property 'timeTelemetryCollector' of undefined
+	at Object.deactivate (/home/joris/.vscode/extensions/ms-vscode.cpptools-1.6.0/dist/main.js:46550:13)
+	at Object.deactivate (/home/joris/.vscode/extensions/ms-vscode.cpptools-1.6.0/dist/main.js:51553:27)
+	at v._deactivate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:11277)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:9991
+	at Array.map (<anonymous>)
+	at v.deactivateAll (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:9979)
+	at E.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:723)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:32208)
+	at Socket.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:29858)
+	at Socket.emit (events.js:327:22)
+	at Socket.EventEmitter.emit (domain.js:467:12)
+	at Pipe.<anonymous> (net.js:673:12)
+[2021-10-11 09:19:05.741] [exthost] [info] exiting with code 0

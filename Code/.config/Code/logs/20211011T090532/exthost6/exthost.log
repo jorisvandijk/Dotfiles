@@ -1,0 +1,102 @@
+[2021-10-11 10:22:17.797] [exthost] [info] extension host started
+[2021-10-11 10:22:17.797] [exthost] [info] Skipping acquiring lock for /home/joris/.config/Code/User/workspaceStorage/74902f3b10981e7ae69f19df06fc94c6.
+[2021-10-11 10:22:17.875] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication {"startup":false,"extensionId":{"value":"vscode.microsoft-authentication","_lower":"vscode.microsoft-authentication"},"activationEvent":"onAuthenticationRequest:microsoft"}
+[2021-10-11 10:22:17.875] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/microsoft-authentication/dist/extension.js
+[2021-10-11 10:22:17.883] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"extensionId":{"value":"vscode.debug-auto-launch","_lower":"vscode.debug-auto-launch"},"activationEvent":"*"}
+[2021-10-11 10:22:17.883] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/debug-auto-launch/dist/extension
+[2021-10-11 10:22:17.884] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"extensionId":{"value":"vscode.github","_lower":"vscode.github"},"activationEvent":"*"}
+[2021-10-11 10:22:17.885] [exthost] [info] ExtensionService#loadCommonJSModule file:///opt/visual-studio-code/resources/app/extensions/git/dist/main
+[2021-10-11 10:22:17.898] [exthost] [info] ExtensionService#_doActivateExtension ms-vscode.cpptools {"startup":true,"extensionId":{"value":"platformio.platformio-ide","_lower":"platformio.platformio-ide"},"activationEvent":"*"}
+[2021-10-11 10:22:17.898] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/joris/.vscode/extensions/ms-vscode.cpptools-1.6.0/dist/main
+[2021-10-11 10:22:18.010] [exthost] [info] ExtensionService#_doActivateExtension streetsidesoftware.code-spell-checker {"startup":true,"extensionId":{"value":"streetsidesoftware.code-spell-checker","_lower":"streetsidesoftware.code-spell-checker"},"activationEvent":"*"}
+[2021-10-11 10:22:18.010] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/joris/.vscode/extensions/streetsidesoftware.code-spell-checker-2.0.10/packages/client/dist/extension.js
+[2021-10-11 10:22:18.038] [exthost] [info] extension host terminating: renderer closed the socket
+[2021-10-11 10:22:18.039] [exthost] [error] Activating extension vscode.microsoft-authentication failed due to an error:
+[2021-10-11 10:22:18.039] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8805
+	at Array.forEach (<anonymous>)
+	at i.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8753)
+	at E.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:682)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:32208)
+	at Socket.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:29858)
+	at Socket.emit (events.js:327:22)
+	at Pipe.<anonymous> (net.js:673:12)
+[2021-10-11 10:22:18.039] [exthost] [error] Activating extension vscode.debug-auto-launch failed due to an error:
+[2021-10-11 10:22:18.039] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8805
+	at Array.forEach (<anonymous>)
+	at i.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8753)
+	at E.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:682)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:32208)
+	at Socket.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:29858)
+	at Socket.emit (events.js:327:22)
+	at Pipe.<anonymous> (net.js:673:12)
+[2021-10-11 10:22:18.039] [exthost] [error] Activating extension vscode.git failed due to an error:
+[2021-10-11 10:22:18.039] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8805
+	at Array.forEach (<anonymous>)
+	at i.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8753)
+	at E.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:682)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:32208)
+	at Socket.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:29858)
+	at Socket.emit (events.js:327:22)
+	at Pipe.<anonymous> (net.js:673:12)
+[2021-10-11 10:22:18.039] [exthost] [error] Activating extension ms-vscode.cpptools failed due to an error:
+[2021-10-11 10:22:18.039] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8805
+	at Array.forEach (<anonymous>)
+	at i.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8753)
+	at E.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:682)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:32208)
+	at Socket.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:29858)
+	at Socket.emit (events.js:327:22)
+	at Pipe.<anonymous> (net.js:673:12)
+[2021-10-11 10:22:18.039] [exthost] [error] Activating extension streetsidesoftware.code-spell-checker failed due to an error:
+[2021-10-11 10:22:18.039] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8805
+	at Array.forEach (<anonymous>)
+	at i.dispose (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:8753)
+	at E.terminate (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:103:682)
+	at a (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:32208)
+	at Socket.<anonymous> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:113:29858)
+	at Socket.emit (events.js:327:22)
+	at Pipe.<anonymous> (net.js:673:12)
+[2021-10-11 10:22:18.040] [exthost] [info] eager extensions activated
+[2021-10-11 10:22:18.040] [exthost] [error] Activating extension vscode.emmet failed due to an error:
+[2021-10-11 10:22:18.040] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at i._remoteCall (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:13617)
+	at Proxy.N.<computed>.G.charCodeAt.N.<computed> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:10012)
+	at v._activateExtension (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:11651)
+	at Object.actualActivateExtension (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:9236)
+	at c._activateExtension (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:87973)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:87655
+	at Array.map (<anonymous>)
+	at c._activateExtensions (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:87643)
+	at c.activateById (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:85273)
+	at v._activateById (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:10238)
+	at v._activateOneStartupFinished (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:15128)
+	at v._activateAllStartupFinished (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:15499)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:15992
+[2021-10-11 10:22:18.040] [exthost] [error] Activating extension vscode.merge-conflict failed due to an error:
+[2021-10-11 10:22:18.040] [exthost] [error] Canceled: Canceled
+	at Object.n [as canceled] (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:5:1157)
+	at i._remoteCall (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:13617)
+	at Proxy.N.<computed>.G.charCodeAt.N.<computed> (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:98:10012)
+	at v._activateExtension (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:11651)
+	at Object.actualActivateExtension (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:9236)
+	at c._activateExtension (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:87973)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:87655
+	at Array.map (<anonymous>)
+	at c._activateExtensions (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:87643)
+	at c.activateById (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:94:85273)
+	at v._activateById (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:10238)
+	at v._activateOneStartupFinished (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:15128)
+	at v._activateAllStartupFinished (/opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:15499)
+	at /opt/visual-studio-code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:99:15992
+[2021-10-11 10:22:19.039] [exthost] [info] exiting with code 0

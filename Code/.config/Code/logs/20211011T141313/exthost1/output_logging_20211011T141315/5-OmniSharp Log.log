@@ -1,0 +1,122 @@
+Starting OmniSharp server at 10/11/2021, 2:13:19 PM
+    Target: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2
+
+OmniSharp server started.
+    Path: /home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/run
+    PID: 24750
+
+[info]: OmniSharp.Stdio.Host
+        Starting OmniSharp on arch 0.0 (x64)
+[info]: OmniSharp.Services.DotNetCliService
+        DotNetPath set to dotnet
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        Located 1 MSBuild instance(s)
+            1: StandAlone 17.0.0 - "/home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/omnisharp/.msbuild/Current/Bin"
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        MSBUILD_EXE_PATH environment variable set to '/home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/omnisharp/.msbuild/Current/Bin/MSBuild.exe'
+[info]: OmniSharp.MSBuild.Discovery.MSBuildLocator
+        Registered MSBuild instance: StandAlone 17.0.0 - "/home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/omnisharp/.msbuild/Current/Bin"
+            CscToolExe = csc.exe
+            MSBuildToolsPath = /home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/omnisharp/.msbuild/Current/Bin
+            CscToolPath = /home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/omnisharp/.msbuild/Current/Bin/Roslyn
+            BypassFrameworkInstallChecks = true
+            MSBuildExtensionsPath = /home/joris/.vscode/extensions/ms-dotnettools.csharp-1.23.15/.omnisharp/1.37.15/omnisharp/.msbuild
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.CSharpFormattingWorkspaceOptionsProvider, Order: 0
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.Completion.CompletionOptionsProvider, Order: 0
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.RenameWorkspaceOptionsProvider, Order: 100
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.ImplementTypeWorkspaceOptionsProvider, Order: 110
+[info]: OmniSharp.WorkspaceInitializer
+        Invoking Workspace Options Provider: OmniSharp.Roslyn.CSharp.Services.BlockStructureWorkspaceOptionsProvider, Order: 140
+[info]: OmniSharp.Cake.CakeProjectSystem
+        Detecting Cake files in '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2'.
+[info]: OmniSharp.Cake.CakeProjectSystem
+        Could not find any Cake files
+[info]: OmniSharp.MSBuild.ProjectSystem
+        No solution files found in '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2'
+[info]: OmniSharp.MSBuild.ProjectManager
+        Queue project update for '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/2. AllOptions.csproj'
+[info]: OmniSharp.Script.ScriptProjectSystem
+        Detecting CSX files in '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2'.
+[info]: OmniSharp.Script.ScriptProjectSystem
+        Could not find any CSX files
+[info]: OmniSharp.WorkspaceInitializer
+        Configuration finished.
+[info]: OmniSharp.Stdio.Host
+        Omnisharp server running using Stdio at location '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2' on host 24600.
+[info]: OmniSharp.MSBuild.ProjectManager
+        Loading project: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/2. AllOptions.csproj
+[info]: OmniSharp.MSBuild.ProjectManager
+        Successfully loaded project file '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/2. AllOptions.csproj'.
+[info]: OmniSharp.MSBuild.ProjectManager
+        Adding project '/home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/2. AllOptions.csproj'
+[info]: OmniSharp.MSBuild.ProjectManager
+        Update project: 2. AllOptions
+Received response for /v2/blockstructure but could not find request.
+Received response for /v2/getcodeactions but could not find request.
+Received response for /completion/resolve but could not find request.
+Received response for /quickinfo but could not find request.
+Received response for /quickinfo but could not find request.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 115, Column: 12.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 97, Column: 24.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 119, Column: 27.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 94, Column: 27.
+Received response for /v2/getcodeactions but could not find request.
+Received response for /v2/getcodeactions but could not find request.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 120, Column: 27.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 135, Column: 20.
+Received response for /v2/getcodeactions but could not find request.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 108, Column: 29.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 20, Column: 20.
+Received response for /v2/getcodeactions but could not find request.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 20, Column: 21.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 20, Column: 24.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 20, Column: 29.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 95, Column: 19.
+Received response for /v2/getcodeactions but could not find request.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 95, Column: 41.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 98, Column: 16.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 101, Column: 20.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 103, Column: 20.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 106, Column: 25.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 106, Column: 31.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 104, Column: 31.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 103, Column: 31.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 103, Column: 26.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 101, Column: 26.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 98, Column: 22.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 95, Column: 24.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 95, Column: 26.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 95, Column: 25.
+[warn]: OmniSharp.Roslyn.CSharp.Services.Navigation.FindUsagesService
+        No symbol found. File: /home/joris/Fontys/Software/C# no forms/Wie zit er aan tafel V2/Program.cs, Line: 95, Column: 48.
+Received response for /v2/getcodeactions but could not find request.
