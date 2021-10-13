@@ -73,7 +73,8 @@ bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 bindsym $mod+space $e rofi -modi drun -show drun -sort
 bindsym $moc+c $e .bin/rofi_config_menu.sh
-bindsym $mod+Tab $e rofi -show window
+bindsym $mod+Tab workspace next
+bindsym Mod1+Tab workspace prev
 bindsym $mos+d $e dunstctl close-all
 
 bindsym $mod+u $e $term -e "ncdu"
