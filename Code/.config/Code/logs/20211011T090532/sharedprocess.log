@@ -1,6 +1,0 @@
-[2021-10-11 09:05:34.399] [sharedprocess] [info] Deleted from disk streetsidesoftware.code-spell-checker /home/joris/.vscode/extensions/streetsidesoftware.code-spell-checker-2.0.9
-[2021-10-11 09:05:44.118] [sharedprocess] [info] [logs cleanup]: Starting to clean up old logs.
-[2021-10-11 09:05:44.120] [sharedprocess] [info] [logs cleanup]: Removing log folders '20211007T212135'
-[2021-10-11 09:06:04.117] [sharedprocess] [info] [code cache cleanup]: Starting to clean up old code cache folders.
-[2021-10-11 09:06:04.118] [sharedprocess] [info] [storage cleanup]: Starting to clean up storage folders.
-[2021-10-11 09:06:14.116] [sharedprocess] [info] [language pack cache cleanup]: Starting to clean up unused language packs.
