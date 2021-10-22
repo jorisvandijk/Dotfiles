@@ -57,7 +57,7 @@ bindsym $mos+i $e optimus-manager --switch intel --no-confirm
 bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
 
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
-bindsym $mod+a $e feh --bg-fill --randomize ~/Git/wallpapers/*
+#bindsym $mod+a $e feh --bg-fill --randomize ~/Git/wallpapers/*
 
 bindsym XF86MonBrightnessUp $e light -A 10 
 bindsym XF86MonBrightnessDown $e light -U 10
@@ -70,6 +70,7 @@ bindsym $mod+Left $e playerctl previous
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym $mod+a $e kitty -e alsamixer
 
 bindsym $mod+space $e rofi -modi drun -show drun -sort
 bindsym $moc+c $e .bin/rofi_config_menu.sh
@@ -144,6 +145,7 @@ for_window [class="mpv"] fullscreen enable
 for_window [class="Netflix"] fullscreen enable
 for_window [class="libreoffice"] move to workspace $ws3 
 for_window [class="fullme"] fullscreen enable
+for_window [title="alsamixer"] floating enable
 
 #$e feh --randomize --bg-scale ~/Git/wallpapers/* 
 $e feh --bg-scale ~/Git/wallpapers/0309.png
