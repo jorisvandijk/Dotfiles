@@ -23,7 +23,7 @@ bindsym $mos+Escape $e systemctl poweroff -i, mode "default"
 bindsym $mod+f fullscreen toggle
 bindsym $mos+f floating toggle
 bindsym $mod+g $e gimp
-bindsym $mod+Grave $e rofi -show window
+bindsym $mod+grave $e rofi -show window
 bindsym $mod+Home $e kill -9 -1
 bindsym $mod+i $e .bin/info.sh
 bindsym $mos+i $e optimus-manager --switch intel --no-confirm
@@ -58,8 +58,8 @@ $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e batsignal
 $e xset r rate 200 60
-$e xmodmap -e "keycode 66 = Escape" 	# caps lock is now escape
-$e xmodmap -e "clear lock" 				# disable caps lock switch
+$e xmodmap -e "keycode 66 = Escape" 	
+$e xmodmap -e "clear lock"
 $e .bin/trackpad_off.sh
 
 # class                 border  bground text    indicator child_border
