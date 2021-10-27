@@ -8,7 +8,6 @@ set $moc Mod4+Control
 set $e exec --no-startup-id
 set $term kitty
 
-floating_modifier $mod
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title", fullscreen enable
 
 bindsym $mod+a $e kitty -e alsamixer
@@ -58,6 +57,5 @@ $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e batsignal
 $e xset r rate 200 60
-$e xmodmap -e "keycode 66 = N" 	
 $e xmodmap -e "clear lock"
 $e .bin/trackpad_off.sh
