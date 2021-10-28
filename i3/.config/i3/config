@@ -37,7 +37,7 @@ bindsym $mos+r restart
 bindsym $mod+Return $e $term
 bindsym $mod+Right $e playerctl next
 bindsym $mod+s $e spotify
-bindsym $mos+s $e .bin/scriptsmenu.sh
+bindsym $moc+s $e .bin/scriptsmenu.sh
 bindsym $mod+space $e rofi -modi drun -show drun -sort
 bindsym $mod+t $e thunar
 bindsym $mod+Tab workspace next
@@ -57,5 +57,5 @@ $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e batsignal
 $e xset r rate 200 60
-$e xmodmap -e "clear lock"
+$e xmodmap -e "keycode 66 = Escape" 	
 $e .bin/trackpad_off.sh
