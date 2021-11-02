@@ -57,5 +57,6 @@ $e /usr/bin/unclutter -b
 $e picom --config ~/.config/picom/picom.conf
 $e batsignal
 $e xset r rate 200 60
-$e xmodmap -e "keycode 66 = Escape" 	
+$e xmodmap -e "keycode 66 = Escape" 
+$e xmodmap -e "clear lock" 		
 $e .bin/trackpad_off.sh

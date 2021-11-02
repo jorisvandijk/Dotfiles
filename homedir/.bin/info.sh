@@ -7,7 +7,7 @@
 #
 #          Published under GPL-3.0-or-later
 
-notify-send -u critical -t 15000 "$(
+notify-send -u normal -t 15000 "$(
     echo $(date +"%A %-d %B %Y %R")
     echo
     bat=$(acpi | awk {'print $3'})
