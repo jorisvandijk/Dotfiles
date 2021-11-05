@@ -114,7 +114,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
 
-alias gut='sh /$HOME/Git/bash/update_repositories'
+alias gut='sh /$HOME/.bin/update_repositories.sh'
 
 # Other
 alias c='clear'
