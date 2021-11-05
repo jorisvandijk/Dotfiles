@@ -24,6 +24,7 @@ bindsym $mos+c reload
 bindsym $moc+c $e .bin/rofi_config_menu.sh
 bindsym $mod+d $e discord
 bindsym $mod+Down $e playerctl play-pause
+bindsym $mod+e $e geary
 bindsym $mod+Escape kill
 bindsym $mos+Escape $e systemctl poweroff -i, mode "default" 
 bindsym $mod+f fullscreen toggle
@@ -35,11 +36,12 @@ bindsym $mod+i $e .bin/info.sh
 bindsym $mos+i $e optimus-manager --switch intel --no-confirm
 bindsym $mod+Insert $e .bin/toggle_trackpad.sh
 bindsym $mod+Left $e playerctl previous
-bindsym $mod+m $e geary
+bindsym $mod+m $e midori
 bindsym $mod+n $e .bin/new_i3_workspace.sh
 bindsym $mos+n $e optimus-manager --switch nvidia --no-confirm
 bindsym $mod+o $e libreoffice
 bindsym Print $e "scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png"
+bindsym $mod+q $e qutebrowser
 bindsym $mos+r restart
 bindsym $mod+Return $e $term
 bindsym $mod+Right $e playerctl next
