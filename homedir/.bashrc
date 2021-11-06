@@ -57,7 +57,7 @@ bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
 # Stow
-alias dostow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
+alias dotstow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
 alias keestow='cd $HOME/Git/kee/stow && for d in *; do stow -v -t ~ "$d" ;done'
 
 # Joris' aliasses

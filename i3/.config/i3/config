@@ -18,7 +18,7 @@ for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 for_window [class="mpv"]                fullscreen enable
 for_window [title="alsamixer"]          floating enable
 for_window [class="VirtualBox Manager"] floating enable
-for_window [class="VirtualBox Machine"] fullscreen enable, border 0
+for_window [class="VirtualBox Machine"] fullscreen enable
 
 bindsym $mod+a                  $e  $term -e alsamixer
 bindsym $mod+BackSpace          $e  dm-tool lock
@@ -96,14 +96,14 @@ bindsym $mos+9 move container to workspace 9
 bindsym $mos+0 move container to workspace 0
 
 $ea autotiling
-$e batsignal
-$e dunst
-$e feh          --bg-scale ~/Git/wallpapers/0309.png
-$e picom        --config ~/.config/picom/picom.conf
-$e xset         r rate 200 60
-$e unclutter    -b
+$e  batsignal
+$e  dunst
+$e  feh          --bg-scale ~/Git/wallpapers/0309.png
+$e  picom        --config ~/.config/picom/picom.conf
+$e  xset         r rate 200 60
+$e  unclutter    -b
 
-$e ~/.bin/trackpad_off.sh
+$e  ~/.bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
 client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
