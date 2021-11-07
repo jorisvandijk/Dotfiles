@@ -24,9 +24,9 @@ bindsym $mod+a                  $e  $term -e alsamixer
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
 bindsym $mos+c                      reload
-bindsym $moc+c                  $e  .bin/rofi_config_menu.shaaa
+bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
 bindsym $mod+d                  $e  discord
-bindsym $mod+Down               $e  playerctl play-
+bindsym $mod+Down               $e  playerctl play-pause
 bindsym $mod+e                  $e  geary
 bindsym $mod+Escape                 kill
 bindsym $mos+Escape             $e  systemctl poweroff -i, mode "default"
@@ -56,9 +56,9 @@ bindsym $mod+Tab                $e  rofi -show window
 bindsym $mod+Up                 $e  playerctl play-pause
 bindsym $mod+v                  $e  virtualbox
 bindsym $mod+w                  $e  firefox
-bindsym XF86AudioLowerVolume    $e  "amixer -q sset Master,0 1- unmute"
-bindsym XF86AudioMute           $e  "amixer -q sset Master,0 toggle"
-bindsym XF86AudioRaiseVolume    $e  "amixer -q sset Master,0 1+ unmute"
+bindsym XF86AudioLowerVolume    $e  amixer -D pulse sset Master 1%-
+bindsym XF86AudioMute           $e  amixer sset Master toggle
+bindsym XF86AudioRaiseVolume    $e  amixer -D pulse sset Master 1%+
 bindsym XF86MonBrightnessDown   $e  light -U 10
 bindsym XF86MonBrightnessUp     $e  light -A 10
 bindsym $mod+x                  $e  dunstctl close-all
@@ -105,6 +105,13 @@ $e  xset         r rate 200 60
 $e  unclutter    -b
 
 $e  ~/.bin/trackpad_off.sh
+
+client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
+client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
+client.unfocused            #282A36 #282A36 #BFBFBF #282A36 #282A36
+client.urgent               #44475A #FF5555 #F8F8F2 #FF5555 #FF5555
+client.placeholder          #282A36 #282A36 #F8F8F2 #282A36 #282A36
+client.background           #F8F8F2
 
 bar {
     status_command          i3status
