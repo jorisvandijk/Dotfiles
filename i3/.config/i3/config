@@ -15,10 +15,10 @@ font pango:andika 11
 
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 
-for_window [class="mpv"]                fullscreen enable
-for_window [title="alsamixer"]          floating enable
-for_window [class="VirtualBox Manager"] floating enable
-for_window [class="VirtualBox Machine"] fullscreen enable
+for_window [class="mpv"]                fullscreen  enable
+for_window [title="alsamixer"]          floating    enable
+for_window [class="VirtualBox Manager"] floating    enable
+for_window [class="VirtualBox Machine"] fullscreen  enable
 
 bindsym $mod+a                  $e  $term -e alsamixer
 bindsym $mod+BackSpace          $e  dm-tool lock
