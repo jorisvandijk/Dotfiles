@@ -61,6 +61,7 @@ bindsym XF86AudioMute           $e  "amixer -q sset Master,0 toggle"
 bindsym XF86AudioRaiseVolume    $e  "amixer -q sset Master,0 1+ unmute"
 bindsym XF86MonBrightnessDown   $e  light -U 10
 bindsym XF86MonBrightnessUp     $e  light -A 10
+bindsym $mod+x                  $e  dunstctl close-all
 bindsym $mod+Y                  $e  $term -e newsboat
 
 bindsym $mod+h focus left
