@@ -20,7 +20,7 @@ for_window [title="alsamixer"]          floating    enable
 for_window [class="VirtualBox Manager"] floating    enable
 for_window [class="VirtualBox Machine"] fullscreen  enable
 
-bindsym $mod+a                  $e  $term -e alsamixer
+bindsym $mod+a                  $e  $term -e alsamixer -c 0
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
 bindsym $mos+c                      reload
