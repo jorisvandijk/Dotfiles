@@ -23,7 +23,7 @@ for_window [class="VirtualBox Machine"] fullscreen  enable
 bindsym $mod+a                  $e  $term -e alsamixer -c 0
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
-bindsym $mos+c                      reload
+bindsym $mos+c                  $e  rofi -show calc -modi calc -no-show-match -no-sort
 bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
 bindsym $mod+d                  $e  discord
 bindsym $mod+Down               $e  playerctl play-pause
@@ -99,11 +99,11 @@ bindsym $mos+0 move container to workspace 0
 $ea autotiling
 $e  batsignal
 $e  dunst
-$e  feh          --bg-scale ~/Git/wallpapers/0163.jpg
-$e  picom        --config ~/.config/picom/picom.conf
-$e  xset         r rate 200 60
-$e  unclutter    -b
-
+$e  feh                         --bg-scale ~/Git/wallpapers/0163.jpg
+$e  greenclip daemon>/dev/null
+$e  picom                       --config ~/.config/picom/picom.conf
+$e  xset                        r rate 200 60
+$e  unclutter                   -b
 $e  ~/.bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
