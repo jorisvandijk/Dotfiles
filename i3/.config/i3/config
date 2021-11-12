@@ -56,9 +56,9 @@ bindsym $mod+Tab                $e  rofi -show window
 bindsym $mod+Up                 $e  playerctl play-pause
 bindsym $mod+v                  $e  virtualbox
 bindsym $mod+w                  $e  firefox
-bindsym XF86AudioLowerVolume    $e  amixer -D pulse sset Master 1%-
+bindsym XF86AudioLowerVolume    $e  amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute           $e  amixer sset Master toggle
-bindsym XF86AudioRaiseVolume    $e  amixer -D pulse sset Master 1%+
+bindsym XF86AudioRaiseVolume    $e  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown   $e  light -U 10
 bindsym XF86MonBrightnessUp     $e  light -A 10
 bindsym $mod+x                  $e  dunstctl close-all
