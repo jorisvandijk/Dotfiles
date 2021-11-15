@@ -44,6 +44,7 @@ bindsym $mos+n                  $e  optimus-manager --switch nvidia --no-confirm
 bindsym $mod+o                  $e  libreoffice
 bindsym Print                   $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
 bindsym $mod+q                  $e  qutebrowser
+bindsym $mod+r                  $e  $t -e ranger
 bindsym $mos+r                      restart
 bindsym $mod+Return             $e  $t
 bindsym $mod+Right              $e  playerctl next
@@ -51,7 +52,6 @@ bindsym $mod+s                  $e  spotify
 bindsym $moc+s                  $e  .bin/scriptsmenu.sh
 bindsym $mod+space              $e  $r drun -modi drun -sort
 bindsym $mod+t                  $e  thunar
-bindsym $mod+r                  $e  $r calc -modi calc -no-show-match -no-sort
 bindsym $mod+Tab                $e  $r window
 bindsym $mod+Up                 $e  playerctl play-pause
 bindsym $mod+v                  $e  virtualbox
