@@ -2,13 +2,13 @@
 # Joris van Dijk | gitlab.com/jorisvandijk
 # Published under GPL-3.0-or-later
 
-set $mod    Mod4
-set $mos    Mod4+Shift
-set $moc    Mod4+Control
 set $e      exec --no-startup-id
 set $ea     exec_always --no-startup-id
+set $moc    Mod4+Control
+set $mod    Mod4
+set $mos    Mod4+Shift
 set $r      rofi -show
-set $term   kitty
+set $t      kitty
 
 floating_modifier $mod
 hide_edge_borders smart
@@ -16,12 +16,12 @@ font pango:andika 11
 
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 
-for_window [title="alsamixer"]          floating    enable
+for_window [title="alsamixer"]          fullscreen  enable
 for_window [class="mpv"]                fullscreen  enable
 for_window [class="VirtualBox Manager"] floating    enable
 for_window [class="VirtualBox Machine"] fullscreen  enable
 
-bindsym $mod+a                  $e  $term -e alsamixer -c 0
+bindsym $mod+a                  $e  $t -e alsamixer -c 0
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
 bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
@@ -45,7 +45,7 @@ bindsym $mod+o                  $e  libreoffice
 bindsym Print                   $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
 bindsym $mod+q                  $e  qutebrowser
 bindsym $mos+r                      restart
-bindsym $mod+Return             $e  $term
+bindsym $mod+Return             $e  $t
 bindsym $mod+Right              $e  playerctl next
 bindsym $mod+s                  $e  spotify
 bindsym $moc+s                  $e  .bin/scriptsmenu.sh
@@ -62,7 +62,7 @@ bindsym XF86AudioRaiseVolume    $e  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown   $e  light -U 10
 bindsym XF86MonBrightnessUp     $e  light -A 10
 bindsym $mod+x                  $e  dunstctl close-all
-bindsym $mod+y                  $e  $term -e newsboat
+bindsym $mod+y                  $e  $t -e newsboat
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -100,7 +100,6 @@ $ea autotiling
 $e  batsignal
 $e  dunst
 $e  feh                         --bg-scale ~/Git/wallpapers/0163.jpg
-$e  greenclip daemon>/dev/null
 $e  picom                       --config ~/.config/picom/picom.conf
 $e  xset                        r rate 200 60
 $e  unclutter                   -b
