@@ -7,6 +7,7 @@ set $mos    Mod4+Shift
 set $moc    Mod4+Control
 set $e      exec --no-startup-id
 set $ea     exec_always --no-startup-id
+set $r      rofi -show
 set $term   kitty
 
 floating_modifier $mod
@@ -15,23 +16,22 @@ font pango:andika 11
 
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 
-for_window [class="mpv"]                fullscreen  enable
 for_window [title="alsamixer"]          floating    enable
+for_window [class="mpv"]                fullscreen  enable
 for_window [class="VirtualBox Manager"] floating    enable
 for_window [class="VirtualBox Machine"] fullscreen  enable
 
 bindsym $mod+a                  $e  $term -e alsamixer -c 0
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
-bindsym $mos+c                  $e  rofi -show calc -modi calc -no-show-match -no-sort
 bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
+bindsym $mod+d                  $e  ferdi
 bindsym $mod+Down               $e  playerctl play-pause
 bindsym $mod+e                  $e  geary
 bindsym $mod+Escape                 kill
 bindsym $mos+Escape             $e  systemctl poweroff -i, mode "default"
-bindsym $mod+f                  $e  ferdi
-bindsym $mos+f                      fullscreen toggle
-bindsym $moc+f                      floating toggle
+bindsym $mod+f                      fullscreen toggle
+bindsym $mos+f                      floating toggle
 bindsym $mod+g                  $e  gimp
 bindsym $mod+grave                  workspace back_and_forth
 bindsym $mod+Home               $e  kill -9 -1
@@ -49,9 +49,10 @@ bindsym $mod+Return             $e  $term
 bindsym $mod+Right              $e  playerctl next
 bindsym $mod+s                  $e  spotify
 bindsym $moc+s                  $e  .bin/scriptsmenu.sh
-bindsym $mod+space              $e  rofi -modi drun -show drun -sort
+bindsym $mod+space              $e  $r drun -modi drun -sort
 bindsym $mod+t                  $e  thunar
-bindsym $mod+Tab                $e  rofi -show window
+bindsym $mod+r                  $e  $r calc -modi calc -no-show-match -no-sort
+bindsym $mod+Tab                $e  $r window
 bindsym $mod+Up                 $e  playerctl play-pause
 bindsym $mod+v                  $e  virtualbox
 bindsym $mod+w                  $e  firefox
@@ -61,7 +62,7 @@ bindsym XF86AudioRaiseVolume    $e  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown   $e  light -U 10
 bindsym XF86MonBrightnessUp     $e  light -A 10
 bindsym $mod+x                  $e  dunstctl close-all
-bindsym $mod+Y                  $e  $term -e newsboat
+bindsym $mod+y                  $e  $term -e newsboat
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
