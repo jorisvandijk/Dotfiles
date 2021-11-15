@@ -24,7 +24,7 @@ for_window [class="VirtualBox Machine"] fullscreen  enable
 bindsym $mod+a                  $e  $t -e alsamixer -c 0
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
-bindsym $moc+c                  $e  rofi_config_menu.sh
+bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
 bindsym $mod+d                  $e  ferdi
 bindsym $mod+Down               $e  playerctl play-pause
 bindsym $mod+e                  $e  geary
@@ -36,10 +36,10 @@ bindsym $mod+g                  $e  gimp
 bindsym $mod+grave                  workspace back_and_forth
 bindsym $mod+Home               $e  kill -9 -1
 bindsym $mos+i                  $e  optimus-manager --switch intel --no-confirm
-bindsym $mod+Insert             $e  toggle_trackpad.sh
+bindsym $mod+Insert             $e  .bin/toggle_trackpad.sh
 bindsym $mod+Left               $e  playerctl previous
 bindsym $mod+m                  $e  midori
-bindsym $mod+n                  $e  new_i3_workspace.sh
+bindsym $mod+n                  $e  .bin/new_i3_workspace.sh
 bindsym $mos+n                  $e  optimus-manager --switch nvidia --no-confirm
 bindsym $mod+o                  $e  libreoffice
 bindsym Print                   $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
@@ -49,7 +49,7 @@ bindsym $mos+r                      restart
 bindsym $mod+Return             $e  $t
 bindsym $mod+Right              $e  playerctl next
 bindsym $mod+s                  $e  spotify
-bindsym $moc+s                  $e  scriptsmenu.sh
+bindsym $moc+s                  $e  .bin/scriptsmenu.sh
 bindsym $mod+space              $e  $r drun -modi drun -sort
 bindsym $mod+t                  $e  thunar
 bindsym $mod+Tab                $e  $r window
@@ -99,11 +99,11 @@ bindsym $mos+0 move container to workspace 0
 $ea autotiling
 $e  batsignal
 $e  dunst
-$e  feh                         --bg-scale ~/Git/wallpapers/0163.jpg
-$e  picom                       --config ~/.config/picom/picom.conf
-$e  xset                        r rate 200 60
-$e  unclutter                   -b
-$e  trackpad_off.sh
+$e  feh                     --bg-scale ~/Git/wallpapers/0163.jpg
+$e  picom                   --config ~/.config/picom/picom.conf
+$e  xset                    r rate 200 60
+$e  unclutter               -b
+$e  .bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
 client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
