@@ -26,8 +26,8 @@ $a+a                        $e  audacious
 $m+a                            [class="Audacious"] focus
 $m+BackSpace                $e  dm-tool lock
 $a+c                        $e  code
-$m+c                            [class="Code"] focus
 $c+c                        $e  .bin/rofi_config_menu.sh
+$m+c                            [class="Code"] focus
 $a+d                        $e  ferdi
 $m+d                            [class="Ferdi"] focus
 $m+Down                     $e  playerctl play-pause
