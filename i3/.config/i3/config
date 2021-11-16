@@ -2,99 +2,115 @@
 # Joris van Dijk | gitlab.com/jorisvandijk
 # Published under GPL-3.0-or-later
 
-set $e      exec --no-startup-id
-set $ea     exec_always --no-startup-id
-set $moc    Mod4+Control
-set $mod    Mod4
-set $mos    Mod4+Shift
-set $r      rofi -show
-set $t      kitty
+set     $b      bindsym
+set     $e      exec --no-startup-id
+set     $ea     exec_always --no-startup-id
+set     $moa    bindsym Mod4+Mod1
+set     $moc    bindsym Mod4+Control
+set     $mod    bindsym Mod4
+set     $mos    bindsym Mod4+Shift
+set     $r      rofi -show
+set     $t      kitty
 
-floating_modifier $mod
-hide_edge_borders smart
-font pango:andika 11
+floating_modifier   Mod4
+font pango:         andika 11
+hide_edge_borders   smart
 
-for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
-
-for_window [title="pulsemixer"]         fullscreen  enable
+for_window [class="^.*"]                border      pixel 2
 for_window [class="mpv"]                fullscreen  enable
 for_window [class="VirtualBox Manager"] floating    enable
 for_window [class="VirtualBox Machine"] fullscreen  enable
+for_window [title="pulsemixer"]         fullscreen  enable
 
-bindsym $mod+a                  $e  $t pulsemixer
-bindsym $mod+BackSpace          $e  dm-tool lock
-bindsym $mod+c                  $e  code
-bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
-bindsym $mod+d                  $e  ferdi
-bindsym $mod+Down               $e  playerctl play-pause
-bindsym $mod+e                  $e  geary
-bindsym $mod+Escape                 kill
-bindsym $mos+Escape             $e  systemctl poweroff -i, mode "default"
-bindsym $mod+f                      fullscreen toggle
-bindsym $mos+f                      floating toggle
-bindsym $mod+g                  $e  gimp
-bindsym $mod+grave                  workspace back_and_forth
-bindsym $mod+Home               $e  kill -9 -1
-bindsym $mos+i                  $e  optimus-manager --switch intel --no-confirm
-bindsym $mod+Insert             $e  .bin/toggle_trackpad.sh
-bindsym $mod+Left               $e  playerctl previous
-bindsym $mod+m                  $e  midori
-bindsym $mod+n                  $e  .bin/new_i3_workspace.sh
-bindsym $mos+n                  $e  optimus-manager --switch nvidia --no-confirm
-bindsym $mod+o                  $e  libreoffice
-bindsym Print                   $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
-bindsym $mod+q                  $e  qutebrowser
-bindsym $mod+r                  $e  $t -e ranger
-bindsym $mos+r                      restart
-bindsym $mod+Return             $e  $t
-bindsym $mod+Right              $e  playerctl next
-bindsym $mod+s                  $e  spotify
-bindsym $moc+s                  $e  .bin/scriptsmenu.sh
-bindsym $mod+space              $e  $r drun -modi drun -sort
-bindsym $mod+t                  $e  thunar
-bindsym $mod+Tab                $e  $r window
-bindsym $mod+Up                 $e  playerctl play-pause
-bindsym $mod+v                  $e  virtualbox
-bindsym $mod+w                  $e  firefox
-bindsym XF86AudioLowerVolume    $e  amixer -D pulse sset Master 2%-
-bindsym XF86AudioMute           $e  amixer sset Master toggle
-bindsym XF86AudioRaiseVolume    $e  amixer -D pulse sset Master 2%+
-bindsym XF86MonBrightnessDown   $e  light -U 10
-bindsym XF86MonBrightnessUp     $e  light -A 10
-bindsym $mod+x                  $e  dunstctl close-all
-bindsym $mod+y                  $e  $t -e newsboat
+$moa+a                    $e  audacious
+$mod+a                        [class="Audacious"] focus
+$mod+BackSpace            $e  dm-tool lock
+$moa+c                    $e  code
+$mod+c                        [class="Code"] focus
+$moc+c                    $e  .bin/rofi_config_menu.sh
+$moa+d                    $e  ferdi
+$mod+d                        [class="Ferdi"] focus
+$mod+Down                 $e  playerctl play-pause
+$moa+e                    $e  geary
+$mod+e                        [class="Geary"] focus
+$mod+Escape                   kill
+$mos+Escape               $e  systemctl poweroff -i, mode "default"
+$mod+f                        fullscreen toggle
+$mos+f                        floating toggle
+$moa+g                    $e  gimp
+$mod+g                        [class="Gimp"] focus
+$mod+grave                    workspace back_and_forth
+$mod+Home                 $e  kill -9 -1
+$mos+i                    $e  optimus-manager --switch intel --no-confirm
+$mod+Insert               $e  .bin/toggle_trackpad.sh
+$mod+Left                 $e  playerctl previous
+$moa+m                    $e  midori
+$mod+m                        [class="Midori"] focus
+$mod+n                    $e  .bin/new_i3_workspace.sh
+$mos+n                    $e  optimus-manager --switch nvidia --no-
+$mod+Next                     workspace next
+$moa+o                    $e  libreoffice
+$mod+o                        [class="libreoffice"] focus
+$mod+p                    $e  $t pulsemixer
+$b Print                  $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
+$mod+Prior                    workspace prev
+$moa+q                    $e  qutebrowser
+$mod+q                        [class="qutebrowser"] focus
+$mod+r                    $e  $t -e ranger
+$mos+r                        restart
+$mod+Return               $e  $t
+$mod+Right                $e  playerctl next
+$moa+s                    $e  spotify
+$mod+s                        [class="Spotify"] focus
+$moc+s                    $e  .bin/scriptsmenu.sh
+$mod+space                $e  $r drun -modi drun -sort
+$moa+t                    $e  thunar
+$mod+t                        [class="Thunar"] focus
+$mod+Tab                  $e  $r window
+$mod+Up                   $e  playerctl play-pause
+$moa+v                    $e  virtualbox
+$moa+w                    $e  firefox
+$mod+w                        [class="firefox"] focus
+$b XF86AudioLowerVolume   $e  amixer -D pulse sset Master 2%-
+$b XF86AudioMute          $e  amixer sset Master toggle
+$b XF86AudioRaiseVolume   $e  amixer -D pulse sset Master 2%+
+$b XF86MonBrightnessDown  $e  light -U 10
+$b XF86MonBrightnessUp    $e  light -A 10
+$mod+x                    $e  dunstctl close-all
+$moa+y                    $e  $t -e newsboat
+$mod+y                        [title="newsboat"] focus
 
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+$mod+h focus left
+$mod+j focus down
+$mod+k focus up
+$mod+l focus right
 
-bindsym $mos+h move left
-bindsym $mos+j move down
-bindsym $mos+k move up
-bindsym $mos+l move right
+$mos+h move left
+$mos+j move down
+$mos+k move up
+$mos+l move right
 
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 0
+$mod+1 workspace 1
+$mod+2 workspace 2
+$mod+3 workspace 3
+$mod+4 workspace 4
+$mod+5 workspace 5
+$mod+6 workspace 6
+$mod+7 workspace 7
+$mod+8 workspace 8
+$mod+9 workspace 9
+$mod+0 workspace 0
 
-bindsym $mos+1 move container to workspace 1
-bindsym $mos+2 move container to workspace 2
-bindsym $mos+3 move container to workspace 3
-bindsym $mos+4 move container to workspace 4
-bindsym $mos+5 move container to workspace 5
-bindsym $mos+6 move container to workspace 6
-bindsym $mos+7 move container to workspace 7
-bindsym $mos+8 move container to workspace 8
-bindsym $mos+9 move container to workspace 9
-bindsym $mos+0 move container to workspace 0
+$mos+1 move container to workspace 1
+$mos+2 move container to workspace 2
+$mos+3 move container to workspace 3
+$mos+4 move container to workspace 4
+$mos+5 move container to workspace 5
+$mos+6 move container to workspace 6
+$mos+7 move container to workspace 7
+$mos+8 move container to workspace 8
+$mos+9 move container to workspace 9
+$mos+0 move container to workspace 0
 
 $ea autotiling
 $e  batsignal
@@ -113,16 +129,16 @@ client.placeholder          #282A36 #282A36 #F8F8F2 #282A36 #282A36
 client.background           #F8F8F2
 
 bar {
-    status_command          i3status
-    mode                    hide
-    colors {
-        background          #282A36
-        statusline          #F8F8F2
-        separator           #44475A
-        focused_workspace   #44475A #44475A #F8F8F2
-        active_workspace    #282A36 #44475A #F8F8F2
-        inactive_workspace  #282A36 #282A36 #BFBFBF
-        urgent_workspace    #FF5555 #FF5555 #F8F8F2
-        binding_mode        #FF5555 #FF5555 #F8F8F2
-    }
+   status_command          i3status
+   mode                    hide
+   colors {
+       background          #282A36
+       statusline          #F8F8F2
+       separator           #44475A
+       focused_workspace   #44475A #44475A #F8F8F2
+       active_workspace    #282A36 #44475A #F8F8F2
+       inactive_workspace  #282A36 #282A36 #BFBFBF
+       urgent_workspace    #FF5555 #FF5555 #F8F8F2
+       binding_mode        #FF5555 #FF5555 #F8F8F2
+   }
 }
