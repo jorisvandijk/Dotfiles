@@ -16,12 +16,12 @@ font pango:andika 11
 
 for_window [class="^.*"] border pixel 2, title_format "%class >> %title"
 
-for_window [title="alsamixer"]          fullscreen  enable
+for_window [title="pulsemixer"]         fullscreen  enable
 for_window [class="mpv"]                fullscreen  enable
 for_window [class="VirtualBox Manager"] floating    enable
 for_window [class="VirtualBox Machine"] fullscreen  enable
 
-bindsym $mod+a                  $e  $t -e alsamixer -c 0
+bindsym $mod+a                  $e  $t pulsemixer
 bindsym $mod+BackSpace          $e  dm-tool lock
 bindsym $mod+c                  $e  code
 bindsym $moc+c                  $e  .bin/rofi_config_menu.sh
