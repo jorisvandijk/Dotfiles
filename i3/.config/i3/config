@@ -52,7 +52,7 @@ $m+Next                         workspace next
 $a+o                        $e  libreoffice
 $m+o                            [class="libreoffice"] focus
 $m+p                        $e  $t pulsemixer
-$b Print                      $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
+$b Print                    $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
 $m+Prior                        workspace prev
 $a+q                        $e  qutebrowser
 $m+q                            [class="qutebrowser"] focus
