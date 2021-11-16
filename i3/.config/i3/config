@@ -7,6 +7,7 @@ set $b  bindsym
 set $c  bindsym Mod4+Control
 set $e  exec --no-startup-id
 set $ea exec_always --no-startup-id
+set $f  for_window
 set $m  bindsym Mod4
 set $s  bindsym Mod4+Shift
 set $r  rofi -show
@@ -16,11 +17,11 @@ floating_modifier   Mod4
 font pango:         andika 11
 hide_edge_borders   smart
 
-for_window [class="^.*"]                border      pixel 2
-for_window [class="mpv"]                fullscreen  enable
-for_window [class="VirtualBox Manager"] floating    enable
-for_window [class="VirtualBox Machine"] fullscreen  enable
-for_window [title="pulsemixer"]         fullscreen  enable
+$f [class="^.*"]                    border      pixel 2
+$f [class="mpv"]                    fullscreen  enable
+$f [class="VirtualBox Manager"]     floating    enable
+$f [class="VirtualBox Machine"]     fullscreen  enable
+$f [title="pulsemixer"]             fullscreen  enable
 
 $a+a                        $e  audacious
 $m+a                            [class="Audacious"] focus
