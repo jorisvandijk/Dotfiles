@@ -2,127 +2,143 @@
 # Joris van Dijk | gitlab.com/jorisvandijk
 # Published under GPL-3.0-or-later
 
-set $3  bindsym Mod3
-#set $a  bindsym Mod4+Mod1
-set $b  bindsym
-set $c  bindsym Mod4+Control
-set $e  exec --no-startup-id
-set $ea exec_always --no-startup-id
-set $f  for_window
-set $m  bindsym Mod4
-set $s  bindsym Mod4+Shift
-set $r  rofi -show
-set $t  kitty
-
 floating_modifier   Mod4
 font pango:         andika 11
 hide_edge_borders   smart
 
-$f [class="^.*"]                    border      pixel 2
-$f [class="mpv"]                    fullscreen  enable
-$f [class="VirtualBox Manager"]     floating    enable
-$f [class="VirtualBox Machine"]     fullscreen  enable
-$f [title="pulsemixer"]             fullscreen  enable
+for_window [class="^.*"]                    border      pixel 2
+for_window [class="mpv"]                    fullscreen  enable
+for_window [class="VirtualBox Manager"]     floating    enable
+for_window [class="VirtualBox Machine"]     fullscreen  enable
+for_window [title="pulsemixer"]             fullscreen  enable
 
-$m+a                        $e  audacious
-$3+a                            [class="Audacious"] focus
-$m+BackSpace                $e  dm-tool lock
-$m+c                        $e  code
-$c+c                        $e  .bin/rofi_config_menu.sh
-$3+c                            [class="Code"] focus
-$m+d                        $e  ferdi
-$3+d                            [class="Ferdi"] focus
-$m+Down                     $e  playerctl play-pause
-$m+e                        $e  geary
-$3+e                            [class="Geary"] focus
-$m+Escape                       kill
-$s+Escape                   $e  systemctl poweroff -i, mode "default"
-$m+f                            fullscreen toggle
-$s+f                            floating toggle
-$m+g                        $e  gimp
-$3+g                            [class="Gimp"] focus
-$m+grave                        workspace back_and_forth
-$m+Home                     $e  kill -9 -1
-$s+i                        $e  optimus-manager --switch intel --no-confirm
-$m+Insert                   $e  .bin/toggle_trackpad.sh
-$m+Left                     $e  playerctl previous
-$m+m                        $e  midori
-$c+m                        $e  mpv $(xsel -b)
-$3+m                            [class="Midori"] focus
-$m+n                        $e  .bin/new_i3_workspace.sh
-$s+n                        $e  optimus-manager --switch nvidia --no-
-$m+Next                         workspace next
-$m+o                        $e  libreoffice
-$3+o                            [class="libreoffice"] focus
-$m+p                        $e  $t pulsemixer
-$b Print                    $e  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
-$m+Prior                        workspace prev
-$m+q                        $e  qutebrowser
-$3+q                            [class="qutebrowser"] focus
-$m+r                        $e  $t -e ranger
-$s+r                            restart
-$m+Return                   $e  $t
-$m+Right                    $e  playerctl next
-$m+s                        $e  spotify
-$3+s                            [class="Spotify"] focus
-$c+s                        $e  .bin/scriptsmenu.sh
-$m+space                    $e  $r drun -modi drun -sort
-$m+t                        $e  thunar
-$3+t                            [class="Thunar"] focus
-$m+Tab                      $e  $r window
-$m+Up                       $e  playerctl play-pause
-$m+v                        $e  virtualbox
-$m+w                        $e  firefox
-$3+w                            [class="firefox"] focus
-$b XF86AudioLowerVolume     $e  amixer -D pulse sset Master 2%-
-$b XF86AudioMute            $e  amixer sset Master toggle
-$b XF86AudioRaiseVolume     $e  amixer -D pulse sset Master 2%+
-$b XF86MonBrightnessDown    $e  light -U 10
-$b XF86MonBrightnessUp      $e  light -A 10
-$m+x                        $e  dunstctl close-all
-$m+y                        $e  $t -e newsboat
-$3+y                            [title="newsboat"] focus
+set $1 bindsym Mod4
+set $2 exec --no-startup-id 
+set $3 && i3-msg
+set $4 .bin/new_i3_workspace.sh &&
+set $5 kitty
+set $6 bindsym Mod4+Shift
+set $7 exec_always --no-startup-id
+set $8 exec --no-startup-id
 
-$m+h focus left
-$m+j focus down
-$m+k focus up
-$m+l focus right
+set $a audacious
+# set $b
+set $c code
+set $d ferdi
+set $e geary
+# f
+set $g gimp
+# h
+# set $i
+# j
+# k
+# l
+set $m midori
+# n
+set $o libreoffice
+# p
+set $q qutebrowser
+set $r ranger
+set $s spotify
+set $t thunar
+# set $u
+set $v virtualbox
+set $w firefox
+# x
+set $y newsboat
+# set $z
 
-$s+h move left
-$s+j move down
-$s+k move up
-$s+l move right
+$1+a $2 pgrep $a $3 '[class="(?i)$a"] focus' || $4 $a
+$1+c $2 pgrep $c $3 '[class="(?i)$c"] focus' || $4 $c
+$1+d $2 pgrep $d $3 '[class="(?i)$d"] focus' || $4 $d
+$1+e $2 pgrep $e $3 '[class="(?i)$e"] focus' || $4 $e
+$1+f                fullscreen toggle
+$1+g $2 pgrep $g $3 '[class="(?i)$g"] focus' || $4 $g
+$1+m $2 pgrep $m $3 '[class="(?i)$m"] focus' || $4 $m
+$1+n $2             .bin/new_i3_workspace.sh
+$1+o $2 pgrep $o $3 '[class="(?i)$o"] focus' || $4 $o
+$1+p $2       $5    pulsemixer
+$1+q $2 pgrep $q $3 '[class="(?i)$q"] focus' || $4 $q
+$1+r $2 pgrep $r $3 '[class="(?i)$r"] focus' || $4 $5 -e $r
+$1+s $2 pgrep $s $3 '[class="(?i)$s"] focus' || $4 $s
+$1+t $2 pgrep $t $3 '[class="(?i)$t"] focus' || $4 $t
+$1+v $2 pgrep $v $3 '[class="(?i)$v"] focus' || $4 $v
+$1+w $2 pgrep $w $3 '[class="(?i)$w"] focus' || $4 $w
+$1+x $2             dunstctl close-all
+$1+y $2 pgrep $y $3 '[title="(?i)$y"] focus' || $4 $5 -e $y
 
-$m+1 workspace 1
-$m+2 workspace 2
-$m+3 workspace 3
-$m+4 workspace 4
-$m+5 workspace 5
-$m+6 workspace 6
-$m+7 workspace 7
-$m+8 workspace 8
-$m+9 workspace 9
-$m+0 workspace 0
+$1+BackSpace     $2  dm-tool lock
+$1+Down          $2  playerctl play-pause
+$1+Escape            kill
+$1+grave             workspace back_and_forth
+$1+Home          $2  kill -9 -1
+$1+Insert        $2  .bin/toggle_trackpad.sh
+$1+Left          $2  playerctl previous
+$1+Next              workspace next
+$1+Prior             workspace prev
+$1+Return        $2  $5
+$1+Right         $2  playerctl next
+$1+space         $2  rofi -show drun -modi drun -sort
+$1+Tab           $2  rofi -show window
+$1+Up            $2  playerctl play-pause
 
-$s+1 move container to workspace 1
-$s+2 move container to workspace 2
-$s+3 move container to workspace 3
-$s+4 move container to workspace 4
-$s+5 move container to workspace 5
-$s+6 move container to workspace 6
-$s+7 move container to workspace 7
-$s+8 move container to workspace 8
-$s+9 move container to workspace 9
-$s+0 move container to workspace 0
+$6+c             $2  .bin/rofi_config_menu.sh
+$6+Escape        $2  systemctl poweroff -i, mode "default"
+$6+f                 floating toggle
+$6+i             $2  optimus-manager --switch intel --no-confirm
+$6+n             $2  optimus-manager --switch nvidia --no-confirm
+$6+r                 restart
+$6+s             $2  .bin/scriptsmenu.sh
+$6+y             $2  mpv $(xsel -b)
 
-$ea autotiling
-$e  batsignal
-$e  dunst
-$e  feh                     --bg-scale ~/Git/wallpapers/0163.jpg
-$e  picom                   --config ~/.config/picom/picom.conf
-$e  xset                    r rate 200 60
-$e  unclutter               -b
-$e  .bin/trackpad_off.sh
+bindsym Print                    $2  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
+bindsym XF86AudioLowerVolume     $2  amixer -D pulse sset Master 2%-
+bindsym XF86AudioMute            $2  amixer sset Master toggle
+bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
+bindsym XF86MonBrightnessDown    $2  light -U 10
+bindsym XF86MonBrightnessUp      $2  light -A 10
+
+$1+h focus left
+$1+j focus down
+$1+k focus up
+$1+l focus right
+
+$6+h move left
+$6+j move down
+$6+k move up
+$6+l move right
+
+$1+1 workspace 1
+$1+2 workspace 2
+$1+3 workspace 3
+$1+4 workspace 4
+$1+5 workspace 5
+$1+6 workspace 6
+$1+7 workspace 7
+$1+8 workspace 8
+$1+9 workspace 9
+$1+0 workspace 0
+
+$6+1 move container to workspace 1
+$6+2 move container to workspace 2
+$6+3 move container to workspace 3
+$6+4 move container to workspace 4
+$6+5 move container to workspace 5
+$6+6 move container to workspace 6
+$6+7 move container to workspace 7
+$6+8 move container to workspace 8
+$6+9 move container to workspace 9
+$6+0 move container to workspace 0
+
+$7 autotiling
+$8 batsignal
+$8 dunst
+$8 feh                     --bg-scale ~/Git/wallpapers/0163.jpg
+$8 picom                   --config ~/.config/picom/picom.conf
+$8 xset                    r rate 200 60
+$8 unclutter               -b
+$8 i3-msg workspace 0
+$8 .bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
 client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
@@ -132,16 +148,16 @@ client.placeholder          #282A36 #282A36 #F8F8F2 #282A36 #282A36
 client.background           #F8F8F2
 
 bar {
-   status_command          i3status
-   mode                    hide
-   colors {
-       background          #282A36
-       statusline          #F8F8F2
-       separator           #44475A
-       focused_workspace   #44475A #44475A #F8F8F2
-       active_workspace    #282A36 #44475A #F8F8F2
-       inactive_workspace  #282A36 #282A36 #BFBFBF
-       urgent_workspace    #FF5555 #FF5555 #F8F8F2
-       binding_mode        #FF5555 #FF5555 #F8F8F2
-   }
+  status_command          i3status
+  mode                    hide
+  colors {
+      background          #282A36
+      statusline          #F8F8F2
+      separator           #44475A
+      focused_workspace   #44475A #44475A #F8F8F2
+      active_workspace    #282A36 #44475A #F8F8F2
+      inactive_workspace  #282A36 #282A36 #BFBFBF
+      urgent_workspace    #FF5555 #FF5555 #F8F8F2
+      binding_mode        #FF5555 #FF5555 #F8F8F2
+  }
 }
