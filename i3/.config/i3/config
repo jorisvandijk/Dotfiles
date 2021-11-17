@@ -14,58 +14,30 @@ for_window [title="pulsemixer"]             fullscreen  enable
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
-set $3 && i3-msg
-set $4 .bin/new_i3_workspace.sh &&
-set $5 kitty
-set $6 bindsym Mod4+Shift
-set $7 exec_always --no-startup-id
-set $8 exec --no-startup-id
+set $3 bindsym Mod4+Shift
+set $4 kitty
+set $5 .bin/i3_app.sh
+set $6 exec_always --no-startup-id
+set $7 exec --no-startup-id
 
-set $a audacious
-# set $b
-set $c code
-set $d ferdi
-set $e geary
-# f
-set $g gimp
-# h
-# set $i
-# j
-# k
-# l
-set $m midori
-# n
-set $o libreoffice
-# p
-set $q qutebrowser
-set $r ranger
-set $s spotify
-set $t thunar
-# set $u
-set $v virtualbox
-set $w firefox
-# x
-set $y newsboat
-# set $z
-
-$1+a $2 pgrep $a $3 '[class="(?i)$a"] focus' || $4 $a
-$1+c $2 pgrep $c $3 '[class="(?i)$c"] focus' || $4 $c
-$1+d $2 pgrep $d $3 '[class="(?i)$d"] focus' || $4 $d
-$1+e $2 pgrep $e $3 '[class="(?i)$e"] focus' || $4 $e
-$1+f                fullscreen toggle
-$1+g $2 pgrep $g $3 '[class="(?i)$g"] focus' || $4 $g
-$1+m $2 pgrep $m $3 '[class="(?i)$m"] focus' || $4 $m
-$1+n $2             .bin/new_i3_workspace.sh
-$1+o $2 pgrep $o $3 '[class="(?i)$o"] focus' || $4 $o
-$1+p $2       $5    pulsemixer
-$1+q $2 pgrep $q $3 '[class="(?i)$q"] focus' || $4 $q
-$1+r $2 pgrep $r $3 '[class="(?i)$r"] focus' || $4 $5 -e $r
-$1+s $2 pgrep $s $3 '[class="(?i)$s"] focus' || $4 $s
-$1+t $2 pgrep $t $3 '[class="(?i)$t"] focus' || $4 $t
-$1+v $2 pgrep $v $3 '[class="(?i)$v"] focus' || $4 $v
-$1+w $2 pgrep $w $3 '[class="(?i)$w"] focus' || $4 $w
-$1+x $2             dunstctl close-all
-$1+y $2 pgrep $y $3 '[title="(?i)$y"] focus' || $4 $5 -e $y
+$1+a  $2  $5  audacious
+$1+c  $2  $5  code
+$1+d  $2  $5  ferdi
+$1+e  $2  $5  geary
+$1+f          fullscreen toggle
+$1+g  $2  $5  gimp
+$1+m  $2  $5  midori
+$1+n  $2      .bin/new_i3_workspace.sh
+$1+o  $2  $5  libreoffice
+$1+p  $2  $4  pulsemixer
+$1+q  $2  $5  qutebrowser
+$1+r  $2  $4  ranger
+$1+s  $2  $5  spotify
+$1+t  $2  $5  thunar
+$1+v  $2  $5  virtualbox
+$1+w  $2  $5  firefox
+$1+x  $2      dunstctl close-all
+$1+y  $2  $4  newsboat 
 
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
@@ -76,20 +48,20 @@ $1+Insert        $2  .bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
 $1+Next              workspace next
 $1+Prior             workspace prev
-$1+Return        $2  $5
+$1+Return        $2  $4
 $1+Right         $2  playerctl next
 $1+space         $2  rofi -show drun -modi drun -sort
 $1+Tab           $2  rofi -show window
 $1+Up            $2  playerctl play-pause
 
-$6+c             $2  $4 .bin/rofi_config_menu.sh
-$6+Escape        $2  systemctl poweroff -i, mode "default"
-$6+f                 floating toggle
-$6+i             $2  optimus-manager --switch intel --no-confirm
-$6+n             $2  optimus-manager --switch nvidia --no-confirm
-$6+r                 restart
-$6+s             $2  $4 .bin/scriptsmenu.sh
-$6+y             $2  mpv $(xsel -b)
+$3+c             $2  $4 .bin/rofi_config_menu.sh
+$3+Escape        $2  systemctl poweroff -i, mode "default"
+$3+f                 floating toggle
+$3+i             $2  optimus-manager --switch intel --no-confirm
+$3+n             $2  optimus-manager --switch nvidia --no-confirm
+$3+r                 restart
+$3+s             $2  $4 .bin/scriptsmenu.sh
+$3+y             $2  mpv $(xsel -b)
 
 bindsym Print                    $2  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
 bindsym XF86AudioLowerVolume     $2  amixer -D pulse sset Master 2%-
@@ -103,10 +75,10 @@ $1+j focus down
 $1+k focus up
 $1+l focus right
 
-$6+h move left
-$6+j move down
-$6+k move up
-$6+l move right
+$3+h move left
+$3+j move down
+$3+k move up
+$3+l move right
 
 $1+1 workspace 1
 $1+2 workspace 2
@@ -119,26 +91,26 @@ $1+8 workspace 8
 $1+9 workspace 9
 $1+0 workspace 0
 
-$6+1 move container to workspace 1
-$6+2 move container to workspace 2
-$6+3 move container to workspace 3
-$6+4 move container to workspace 4
-$6+5 move container to workspace 5
-$6+6 move container to workspace 6
-$6+7 move container to workspace 7
-$6+8 move container to workspace 8
-$6+9 move container to workspace 9
-$6+0 move container to workspace 0
+$3+1 move container to workspace 1
+$3+2 move container to workspace 2
+$3+3 move container to workspace 3
+$3+4 move container to workspace 4
+$3+5 move container to workspace 5
+$3+6 move container to workspace 6
+$3+7 move container to workspace 7
+$3+8 move container to workspace 8
+$3+9 move container to workspace 9
+$3+0 move container to workspace 0
 
-$7 autotiling
-$8 batsignal
-$8 dunst
-$8 feh                     --bg-scale ~/Git/wallpapers/0163.jpg
-$8 picom                   --config ~/.config/picom/picom.conf
-$8 xset                    r rate 200 60
-$8 unclutter               -b
-$8 i3-msg workspace 0
-$8 .bin/trackpad_off.sh
+$6 autotiling
+$7 batsignal
+$7 dunst
+$7 feh                     --bg-scale ~/Git/wallpapers/0163.jpg
+$7 picom                   --config ~/.config/picom/picom.conf
+$7 xset                    r rate 200 60
+$7 unclutter               -b
+$7 i3-msg workspace 0
+$7 .bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
 client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
