@@ -54,7 +54,7 @@ $1+space         $2  rofi -show drun -modi drun -sort
 $1+Tab           $2  rofi -show window
 $1+Up            $2  playerctl play-pause
 
-$3+c             $2  $4 .bin/rofi_config_menu.sh
+$3+c             $2  .bin/rofi_config_menu.sh
 $3+Escape        $2  systemctl poweroff -i, mode "default"
 $3+f                 floating toggle
 $3+i             $2  optimus-manager --switch intel --no-confirm
