@@ -67,8 +67,10 @@ alias keestow='cd $HOME/Git/kee/stow && for d in *; do stow -v -t ~ "$d" ;done'
 alias pacman='pacman --color auto'
 alias u='sudo pacman -Syyu'
 alias i='sudo pacman -S'
-alias r='sudo pacman -Rs'
-alias s='pacman -Ss'
+#alias r='sudo pacman -Rs'
+alias r="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
+#alias s='pacman -Ss'
+alias s="yay -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro yay -S"
 alias clean='sudo pacman -Rscn $(pacman -Qdtq)' # will search for orphaned packages and delete them
 
 alias yu='yay -Syyu'
