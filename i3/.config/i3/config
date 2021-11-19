@@ -20,6 +20,8 @@ set $5 .bin/i3_app.sh
 set $6 exec_always --no-startup-id
 set $7 exec --no-startup-id
 
+$1+b $2 $5 newsboat
+
 $1+a  $2  $5  audacious
 $1+c  $2  $5  code
 $1+d  $2  $5  ferdi
@@ -37,7 +39,7 @@ $1+t  $2  $5  thunar
 $1+v  $2  $5  virtualbox
 $1+w  $2  $5  firefox
 $1+x  $2      dunstctl close-all
-$1+y  $2  $4  newsboat 
+$1+y  $2  $5  newsboat 
 
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
