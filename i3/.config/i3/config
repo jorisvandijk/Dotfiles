@@ -44,7 +44,7 @@ $1+y  $2  $5  newsboat
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
 $1+Escape            kill
-$1+grave             workspace back_and_forth
+$1+grave         $2  rofi -show window
 $1+Home          $2  kill -9 -1
 $1+Insert        $2  .bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
@@ -53,7 +53,7 @@ $1+Prior             workspace prev
 $1+Return        $2  $4
 $1+Right         $2  playerctl next
 $1+space         $2  rofi -show drun -modi drun -sort
-$1+Tab           $2  rofi -show window
+$1+Tab               workspace back_and_forth
 $1+Up            $2  playerctl play-pause
 
 $3+c             $2  .bin/rofi_config_menu.sh
