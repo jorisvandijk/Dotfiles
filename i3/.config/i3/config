@@ -49,6 +49,7 @@ $1+Down          $2  playerctl play-pause
 $1+Escape            kill
 $1+grave             workspace back_and_forth
 $1+Home          $2  kill -9 -1
+$1+Hyper_L           workspace next
 $1+Insert        $2  .bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
 $1+Next              workspace next
