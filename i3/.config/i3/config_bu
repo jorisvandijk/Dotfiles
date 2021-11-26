@@ -1,5 +1,5 @@
 # i3 config file
-# Joris van Dijk | https://gitlab.com/jorisvandijk
+# Joris van Dijk | gitlab.com/jorisvandijk
 # Published under GPL-3.0-or-later
 
 floating_modifier   Mod4
@@ -7,14 +7,13 @@ font pango:         andika 11
 hide_edge_borders   smart
 
 # Temp
-for_window [class="Puzzle"]                   floating    enable
+for_window [class="Puzzle"]                 floating    enable
 
-for_window [class="^.*"]                      border      pixel 2
-for_window [class="mpv"]                      fullscreen  enable
-for_window [class="VirtualBox Manager"]       floating    enable
-for_window [class="VirtualBox Machine"]       fullscreen  enable
-for_window [title="pulsemixer"]               fullscreen  enable
-for_window [urgent="latest" class="firefox"]  focus
+for_window [class="^.*"]                    border      pixel 2
+for_window [class="mpv"]                    fullscreen  enable
+for_window [class="VirtualBox Manager"]     floating    enable
+for_window [class="VirtualBox Machine"]     fullscreen  enable
+for_window [title="pulsemixer"]             fullscreen  enable
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
@@ -32,7 +31,6 @@ $1+d  $2  $5  ferdi
 $1+e  $2  $5  geary
 $1+f          fullscreen toggle
 $1+g  $2  $5  gimp
-$1+i  $2      .bin/info.sh
 $1+m  $2  $5  midori
 $1+n  $2      .bin/new_i3_workspace.sh
 $1+o  $2  $5  libreoffice
@@ -77,20 +75,6 @@ bindsym XF86AudioMute            $2  amixer sset Master toggle
 bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown    $2  light -U 10
 bindsym XF86MonBrightnessUp      $2  light -A 10
-
-assign [class="firefox"] 1
-assign [class="Ferdi"] 2
-assign [class="Code"] 3
-assign [class="Thunar"] 4
-assign [class="newsboat"] 5
-assign [class="Gimp"] 6
-assign [class="libreoffice"] 7
-assign [class="qutebrowser"] 8
-assign [class="Geary"] 9
-assign [class="Audacious"] 10
-assign [title="Spotify"] 11
-assign [class="Midori"] 12
-assign [class="Virtualbox*"] 13
 
 $1+h focus left
 $1+j focus down
@@ -141,18 +125,17 @@ client.urgent               #44475A #FF5555 #F8F8F2 #FF5555 #FF5555
 client.placeholder          #282A36 #282A36 #F8F8F2 #282A36 #282A36
 client.background           #F8F8F2
 
-# bar {
-#   status_command          i3status
-
-#   mode                    hide
-#   colors {
-#       background          #282A36
-#       statusline          #F8F8F2
-#       separator           #44475A
-#       focused_workspace   #44475A #44475A #F8F8F2
-#       active_workspace    #282A36 #44475A #F8F8F2
-#       inactive_workspace  #282A36 #282A36 #BFBFBF
-#       urgent_workspace    #FF5555 #FF5555 #F8F8F2
-#       binding_mode        #FF5555 #FF5555 #F8F8F2
-#   }
-# }
+bar {
+  status_command          i3status
+  mode                    hide
+  colors {
+      background          #282A36
+      statusline          #F8F8F2
+      separator           #44475A
+      focused_workspace   #44475A #44475A #F8F8F2
+      active_workspace    #282A36 #44475A #F8F8F2
+      inactive_workspace  #282A36 #282A36 #BFBFBF
+      urgent_workspace    #FF5555 #FF5555 #F8F8F2
+      binding_mode        #FF5555 #FF5555 #F8F8F2
+  }
+}
