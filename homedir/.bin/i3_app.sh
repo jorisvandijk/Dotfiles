@@ -34,6 +34,8 @@ else
 
   if [ $1 == "newsboat" ]; then
     kitty --hold --detach --class newsboat -e newsboat 
+    sleep .5
+    i3-msg '[class=(?i)'$1'] focus' 
   fi
 
   $1 &

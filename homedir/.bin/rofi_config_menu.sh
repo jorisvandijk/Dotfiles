@@ -38,6 +38,8 @@ if [[ "$choice" == "[quit]" ]]; then
 elif [ "$choice" ]; then
     cfg=$(printf '%s\n' "${choice}" | awk '{print $NF}')
     $DMEDITOR "$cfg"
+    sleep .5
+    i3-msg '[class=(?i)'Code'] focus' 
 
 # What to do if we just escape without choosing anything.
 else
