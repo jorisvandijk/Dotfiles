@@ -45,6 +45,7 @@ $1+v  $2  $5  virtualbox
 $1+w  $2  $5  firefox
 $1+x  $2      dunstctl close-all
 $1+y  $2  $5  newsboat 
+$1+z  $2  $5  godot
 
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
