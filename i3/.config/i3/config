@@ -41,6 +41,7 @@ $1+q  $2  $5  qutebrowser
 $1+r  $2  $4  ranger
 $1+s  $2  $5  spotify
 $1+t  $2  $5  thunar
+$1+u  $2  $5  mpv
 $1+v  $2  $5  virtualbox
 $1+w  $2  $5  firefox
 $1+x  $2      dunstctl close-all

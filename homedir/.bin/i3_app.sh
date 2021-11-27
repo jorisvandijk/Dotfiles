@@ -32,6 +32,10 @@ else
     set -- "libreoffice" 
   fi
 
+  if [ $1 == "mpv" ]; then
+    set -- "newsboat" 
+  fi
+
   if [ $1 == "newsboat" ]; then
     kitty --hold --detach --class newsboat -e newsboat 
     sleep .5
