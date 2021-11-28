@@ -40,9 +40,11 @@ export PATH="$HOME/.bin:$PATH"
 shopt -s histappend
 PROMPT_COMMAND='history -a'
 
-# Set the default editor
-export EDITOR=micro
+# Set the defaults
+export EDITOR=code
 export VISUAL=code
+export TERMINAL=kitty
+export BROWSER=firefox
 
 # Color theme for Micro
 #export MICRO_TRUECOLOR=1
@@ -129,10 +131,6 @@ alias nano='micro'
 alias x='chmod +x'
 alias R='ranger'
 
-# Multimedia
-alias yt='newsboat'
-alias a='alsamixer'
-
 # Fontys
 alias jorbuntu="ssh joris@192.168.56.3"
 
@@ -184,3 +182,17 @@ if [ "$TERM" = "linux" ]; then
   printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
   clear
 fi
+
+# fo - open selected file in editor
+fo() {
+  local file
+  file=$(fzf --query="$1" --select-1 --exit-0)
+  [ -n "$file" ] && ${EDITOR:-vim} "$file"
+}
+
+# fd open directory of selected file
+fd() {
+   local file
+   local dir
+   file=$(fzf -e -q "$*") && dir=$(dirname "$file") && cd "$dir"
+}
