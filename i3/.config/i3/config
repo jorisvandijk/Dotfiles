@@ -15,6 +15,7 @@ for_window [class="VirtualBox Manager"]       floating    enable
 for_window [class="VirtualBox Machine"]       fullscreen  enable
 for_window [title="pulsemixer"]               fullscreen  enable
 for_window [urgent="latest" class="firefox"]  focus
+for_window [urgent="latest" class="Code"]     focus
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
@@ -24,9 +25,8 @@ set $5 .bin/i3_app.sh
 set $6 exec_always --no-startup-id
 set $7 exec --no-startup-id
 
-$1+b $2 $5 newsboat
-
 $1+a  $2  $5  audacious
+$1+b  $2  $5  newsboat
 $1+c  $2  $5  code
 $1+d  $2  $5  ferdi
 $1+e  $2  $5  geary
@@ -68,8 +68,8 @@ $1+Up            $2  playerctl play-pause
 $3+c             $2  .bin/rofi_config_menu.sh
 $3+Escape        $2  systemctl poweroff -i, mode "default"
 $3+f                 floating toggle
-$3+i             $2  optimus-manager --switch intel --no-confirm
-$3+n             $2  optimus-manager --switch nvidia --no-confirm
+$3+i             $2  optimus-manager --switch intel   --no-confirm
+$3+n             $2  optimus-manager --switch nvidia  --no-confirm
 $3+r                 restart
 $3+s             $2  $4 .bin/scriptsmenu.sh
 $3+y             $2  mpv $(xsel -b)
@@ -92,9 +92,11 @@ assign [class="libreoffice"] 7
 assign [class="qutebrowser"] 8
 assign [class="Geary"] 9
 assign [class="Audacious"] 10
-assign [class="spotify"] 11
 assign [class="Midori"] 12
 assign [class="Virtualbox*"] 13
+
+# fu spotify
+for_window [class="Spotify"] move container to workspace 11
 
 $1+h focus left
 $1+j focus down
