@@ -13,7 +13,6 @@ for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="VirtualBox Manager"]       floating    enable
 for_window [class="VirtualBox Machine"]       fullscreen  enable
-for_window [title="pulsemixer"]               fullscreen  enable
 for_window [urgent="latest" class="firefox"]  focus
 for_window [urgent="latest" class="Code"]     focus
 
@@ -35,7 +34,6 @@ $1+i  $2      .bin/info.sh
 $1+m  $2  $5  midori
 $1+n  $2      .bin/new_i3_workspace.sh
 $1+o  $2  $5  libreoffice
-$1+p  $2  $4  pulsemixer
 $1+q  $2  $5  qutebrowser
 $1+r  $2  $4  ranger
 $1+s  $2  $5  spotify
@@ -49,9 +47,9 @@ $1+z  $2  $5  godot
 
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
-$1+Escape            kill
+$1+Escape            [con_id="__focused__" instance="^(?!__*).*$"] kill
 $1+grave             workspace back_and_forth
-$1+Home              kill -9 -1
+$1+Home          $2  i3-msg exit
 $1+Hyper_L       $2  .bin/rofi-file-selector/rofi-file-selector.sh
 $1+Insert        $2  .bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
@@ -96,6 +94,20 @@ assign [class="Virtualbox*"] 13
 
 # fu spotify
 for_window [class="Spotify"] move container to workspace 11
+
+# Scratchpad terminal
+for_window [instance="__ter"] floating enable
+for_window [instance="__ter"] resize set 1024 768
+for_window [instance="__ter"] move scratchpad
+$2 kitty --name=__ter
+$1+F1 [instance="__ter"] scratchpad show;[instance="__ter"] move position center
+
+# Scratchpad pulsemixer
+for_window [instance="__pul"] floating enable
+for_window [instance="__pul"] resize set 800 600
+for_window [instance="__pul"] move scratchpad
+$2 kitty --name=__pul pulsemixer
+$1+F2 [instance="__pul"] scratchpad show;[instance="__pul"] move position center
 
 $1+h focus left
 $1+j focus down
