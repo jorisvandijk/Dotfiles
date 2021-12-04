@@ -23,10 +23,8 @@ set $3 bindsym Mod4+Shift
 set $4 kitty
 set $5 .bin/i3_app.sh
 set $6 exec_always --no-startup-id
-set $7 exec --no-startup-id
 
-bindsym Mod4+a exec pgrep geary && i3-msg '[class="Geary"] focus' || geary
-#$1+a  $2  $5  audacious
+$1+a  $2  $5  audacious
 $1+b  $2  $5  newsboat
 $1+c  $2  $5  code
 $1+d  $2  $5  ferdi
@@ -132,15 +130,15 @@ $3+9 move container to workspace 9
 $3+0 move container to workspace 0
 
 $6 autotiling
-$7 batsignal
-$7 clipster -d 
-$7 dunst
-$7 feh                     --bg-scale ~/Git/wallpapers/0310.jpg
-$7 picom                   --config ~/.config/picom/picom.conf
-$7 xset                    r rate 200 60
-$7 unclutter               -b
-$7 i3-msg workspace 0
-$7 .bin/trackpad_off.sh
+$2 batsignal
+$2 clipster -d 
+$2 dunst
+$2 feh                     --bg-scale ~/Git/wallpapers/0310.jpg
+$2 picom                   --config ~/.config/picom/picom.conf
+$2 xset                    r rate 200 60
+$2 unclutter               -b
+$2 i3-msg workspace 0
+$2 .bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
 client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
