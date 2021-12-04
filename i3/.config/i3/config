@@ -25,7 +25,8 @@ set $5 .bin/i3_app.sh
 set $6 exec_always --no-startup-id
 set $7 exec --no-startup-id
 
-$1+a  $2  $5  audacious
+bindsym Mod4+a exec pgrep geary && i3-msg '[class="Geary"] focus' || geary
+#$1+a  $2  $5  audacious
 $1+b  $2  $5  newsboat
 $1+c  $2  $5  code
 $1+d  $2  $5  ferdi
@@ -134,7 +135,7 @@ $6 autotiling
 $7 batsignal
 $7 clipster -d 
 $7 dunst
-$7 feh                     --bg-scale ~/Git/wallpapers/0163.jpg
+$7 feh                     --bg-scale ~/Git/wallpapers/0310.jpg
 $7 picom                   --config ~/.config/picom/picom.conf
 $7 xset                    r rate 200 60
 $7 unclutter               -b

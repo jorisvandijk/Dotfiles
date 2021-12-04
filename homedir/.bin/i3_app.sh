@@ -42,6 +42,10 @@ else
     i3-msg '[class=(?i)'$1'] focus' 
   fi
 
+  if [ $1 == "ferdi" ]; then
+    sleep 1 
+  fi
+
   $1 &
   sleep 1
   i3-msg '[class=(?i)'$1'] focus' 
