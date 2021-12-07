@@ -130,6 +130,8 @@ alias vi='micro'
 alias nano='micro'
 alias x='chmod +x'
 alias R='ranger'
+alias P='pulsemixer'
+alias N='micro'
 
 # Fontys
 alias jorbuntu="ssh joris@192.168.56.3"

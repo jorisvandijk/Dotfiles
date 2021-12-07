@@ -95,19 +95,19 @@ assign [class="Virtualbox*"] 13
 # fu spotify
 for_window [class="Spotify"] move container to workspace 11
 
-# Scratchpad terminal
-for_window [instance="__ter"] floating enable
-for_window [instance="__ter"] resize set 1024 768
-for_window [instance="__ter"] move scratchpad
-$2 kitty --name=__ter
-$1+F1 [instance="__ter"] scratchpad show;[instance="__ter"] move position center
+# Scratchpad terminal_1
+for_window [instance="_trm1"] floating enable
+for_window [instance="_trm1"] resize set 1024 768
+for_window [instance="_trm1"] move scratchpad
+$2 kitty --name=__trm1 --title=Scratchpad1
+$1+F1 [instance="_trm1"] scratchpad show;[instance="_trm1"] move position center
 
-# Scratchpad pulsemixer
-for_window [instance="__pul"] floating enable
-for_window [instance="__pul"] resize set 800 600
-for_window [instance="__pul"] move scratchpad
-$2 kitty --name=__pul pulsemixer
-$1+F2 [instance="__pul"] scratchpad show;[instance="__pul"] move position center
+# Scratchpad terminal_2
+for_window [instance="_trm2"] floating enable
+for_window [instance="_trm2"] resize set 1024 768
+for_window [instance="_trm2"] move scratchpad
+$2 kitty --name=__trm2 --title=Scratchpad2
+$1+F2 [instance="_trm2"] scratchpad show;[instance="_trm2"] move position center
 
 $1+h focus left
 $1+j focus down
