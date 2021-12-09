@@ -113,8 +113,7 @@ alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # Git
-alias add='git add -u'
-alias addall='git add .'
+alias add='git add .'
 alias commit='git commit -m'
 alias fetch='git fetch'
 alias pull='git pull origin'
@@ -132,6 +131,7 @@ alias x='chmod +x'
 alias R='ranger'
 alias P='pulsemixer'
 alias N='micro'
+alias C='calc'
 
 # Fontys
 alias jorbuntu="ssh joris@192.168.56.3"
