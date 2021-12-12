@@ -94,6 +94,7 @@ choices(){
 updates(){
     REPO=$(echo $result | sed 's:/*$::')
     cd $HOME/Git/$REPO
+		git pull
     git add .
     git status
     echo
