@@ -32,7 +32,7 @@ $1+f          fullscreen toggle
 $1+g  $2  $5  gimp
 $1+i  $2      .bin/info.sh
 $1+m  $2  $5  midori
-$1+n  $2      .bin/new_i3_workspace.sh
+$1+n  $2  $5  obsidian
 $1+o  $2  $5  libreoffice
 $1+q  $2  $5  qutebrowser
 $1+r  $2  $4  ranger
@@ -47,6 +47,7 @@ $1+z  $2  $5  godot
 
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
+$1+equal         $2 .bin/new_i3_workspace.sh
 $1+Escape            [con_id="__focused__" instance="^(?!__*).*$"] kill
 $1+grave             workspace back_and_forth
 $1+Home          $2  i3-msg exit
