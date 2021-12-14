@@ -11,10 +11,10 @@ for_window [class="Puzzle"]                   floating    enable
 
 for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
-for_window [class="VirtualBox Manager"]       floating    enable
-for_window [class="VirtualBox Machine"]       fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
 for_window [class="Code" urgent="latest"]     focus
+for_window [class="VirtualBox Manager"]       floating    enable
+for_window [class="VirtualBox Machine"]       fullscreen  enable
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
@@ -23,18 +23,14 @@ set $4 kitty
 set $5 .bin/i3_app.sh
 set $6 exec_always --no-startup-id
 
-$1+a  $2  $5  audacious
-$1+b  $2  $5  newsboat
 $1+c  $2  $5  code
 $1+d  $2  $5  ferdi
 $1+e  $2  $5  geary
 $1+f          fullscreen toggle
 $1+g  $2  $5  gimp
 $1+i  $2      .bin/info.sh
-$1+m  $2  $5  midori
 $1+n  $2  $5  obsidian
 $1+o  $2  $5  libreoffice
-$1+q  $2  $5  qutebrowser
 $1+r  $2  $4  ranger
 $1+s  $2  $5  spotify
 $1+t  $2  $5  thunar
@@ -55,7 +51,6 @@ $1+Hyper_L       $2  .bin/rofi-file-selector/rofi-file-selector.sh
 $1+Insert        $2  .bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
 $1+Next              workspace next
-$1+Pause         $2  python3 .bin/rofi-clipster.py
 $1+Prior             workspace prev
 $1+Return        $2  $4
 $1+Right         $2  playerctl next
@@ -79,22 +74,20 @@ bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown    $2  light -U 10
 bindsym XF86MonBrightnessUp      $2  light -A 10
 
-assign [class="Godot"] 0
-assign [class="firefox"] 1
-assign [class="Ferdi"] 2
-assign [class="Code"] 3
-assign [class="Thunar"] 4
-assign [class="newsboat"] 5
-assign [class="Gimp"] 6
-assign [class="libreoffice"] 7
-assign [class="qutebrowser"] 8
-assign [class="Geary"] 9
-assign [class="Audacious"] 10
-assign [class="Midori"] 12
-assign [class="Virtualbox*"] 13
+# assign [class="Virtualbox Machine"] 0
+# assign [class="firefox"] 1
+# assign [class="Ferdi"] 2
+# assign [class="Code"] 3
+# assign [class="Thunar"] 4
+# assign [class="newsboat"] 5
+# assign [class="Gimp"] 6
+# assign [class="libreoffice"] 7
+# assign [class="obsidian"] 8
+# assign [class="Geary"] 9
+# assign [class="Virtualbox Manager"] 10
 
 # fu spotify
-for_window [class="Spotify"] move container to workspace 11
+# for_window [class="Spotify"] move container to workspace 11
 
 # Scratchpad terminal_1
 for_window [instance="_trm1"] floating enable
@@ -103,12 +96,12 @@ for_window [instance="_trm1"] move scratchpad
 $2 kitty --name=__trm1 --title=Scratchpad1
 $1+F1 [instance="_trm1"] scratchpad show;[instance="_trm1"] move position center
 
-# Scratchpad terminal_2
-for_window [instance="_trm2"] floating enable
-for_window [instance="_trm2"] resize set 1024 768
-for_window [instance="_trm2"] move scratchpad
-$2 kitty --name=__trm2 --title=Scratchpad2
-$1+F2 [instance="_trm2"] scratchpad show;[instance="_trm2"] move position center
+# # Scratchpad terminal_2
+# for_window [instance="_trm2"] floating enable
+# for_window [instance="_trm2"] resize set 1024 768
+# for_window [instance="_trm2"] move scratchpad
+# $2 kitty --name=__trm2 --title=Scratchpad2
+# $1+F2 [instance="_trm2"] scratchpad show;[instance="_trm2"] move position center
 
 $1+h focus left
 $1+j focus down
@@ -146,11 +139,11 @@ $6 autotiling
 $2 batsignal
 $2 clipster -d 
 $2 dunst
-$2 feh                     --bg-scale ~/Git/wallpapers/0310.jpg
+$2 feh                     --bg-scale ~/Pictures/wallpaper_fall.jpg
 $2 picom                   --config ~/.config/picom/picom.conf
 $2 xset                    r rate 200 60
 $2 unclutter               -b
-$2 i3-msg workspace 0
+# $2 i3-msg workspace 0
 $2 .bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
