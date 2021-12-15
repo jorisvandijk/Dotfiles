@@ -6,9 +6,6 @@ floating_modifier   Mod4
 font pango:         andika 11
 hide_edge_borders   smart
 
-# Temp
-for_window [class="Puzzle"]                   floating    enable
-
 for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
@@ -39,7 +36,6 @@ $1+v  $2  $5  virtualbox
 $1+w  $2  $5  firefox
 $1+x  $2      dunstctl close-all
 $1+y  $2  $5  newsboat 
-$1+z  $2  $5  godot
 
 $1+BackSpace     $2  dm-tool lock
 $1+Down          $2  playerctl play-pause
@@ -89,19 +85,12 @@ assign [class="Virtualbox Manager"] 10
 # fu spotify
 for_window [class="Spotify"] move container to workspace 11
 
-# Scratchpad terminal_1
-for_window [instance="_trm1"] floating enable
-for_window [instance="_trm1"] resize set 1024 768
-for_window [instance="_trm1"] move scratchpad
-$2 kitty --name=__trm1 --title=Scratchpad1
-$1+F1 [instance="_trm1"] scratchpad show;[instance="_trm1"] move position center
-
-# # Scratchpad terminal_2
-# for_window [instance="_trm2"] floating enable
-# for_window [instance="_trm2"] resize set 1024 768
-# for_window [instance="_trm2"] move scratchpad
-# $2 kitty --name=__trm2 --title=Scratchpad2
-# $1+F2 [instance="_trm2"] scratchpad show;[instance="_trm2"] move position center
+# Scratchpad terminal
+for_window [instance="_trm"] floating enable
+for_window [instance="_trm"] resize set 1024 768
+for_window [instance="_trm"] move scratchpad
+$2 kitty --name=_trm --title=Scratchpad
+$1+F1 [instance="_trm"] scratchpad show;[instance="_trm"] move position center
 
 $1+h focus left
 $1+j focus down
@@ -143,7 +132,7 @@ $2 feh                     --bg-scale ~/Pictures/wallpaper_fall.jpg
 $2 picom                   --config ~/.config/picom/picom.conf
 $2 xset                    r rate 200 60
 $2 unclutter               -b
-# $2 i3-msg workspace 0
+$2 i3-msg workspace 0
 $2 .bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
