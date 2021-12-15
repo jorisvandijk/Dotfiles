@@ -74,20 +74,20 @@ bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown    $2  light -U 10
 bindsym XF86MonBrightnessUp      $2  light -A 10
 
-# assign [class="Virtualbox Machine"] 0
-# assign [class="firefox"] 1
-# assign [class="Ferdi"] 2
-# assign [class="Code"] 3
-# assign [class="Thunar"] 4
-# assign [class="newsboat"] 5
-# assign [class="Gimp"] 6
-# assign [class="libreoffice"] 7
-# assign [class="obsidian"] 8
-# assign [class="Geary"] 9
-# assign [class="Virtualbox Manager"] 10
+assign [class="Virtualbox Machine"] 0
+assign [class="firefox"] 1
+assign [class="Ferdi"] 2
+assign [class="Code"] 3
+assign [class="Thunar"] 4
+assign [class="newsboat"] 5
+assign [class="Gimp"] 6
+assign [class="libreoffice"] 7
+assign [class="obsidian"] 8
+assign [class="Geary"] 9
+assign [class="Virtualbox Manager"] 10
 
 # fu spotify
-# for_window [class="Spotify"] move container to workspace 11
+for_window [class="Spotify"] move container to workspace 11
 
 # Scratchpad terminal_1
 for_window [instance="_trm1"] floating enable
