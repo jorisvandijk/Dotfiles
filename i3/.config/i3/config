@@ -10,8 +10,6 @@ for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
 for_window [class="Code" urgent="latest"]     focus
-for_window [class="VirtualBox Manager"]       floating    enable
-for_window [class="VirtualBox Machine"]       fullscreen  enable
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
@@ -28,11 +26,10 @@ $1+g  $2  $5  gimp
 $1+i  $2      .bin/info.sh
 $1+n  $2  $5  obsidian
 $1+o  $2  $5  libreoffice
-$1+r  $2  $4  ranger
+$1+r  $2  $5  rider
 $1+s  $2  $5  spotify
 $1+t  $2  $5  thunar
 $1+u  $2  $5  mpv
-$1+v  $2  $5  virtualbox
 $1+w  $2  $5  firefox
 $1+x  $2      dunstctl close-all
 $1+y  $2  $5  newsboat 
@@ -43,7 +40,6 @@ $1+equal         $2 .bin/new_i3_workspace.sh
 $1+Escape            [con_id="__focused__" instance="^(?!__*).*$"] kill
 $1+grave             workspace back_and_forth
 $1+Home          $2  i3-msg exit
-$1+Hyper_L       $2  .bin/rofi-file-selector/rofi-file-selector.sh
 $1+Insert        $2  .bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
 $1+Next              workspace next
@@ -60,7 +56,7 @@ $3+f                 floating toggle
 $3+i             $2  optimus-manager --switch intel   --no-confirm
 $3+n             $2  optimus-manager --switch nvidia  --no-confirm
 $3+r                 restart
-$3+s             $2  $4 .bin/scriptsmenu.sh
+$3+s             $2  .bin/scriptsmenu.sh
 $3+y             $2  mpv $(xsel -b)
 
 bindsym Print                    $2  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
@@ -70,27 +66,18 @@ bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
 bindsym XF86MonBrightnessDown    $2  light -U 10
 bindsym XF86MonBrightnessUp      $2  light -A 10
 
-assign [class="Virtualbox Machine"] 0
 assign [class="firefox"] 1
 assign [class="Ferdi"] 2
-assign [class="Code"] 3
+assign [class="jetbrains-rider"] 3
 assign [class="Thunar"] 4
 assign [class="newsboat"] 5
 assign [class="Gimp"] 6
 assign [class="libreoffice"] 7
 assign [class="obsidian"] 8
 assign [class="Geary"] 9
-assign [class="Virtualbox Manager"] 10
 
 # fu spotify
-for_window [class="Spotify"] move container to workspace 11
-
-# Scratchpad terminal
-for_window [instance="_trm"] floating enable
-for_window [instance="_trm"] resize set 1024 768
-for_window [instance="_trm"] move scratchpad
-$2 kitty --name=_trm --title=Scratchpad
-$1+F1 [instance="_trm"] scratchpad show;[instance="_trm"] move position center
+for_window [class="Spotify"] move container to workspace 10
 
 $1+h focus left
 $1+j focus down
