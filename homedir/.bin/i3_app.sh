@@ -42,11 +42,13 @@ else
     i3-msg '[class=(?i)'$1'] focus' 
   fi
 
+  $1 &
+
   if [ $1 == "ferdi" ]; then
     sleep 1 
   fi
 
-  $1 &
+  fi
   sleep 1
   i3-msg '[class=(?i)'$1'] focus' 
 

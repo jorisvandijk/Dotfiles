@@ -45,15 +45,15 @@ export EDITOR=code
 export VISUAL=code
 export TERMINAL=kitty
 export BROWSER=firefox
-
+export TERM=xterm
 # Color theme for Micro
 export MICRO_TRUECOLOR=1
 
 # Term fix
-if [ "$TERM" = xterm ]; then
-  TERM=xterm-256color
-fi
-export TERM=xterm-256color
+# if [ "$TERM" = xterm ]; then
+#   TERM=xterm-256color
+# fi
+# export TERM=xterm-256color
 
 # Use auto cd
 shopt -s autocd
