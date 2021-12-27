@@ -20,8 +20,8 @@
 #     printf "You're on workspace $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)"
 # )"  
 
-notify-send -u normal -t 15000 "$(
-    printf " $(date "+%A %-d %-B %Y")\n"
+notify-send -u normal -t 5000 "$(
+    printf " $(date "+%A %-d/%-m/%Y")\n"
     printf " $(date "+%H:%M")\n"
     bat=$(acpi | awk {'print $3'})
     if [[ $bat == Charging, ]]; then
