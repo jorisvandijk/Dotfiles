@@ -2,7 +2,6 @@
 
 CHECK=NAME
 NAME=$1
-WORKSPACE=$2
 
 if [ $1 == firefox ]; then
     CHECK=GeckoMain
@@ -17,8 +16,8 @@ if [ $1 == newsboat ]; then
     NAME="kitty --hold --detach --class newsboat -e newsboat"
 fi
 
-i3-msg workspace $WORKSPACE
-# notify-send -t 1500 "Workspace $WORKSPACE : ${NAME^}"
+i3-msg workspace "${NAME^}"
+
 if ! pgrep -x "$CHECK" > /dev/null; then
     $NAME
 fi
