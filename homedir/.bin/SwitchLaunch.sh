@@ -1,23 +1,10 @@
 #!/usr/bin/env bash
 
-CHECK=NAME
-NAME=$1
-
-if [ $1 == firefox ]; then
-    CHECK=GeckoMain
-fi
-
-if [ $1 == libreoffice ]; then
-    CHECK=asoffice.bin
-fi
+# This script requires wmctrl
+i3-msg workspace "${1^}"
 
 if [ $1 == newsboat ]; then
-    CHECK=newsboat
-    NAME="kitty --hold --detach --class newsboat -e newsboat"
-fi
-
-i3-msg workspace "${NAME^}"
-
-if ! pgrep -x "$CHECK" > /dev/null; then
-    $NAME
+    wmctrl -x -a "$1" || kitty --hold --detach --class newsboat -e newsboat
+else
+    wmctrl -x -a "$1" || $1
 fi

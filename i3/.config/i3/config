@@ -19,6 +19,8 @@ set $5 exec --no-startup-id .bin/SwitchLaunch.sh
 set $6 exec_always --no-startup-id
 
 $1+1      workspace 1
+$1+2      workspace 2
+$1+3      workspace 3
 $1+c  $5  code
 $1+d  $5  ferdi
 $1+e  $5  geary
