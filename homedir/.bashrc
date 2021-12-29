@@ -34,7 +34,7 @@ export HISTSIZE=500
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 # Add .bin to PATH
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
 # Causes bash to append to history instead of overwriting it so if you start a new terminal, you have old session history
 shopt -s histappend
@@ -120,7 +120,7 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
 
-alias gut='sh /$HOME/.bin/update_repositories.sh'
+alias gut='sh /$HOME/bin/update_repositories.sh'
 
 # Other
 alias c='clear'
