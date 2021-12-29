@@ -44,8 +44,8 @@ $1+grave             workspace back_and_forth
 $1+Home          $2  i3-msg exit
 $1+Insert        $2  bin/toggle_trackpad.sh
 $1+Left          $2  playerctl previous
-$1+Next              workspace next
-$1+Prior             workspace prev
+$1+Next              scratchpad show
+$1+Prior             move scratchpad
 $1+Return        $2  $4
 $1+Right         $2  playerctl next
 $1+space         $2  rofi -show drun -modi drun -sort
@@ -80,13 +80,12 @@ $3+l move right
 
 $6 autotiling
 $2 batsignal
-$2 clipster -d 
 $2 dunst
 $2 feh                     --bg-scale ~/Pictures/snowy_stmarco.jpg
 $2 picom                   --config ~/.config/picom/picom.conf
 $2 xset                    r rate 200 60
 $2 unclutter               -b
-$2 .bin/trackpad_off.sh
+$2 bin/trackpad_off.sh
 
 client.focused              #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
 client.focused_inactive     #44475A #44475A #F8F8F2 #44475A #44475A
