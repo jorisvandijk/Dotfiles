@@ -81,7 +81,7 @@ $3+l move right
 $6 autotiling
 $2 batsignal
 $2 dunst
-$2 feh                     --bg-scale ~/Pictures/snowy_stmarco.jpg
+$2 feh                     --bg-scale ~/Pictures/lake.jpg
 $2 picom                   --config ~/.config/picom/picom.conf
 $2 xset                    r rate 200 60
 $2 unclutter               -b
