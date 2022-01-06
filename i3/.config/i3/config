@@ -29,6 +29,7 @@ $1+g  $5  gimp
 $1+i  $2  bin/info.sh
 $1+n  $5  obsidian
 $1+o  $5  libreoffice
+$1+p  $5  keepassxc
 $1+r  $5  rider
 $1+s  $5  spotify
 $1+t  $5  thunar
