@@ -201,10 +201,6 @@ function cd_with_fzf() {
     cd $HOME && cd "$(fd -H -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
 }
 
-#two spaces after the d backslash (avoiding nested single quote hell)
-alias winact='wmctrl -i -R $(wmctrl -l | fzf | cut -d\  -f1)'
-
-
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
