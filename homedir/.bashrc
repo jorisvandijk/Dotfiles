@@ -1,102 +1,56 @@
-# Usage: .bashrc file, bash config file.
-#
-# Dotfile by Joris van Dijk | gitlab.com/jorisvandijk
-#
-#          Published under GPL-3.0-or-later
+# bashrc - Bash config file
+# Joris van Dijk | https://gitlab.com/jorisvandijk
+# Published under GPL-3.0-or-later
 
-# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-
-# Set PS1
-PS1='\n\[\e[1;34m\] \W \[\e[m\]'
-
-# Ignore upper and lowercase when TAB completion
-bind "set completion-ignore-case on"
-
-# limits recursive functions, see 'man bash'
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100
 
-## Use the up and down arrow keys for finding a command in history
-## (you can write some initial letters of the command first).
+PS1='\n\[\e[1;34m\] \W \[\e[m\]'
+
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
+bind "set completion-ignore-case on"
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
 
-# Automatically ls when changing directory.
-cd() {
-  builtin cd "$@" && exa -l --color=always --group-directories-first
-}
+shopt -s autocd
+shopt -s histappend
 
-# Expand the history size
 export HISTFILESIZE=10000
 export HISTSIZE=500
-
-# Don't put duplicate lines in the history and do not add lines that start with a space
 export HISTCONTROL=erasedups:ignoredups:ignorespace
+export PROMPT_COMMAND='history -a'
 
-# Causes bash to append to history instead of overwriting it so if you start a new terminal, you have old session history
-shopt -s histappend
-PROMPT_COMMAND='history -a'
-
-# Add bin to PATH
-export PATH="$HOME/bin:$PATH"
-
-# Set the defaults
 export EDITOR=code
 export VISUAL=code
 export TERM=kitty
 export TERMINAL=kitty
 export BROWSER=firefox
 export MICRO_TRUECOLOR=1
+export PATH="$HOME/bin:$PATH"
 
-# Term fix
-# if [ "$TERM" = xterm ]; then
-#   TERM=xterm-256color
-# fi
-# export TERM=xterm-256color
+export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 
+  --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 
+  --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 
+  --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
 
-# Use auto cd
-shopt -s autocd
-
-bind 'set show-all-if-ambiguous on'
-bind 'TAB:menu-complete'
-
-# Stow
-alias dotstow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
-alias keestow='cd $HOME/Git/kee/stow && for d in *; do stow -v -t ~ "$d" ;done'
-
-# Joris' aliasses
-alias pacman='pacman --color auto'
-alias u='sudo yay -Syyu'
-alias clean='sudo pacman -Rscn $(pacman -Qdtq)' # will search for orphaned packages and delete them
-alias unlock="sudo rm /var/lib/pacman/db.lck" # remove pacman lock
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-# See where stuff is
-alias space="ncdu"
-
-# Grab fastest mirrors
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-
-# Changing "ls" to "exa"
-alias ls='exa -l --color=always --group-directories-first'  # list visible files and folders
-alias la='exa -la --color=always --group-directories-first' # list all files and folders
-alias lh='exa -a | egrep "^\."'                             # list only hidden files and folders
-
-alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
+alias cp="cp -i"     
+alias df='df -h'
 alias top='sudo top'
 
-# Colorize grep output (good for log files)
+alias ls='exa -l --color=always --group-directories-first'  
+alias la='exa -la --color=always --group-directories-first' 
+alias lh='exa -a | egrep "^\."' 
+
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-# Adding flags
-alias cp="cp -i"     # confirm before overwriting something
-alias df='df -h'     # human-readable sizes
-
-# Git
 alias add='git add .'
 alias commit='git commit -m'
 alias fetch='git fetch'
@@ -104,25 +58,35 @@ alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
 
-alias gut='sh /$HOME/bin/update_repositories.sh'
-
-# Other
 alias c='clear'
 alias vim='micro'
 alias vi='micro'
 alias nano='micro'
 alias x='chmod +x'
 alias R='ranger'
-alias P='pulsemixer'
 alias M='micro'
 alias C='calc'
 
-# Fontys
-alias jorbuntu="ssh joris@192.168.56.3"
+alias pacman='pacman --color auto'
+alias u='sudo yay -Syyu'
+alias clean='sudo pacman -Rscn $(pacman -Qdtq)' 
+alias unlock="sudo rm /var/lib/pacman/db.lck" 
+alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
 
-# # ex = EXtractor for all kinds of archives
-# # usage: ex <file>
-ex() {
+alias space="ncdu"
+alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
+alias gut='sh /$HOME/bin/update_repositories.sh'
+
+alias dotstow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
+alias keestow='cd $HOME/Git/kee/stow && for d in *; do stow -v -t ~ "$d" ;done'
+
+alias jorbuntu="ssh joris@192.168.56.3" # Fontys
+
+function cd() { # Add exa after a cd
+  builtin cd "$@" && exa -l --color=always --group-directories-first
+}
+
+function ex() { # Extract compressed files
   if [ -f $1 ]; then
     case $1 in
     *.tar.bz2) tar xjf $1 ;;
@@ -146,7 +110,31 @@ ex() {
   fi
 }
 
-# Dracula
+function f() { # Fuzzy find and launch files
+  IFS=$'\n' out=("$(fzf -m --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
+  fi
+}
+
+function fzfcd() { # Fuzzy find and cd to a directory
+    cd $HOME && cd "$(fd -H -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
+}
+
+function fzfo() { # Fuzzy find and open a file
+    fd -t f -H -I | fzf -m --preview='pistol {}' | xargs -ro -d "\n" xdg-open 2>&-
+}
+
+function i() { # Fuzzy find and install applications
+    yay -Slq | fzf -q "$1" -m --preview 'yay -Si {1}'| xargs -ro yay -S
+}
+
+function r() { # Fuzzy find and remove applications
+    yay -Qq | fzf -q "$1" -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns
+}
+
 if [ "$TERM" = "linux" ]; then
   printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
   printf %b '\e[37m' '\e[8]' # set default foreground to color 7 'dracula-fg'
@@ -169,37 +157,6 @@ if [ "$TERM" = "linux" ]; then
   clear
 fi
 
-# FZF
-export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
-export FZF_DEFAULT_COMMAND='find .'
-
-# Install packages using yay (change to pacman/AUR helper of your choice)
-function i() {
-    yay -Slq | fzf -q "$1" -m --preview 'yay -Si {1}'| xargs -ro yay -S
-}
-
-# Remove installed packages (change to pacman/AUR helper of your choice)
-function r() {
-    yay -Qq | fzf -q "$1" -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns
-}
-
-# Find files
-function f() {
-  IFS=$'\n' out=("$(fzf -m --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
-  key=$(head -1 <<< "$out")
-  file=$(head -2 <<< "$out" | tail -1)
-  if [ -n "$file" ]; then
-    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
-  fi
-}
-
-function open_with_fzf() {
-    fd -t f -H -I | fzf -m --preview='pistol {}' | xargs -ro -d "\n" xdg-open 2>&-
-}
-
-function cd_with_fzf() {
-    cd $HOME && cd "$(fd -H -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
-}
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

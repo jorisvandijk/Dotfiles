@@ -10,8 +10,8 @@ for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
 for_window [class="Code" urgent="latest"]     focus
-for_window [class="floatterm"]                floating    enable
-for_window [class="floatterm"]                resize      set 800 600
+
+for_window [class="floatterm"] resize set 800 600, floating enable, move position center
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
@@ -51,8 +51,8 @@ $1+Next              scratchpad show
 $1+Prior             move scratchpad
 $1+Return        $2  $4
 $1+Right         $2  playerctl next
-#$1+space         $2  rofi -show drun -modi drun -sort
-$1+space         $2  $4 --class floatterm -e i3-dmenu-desktop --dmenu=fzf
+$1+space         $2  rofi -show drun -modi drun -sort
+#$1+space         $2  $4 --class floatterm -e i3-dmenu-desktop --dmenu=fzf
 $1+Tab           $2  rofi -show window    
 $1+Up            $2  playerctl play-pause
 
@@ -62,6 +62,7 @@ $3+f                 floating toggle
 $3+g             $2  $4 --class floatterm -e ConjureApplication.sh 
 $3+i             $2  optimus-manager --switch intel   --no-confirm
 $3+n             $2  optimus-manager --switch nvidia  --no-confirm
+$3+p             $2  $4 --class floatterm -e pulsemixer 
 $3+r                 restart
 $3+s             $2  bin/scriptsmenu.sh
 $3+y             $2  mpv $(xsel -b)
