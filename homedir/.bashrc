@@ -33,20 +33,19 @@ export HISTSIZE=500
 # Don't put duplicate lines in the history and do not add lines that start with a space
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
-# Add .bin to PATH
-export PATH="$HOME/bin:$PATH"
-
 # Causes bash to append to history instead of overwriting it so if you start a new terminal, you have old session history
 shopt -s histappend
 PROMPT_COMMAND='history -a'
 
+# Add bin to PATH
+export PATH="$HOME/bin:$PATH"
+
 # Set the defaults
 export EDITOR=code
 export VISUAL=code
+export TERM=kitty
 export TERMINAL=kitty
 export BROWSER=firefox
-export TERM=xterm
-# Color theme for Micro
 export MICRO_TRUECOLOR=1
 
 # Term fix
@@ -67,22 +66,8 @@ alias keestow='cd $HOME/Git/kee/stow && for d in *; do stow -v -t ~ "$d" ;done'
 
 # Joris' aliasses
 alias pacman='pacman --color auto'
-alias u='sudo pacman -Syyu'
-alias i='sudo pacman -S'
-#alias r='sudo pacman -Rs'
-alias r="pacman -Qq | fzf --multi --preview 'pacman -Qi {1}' | xargs -ro sudo pacman -Rns"
-#alias s='pacman -Ss'
-alias s="yay -Slq | fzf --multi --preview 'pacman -Si {1}' | xargs -ro yay -S"
+alias u='sudo yay -Syyu'
 alias clean='sudo pacman -Rscn $(pacman -Qdtq)' # will search for orphaned packages and delete them
-
-alias yu='yay -Syyu'
-alias yi='yay -S'
-alias yr='yay -Rs'
-alias ys='yay -Ss'
-
-alias n='nano'
-
-alias fullupdate="yay -Syyu --noconfirm"      # update standard pkgs and AUR pkgs
 alias unlock="sudo rm /var/lib/pacman/db.lck" # remove pacman lock
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -110,7 +95,6 @@ alias fgrep='fgrep --color=auto'
 # Adding flags
 alias cp="cp -i"     # confirm before overwriting something
 alias df='df -h'     # human-readable sizes
-alias free='free -m' # show sizes in MB
 
 # Git
 alias add='git add .'
@@ -130,7 +114,7 @@ alias nano='micro'
 alias x='chmod +x'
 alias R='ranger'
 alias P='pulsemixer'
-alias N='micro'
+alias M='micro'
 alias C='calc'
 
 # Fontys
@@ -187,20 +171,38 @@ fi
 
 # FZF
 export FZF_DEFAULT_OPTS='--color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9 --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9 --color=info:#ffb86c,prompt:#50fa7b,pointer:#ff79c6 --color=marker:#ff79c6,spinner:#ffb86c,header:#6272a4'
+export FZF_DEFAULT_COMMAND='find .'
 
-# fo - open selected file in editor
-fo() {
-  local file
-  file=$(fzf --query="$1" --select-1 --exit-0)
-  [ -n "$file" ] && ${EDITOR:-vim} "$file"
+# Install packages using yay (change to pacman/AUR helper of your choice)
+function i() {
+    yay -Slq | fzf -q "$1" -m --preview 'yay -Si {1}'| xargs -ro yay -S
 }
 
-# fd open directory of selected file
-fd() {
-   local file
-   local dir
-   file=$(fzf -e -q "$*") && dir=$(dirname "$file") && cd "$dir"
+# Remove installed packages (change to pacman/AUR helper of your choice)
+function r() {
+    yay -Qq | fzf -q "$1" -m --preview 'yay -Qi {1}' | xargs -ro yay -Rns
 }
+
+# Find files
+function f() {
+  IFS=$'\n' out=("$(fzf -m --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
+  fi
+}
+
+function open_with_fzf() {
+    fd -t f -H -I | fzf -m --preview='pistol {}' | xargs -ro -d "\n" xdg-open 2>&-
+}
+
+function cd_with_fzf() {
+    cd $HOME && cd "$(fd -H -t d | fzf --preview="tree -L 1 {}" --bind="space:toggle-preview" --preview-window=:hidden)"
+}
+
+#two spaces after the d backslash (avoiding nested single quote hell)
+alias winact='wmctrl -i -R $(wmctrl -l | fzf | cut -d\  -f1)'
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
