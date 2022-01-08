@@ -11,7 +11,7 @@ for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
 for_window [class="Code" urgent="latest"]     focus
 
-for_window [class="floatterm"] resize set 800 600, floating enable, move position center
+for_window [class="floatterm"] floating enable, resize set 800 600, move position center
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
