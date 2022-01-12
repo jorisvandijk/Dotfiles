@@ -68,7 +68,7 @@ alias M='micro'
 alias C='calc'
 
 alias pacman='pacman --color auto'
-alias u='sudo yay -Syyu'
+alias u='yay -Syyu'
 alias clean='sudo pacman -Rscn $(pacman -Qdtq)' 
 alias unlock="sudo rm /var/lib/pacman/db.lck" 
 alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
