@@ -67,7 +67,7 @@ $3+r                 restart
 $3+s             $2  bin/scriptsmenu.sh
 $3+y             $2  mpv $(xsel -b)
 
-bindsym Print                    $2  scrot ~/Pictures/%Y-%m-%d-%T-screenshot.png
+bindsym Print                    $2  bin/ScreenShot.sh
 bindsym XF86AudioLowerVolume     $2  amixer -D pulse sset Master 2%-
 bindsym XF86AudioMute            $2  amixer sset Master toggle
 bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
