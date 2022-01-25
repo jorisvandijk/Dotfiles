@@ -37,6 +37,7 @@ alias sudo='doas'
 alias c='clear'
 
 alias i='doas apt install'
+alias s='apt search'
 alias u='doas apt update && doas apt upgrade'
 alias r='doas apt purge'
 alias clean='doas apt autoremove && doas apt autoclean'
