@@ -9,7 +9,7 @@
 # Defining the text editor to use.
 # DMENUEDITOR="vim"
 # DMENUEDITOR="nvim"
-DMEDITOR="code"
+DMEDITOR="kitty -e micro"
 
 # An array of options to choose.
 # You can edit this list to add/remove config files.

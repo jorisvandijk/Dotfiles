@@ -21,14 +21,14 @@
 # )"  
 
 notify-send -u normal -t 5000 "$(
-    printf " $(date "+%A %-d/%-m/%Y")\n"
-    printf " $(date "+%H:%M")\n"
+    printf "📅 $(date "+%A %-d/%-m/%Y")\n"
+    printf "🕰 $(date "+%H:%M")\n"
     bat=$(acpi | awk {'print $3'})
     if [[ $bat == Charging, ]]; then
-        echo $(echo "" ; acpi | awk '{print substr($4, 1, length($4)-1)}')
+        echo $(echo "" ; acpi | awk '{print substr($4, 1, length($4)-1)}')
     else
-        echo $(echo "" ; acpi | awk '{print substr($4, 1, length($4)-1)}')
+        echo $(echo "🔋" ; acpi | awk '{print substr($4, 1, length($4)-1)}')
     fi
     
-    printf " $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)"
+    printf "🖥 $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)"
 )"

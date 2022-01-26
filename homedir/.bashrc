@@ -22,7 +22,7 @@ export HISTCONTROL=erasedups:ignoredups:ignorespace
 export PROMPT_COMMAND='history -a'
 
 export EDITOR=micro
-export VISUAL=mousepad
+export VISUAL='kitty -e micro'
 export TERM=kitty
 export TERMINAL=kitty
 export BROWSER=firefox

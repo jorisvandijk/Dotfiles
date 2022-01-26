@@ -9,7 +9,6 @@ hide_edge_borders   smart
 for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
-for_window [class="Code" urgent="latest"]     focus
 
 for_window [class="floatterm"] floating enable, resize set 800 600, move position center
 
@@ -27,7 +26,7 @@ $1+d  $5  ferdi
 $1+f      fullscreen toggle
 $1+g  $5  gimp
 $1+i  $2  bin/info.sh
-$1+o  $5  libreoffice
+
 $1+p  $5  keepassxc
 $1+r  $5  rider
 $1+s  $5  spotify
@@ -64,7 +63,7 @@ $3+r                 restart
 $3+s             $2  bin/scriptsmenu.sh
 $3+y             $2  mpv $(xsel -b)
 
-# bindsym Print                    $2  bin/ScreenShot.sh
+bindsym Print                    $2  bin/ScreenShot.sh
 # bindsym XF86AudioLowerVolume     $2  amixer -D pulse sset Master 2%-
 # bindsym XF86AudioMute            $2  amixer sset Master toggle
 # bindsym XF86AudioRaiseVolume     $2  amixer -D pulse sset Master 2%+
@@ -81,7 +80,8 @@ $3+j move down
 $3+k move up
 $3+l move right
 
-$6 autotiling
+$6 bin/autotiling
+$6 batsignal -b -i
 $2 dunst
 $2 feh                     --bg-scale ~/Pictures/lake.jpg
 $2 picom                   --config ~/.config/picom/picom.conf
