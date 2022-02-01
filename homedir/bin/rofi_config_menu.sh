@@ -17,7 +17,7 @@ declare -a options=(
     "bash - $HOME/.bashrc"
     "dunst - $HOME/.config/dunst/dunstrc"
     "i3 - $HOME/.config/i3/config"
-    "firefox CSS - .mozilla/firefox/s012h755.default-release/chrome/userChrome.css"
+    "firefox CSS - .mozilla/firefox/934rzu32.default-esr/chrome//userChrome.css"
     "kitty - $HOME/.config/kitty/kitty.conf"
     "newsboat URL - $HOME/.newsboat/urls"
     "picom - $HOME/.config/picom/picom.conf"
