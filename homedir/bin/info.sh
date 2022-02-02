@@ -7,29 +7,16 @@
 #
 #          Published under GPL-3.0-or-later
 
-# notify-send -u normal -t 15000 "$(
-#     printf "The time is $(date +"%R") on\n"
-#     printf "$(date +"%A %-d %B %Y")\n"
-#     bat=$(acpi | awk {'print $3'})
-#     if [[ $bat == Charging, ]]; then
-#         echo $(echo "Battery is at"; acpi | awk '{print substr($4, 1, length($4)-1)}'; echo "and charging")
-#     else
-#         echo $(echo "Battery is at"; acpi | awk '{print substr($4, 1, length($4)-1)}')
-#     fi
-    
-#     printf "You're on workspace $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)"
-# )"  
-
 notify-send -u normal -t 5000 "$(
-    printf "📅 $(date "+%A %-d/%-m/%Y")\n"
-    printf "🕰 $(date "+%H:%M")\n"
-    bat=$(acpi | awk {'print $3'})
+    printf "$(date "+%A %-d/%-m/%Y")\n"
+    printf "$(date "+%H:%M")\n\n"
+    bat=$(acpi | head -1 | awk {'print $3'})
     if [[ $bat == Charging, ]]; then
-        echo $(echo "" ; acpi | awk '{print substr($4, 1, length($4)-1)}')
+        echo $(acpi | head -1 | awk '{print substr($4, 1, length($4)-1)}'; echo ' charging')
     else
-        echo $(echo "🔋" ; acpi | awk '{print substr($4, 1, length($4)-1)}')
+        echo $(acpi | head -1 | awk '{print substr($4, 1, length($4)-1)}')
     fi
-    printf "🌍 $(nmcli -t -f name connection show --active)\n"
-    printf "🖥 $(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)"
+    printf "$(nmcli -t -f name connection show --active)\n"
+    printf "$(i3-msg -t get_workspaces | jq '.[] | select(.focused==true).name' | cut -d"\"" -f2)"
     
 )"
