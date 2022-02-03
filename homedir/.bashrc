@@ -34,6 +34,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias sudo='doas'
+alias nan='micro'
 alias c='clear'
 
 alias i='doas apt install'
@@ -91,7 +92,4 @@ if [ "$TERM" = "linux" ]; then
   clear
 fi
 
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION
+export MICRO_TRUECOLOR=1
