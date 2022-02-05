@@ -28,6 +28,7 @@ export TERMINAL=kitty
 export BROWSER=firefox
 export MICRO_TRUECOLOR=1
 export PATH="$HOME/bin:$PATH"
+export PATH="$PATH:/usr/sbin/"
 
 alias ..='cd ..'
 alias ...='cd ../..'
