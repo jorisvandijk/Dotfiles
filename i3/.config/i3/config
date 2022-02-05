@@ -10,7 +10,8 @@ for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
 for_window [title="Vampire Survivors"]		  fullscreen  enable
-for_window [class="floatterm"] floating enable, resize set 800 600, move position center
+for_window [class="floatterm"] floating enable, resize set 800 600, move \
+position center
 
 set $1 bindsym Mod4
 set $2 exec --no-startup-id 
@@ -27,7 +28,7 @@ $1+f      fullscreen toggle
 $1+g  $5  gimp
 $1+i  $2  bin/info.sh
 $1+p  $5  gnome-passwordsafe 
-$1+r  $5  rider
+$1+r  $5  bin/rider
 $1+s  $5  spotify
 $1+t  $5  thunar
 $1+w  $5  firefox
@@ -54,8 +55,6 @@ $3+c             $2  bin/rofi_config_menu.sh
 $3+Escape        $2  systemctl poweroff -i, mode "default"
 $3+f                 floating toggle
 $3+g             $2  $4 --class floatterm -e ConjureApplication.sh 
-# $3+i             $2  optimus-manager --switch intel   --no-confirm
-# $3+n             $2  optimus-manager --switch nvidia  --no-confirm
 $3+p             $2  $4 --class floatterm -e pulsemixer 
 $3+r                 restart
 $3+s             $2  bin/scriptsmenu.sh
