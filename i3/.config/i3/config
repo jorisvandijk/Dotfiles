@@ -9,7 +9,6 @@ hide_edge_borders   smart
 for_window [class="^.*"]                      border      pixel 2
 for_window [class="mpv"]                      fullscreen  enable
 for_window [class="firefox" urgent="latest"]  focus
-for_window [title="Vampire Survivors"]		  fullscreen  enable
 for_window [class="floatterm"] floating enable, resize set 800 600, move \
 position center
 
