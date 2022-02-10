@@ -26,6 +26,7 @@ $1+d  $5  ferdi
 $1+f      fullscreen toggle
 $1+g  $5  gimp
 $1+i  $2  bin/info.sh
+$1+o  $2  libreoffice
 $1+p  $5  gnome-passwordsafe 
 $1+r  $5  bin/rider
 $1+s  $5  spotify
