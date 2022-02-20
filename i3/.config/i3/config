@@ -3,7 +3,7 @@
 # Published under GPL-3.0-or-later
 
 floating_modifier   Mod4
-font pango:         andika 11
+font pango:         monofur 11
 hide_edge_borders   smart
 
 for_window [class="^.*"]                      border      pixel 2
@@ -27,7 +27,7 @@ $1+f      fullscreen toggle
 $1+g  $5  gimp
 $1+o  $2  libreoffice
 $1+p  $5  gnome-passwordsafe 
-$1+r  $5  bin/rider
+$1+r  $5  rider
 $1+s  $5  spotify
 $1+t  $5  thunar
 $1+w  $5  firefox
@@ -70,7 +70,7 @@ bindsym XF86MonBrightnessUp      $2  brightnessctl set 10%+
 $6 bin/autotiling
 $6 batsignal -b -i
 $2 dunst
-$2 feh                     --bg-scale ~/Pictures/lake.jpg
+$2 feh                     --bg-scale ~/pictures/lake.jpg
 $2 picom                   --config ~/.config/picom/picom.conf
 $2 xset                    r rate 200 60
 $2 unclutter               -b

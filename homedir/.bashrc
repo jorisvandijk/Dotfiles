@@ -29,20 +29,18 @@ export BROWSER=firefox
 export MICRO_TRUECOLOR=1
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/usr/sbin/"
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias sudo='doas'
-alias nan='micro'
+alias nano='micro'
 alias c='clear'
 
-alias i='doas apt install'
-alias s='apt search'
-alias u='doas apt update && doas apt upgrade'
-alias r='doas apt purge'
-alias clean='doas apt autoremove && doas apt autoclean'
+alias i='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo pacman -S'
+alias u='sudo pacman -Syu'
+alias r='pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns'
 
 alias ls='exa -l --color=always --group-directories-first'  
 alias la='exa -la --color=always --group-directories-first' 
@@ -60,10 +58,8 @@ alias push='git push origin'
 alias status='git status'
 
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
-alias gut='sh /$HOME/bin/update_repositories.sh'
 
-alias dotstow='cd $HOME/Git/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
-alias keestow='cd $HOME/Git/kee/stow && for d in *; do stow -v -t ~ "$d" ;done'
+alias dotstow='cd $HOME/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
 
 alias jorbuntu="ssh joris@192.168.56.3" # Fontys
 
@@ -93,4 +89,26 @@ if [ "$TERM" = "linux" ]; then
   clear
 fi
 
+o() {
+  IFS=$'\n' out=("$(fzf-tmux --preview='head -$LINES {}' --preview-window=up --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
+  fi
+}
+
+c() {
+  IFS=$'\n' out=("$(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
+  key=$(head -1 <<< "$out")
+  file=$(head -2 <<< "$out" | tail -1)
+  if [ -n "$file" ]; then
+    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
+  fi
+}
+
 export MICRO_TRUECOLOR=1
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
