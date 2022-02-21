@@ -57,6 +57,7 @@ $3+f                 floating toggle
 $3+g             $2  $4 --class floatterm -e ConjureApplication.sh 
 $3+p             $2  $4 --class floatterm -e pulsemixer 
 $3+r                 restart
+$3+space		 $2  bin/fzfopen.sh
 $3+s             $2  bin/scriptsmenu.sh
 $3+y             $2  mpv $(xsel -b)
 

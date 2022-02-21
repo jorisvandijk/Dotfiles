@@ -25,7 +25,7 @@ export EDITOR=micro
 export VISUAL='kitty -e micro'
 export TERM=kitty
 export TERMINAL=kitty
-export BROWSER=firefox
+
 export MICRO_TRUECOLOR=1
 export PATH="$HOME/bin:$PATH"
 export PATH="$PATH:/usr/sbin/"
@@ -89,17 +89,8 @@ if [ "$TERM" = "linux" ]; then
   clear
 fi
 
-o() {
+function o() {
   IFS=$'\n' out=("$(fzf-tmux --preview='head -$LINES {}' --preview-window=up --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
-  key=$(head -1 <<< "$out")
-  file=$(head -2 <<< "$out" | tail -1)
-  if [ -n "$file" ]; then
-    [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
-  fi
-}
-
-c() {
-  IFS=$'\n' out=("$(fzf-tmux --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
   key=$(head -1 <<< "$out")
   file=$(head -2 <<< "$out" | tail -1)
   if [ -n "$file" ]; then
