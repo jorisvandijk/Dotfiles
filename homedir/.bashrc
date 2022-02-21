@@ -39,11 +39,12 @@ alias nano='micro'
 alias c='clear'
 
 alias i='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo pacman -S'
+alias s='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo pacman -S'
 alias u='sudo pacman -Syu'
 alias r='pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns'
 
-alias ls='exa -l --color=always --group-directories-first'  
-alias la='exa -la --color=always --group-directories-first' 
+alias ls='exa -lb --header --color=always --group-directories-first --long --git' 
+alias la='exa -lab --header --color=always --group-directories-first --long --git'  
 alias lh='exa -a | egrep "^\."' 
 
 alias grep='grep --color=auto'
@@ -64,7 +65,7 @@ alias dotstow='cd $HOME/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
 alias jorbuntu="ssh joris@192.168.56.3" # Fontys
 
 function cd() { # Add exa after a cd
-  builtin cd "$@" && exa -l --color=always --group-directories-first
+  builtin cd "$@" && exa -lb --header --color=always --group-directories-first --long --git
 }
 
 if [ "$TERM" = "linux" ]; then
