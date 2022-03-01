@@ -74,7 +74,7 @@ $6 autotiling
 $6 batsignal -b -i
 $2 dunst
 $2 feh                     --bg-scale ~/pictures/wallpaper.jpg
-$2 picom                   --config ~/.config/picom/picom.conf
+$2 picom                   --experimental-backend --config ~/.config/picom/picom.conf
 $2 xset                    r rate 200 60
 $2 unclutter               -b
 $2 bin/trackpad_off.sh
