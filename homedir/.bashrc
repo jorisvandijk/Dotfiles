@@ -42,6 +42,7 @@ alias i='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo p
 alias s='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo pacman -S'
 alias u='sudo pacman -Syu'
 alias r='pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns'
+alias y='yay -Slq | fzf --multi --preview "yay -Si {1}" | xargs -ro yay -S'
 
 alias ls='exa -lb --header --color=always --group-directories-first --long --git' 
 alias la='exa -lab --header --color=always --group-directories-first --long --git'  

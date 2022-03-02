@@ -2,13 +2,13 @@
 # Joris van Dijk | https://gitlab.com/jorisvandijk
 # Published under GPL-3.0-or-later
 
-floating_modifier   Mod4
-font pango:         monofur 11
-hide_edge_borders   smart
+floating_modifier  Mod4
+font pango:        monofur 11
+hide_edge_borders  smart
 
-for_window [class="^.*"]                      border      pixel 2
-for_window [class="mpv"]                      fullscreen  enable
-for_window [class="firefox" urgent="latest"]  focus
+for_window [class="^.*"]                        border     pixel 2
+for_window [class="mpv"]                        fullscreen enable
+for_window [class="firefox" urgent="latest"]    focus
 for_window [class="floatterm"] floating enable, resize set 800 600, move \
 position center
 
@@ -19,71 +19,69 @@ set $4 kitty
 set $5 exec --no-startup-id bin/SwitchLaunch.sh 
 set $6 exec_always --no-startup-id
 
-$1+1      workspace 1
-$1+2      workspace 2
-$1+3      workspace 3
-$1+d  $5  ferdi
-$1+f      fullscreen toggle
-$1+g  $5  gimp
-$1+m  $5  geary
-$1+o  $5  libreoffice
-$1+p  $5  gnome-passwordsafe 
-$1+r  $5  rider
-$1+s  $5  spotify
-$1+t  $5  thunar
-$1+w  $5  firefox
-$1+x  $2  dunstctl close-all
-$1+y  $5  newsboat
-$1+z  $2  bin/info.sh
+$1+1    workspace 1
+$1+2    workspace 2
+$1+3    workspace 3
+$1+d $5 ferdi
+$1+f    fullscreen toggle
+$1+g $5 gimp
+$1+m $5 geary
+$1+o $5 libreoffice
+$1+p $5 gnome-passwordsafe 
+$1+r $5 rider
+$1+s $5 spotify
+$1+t $5 thunar
+$1+w $5 firefox
+$1+x $2 dunstctl close-all
+$1+y $5 newsboat
+$1+z $2 bin/info.sh
 
-$1+BackSpace	 $2  dm-tool switch-to-greeter
-$1+Down          $2  playerctl play-pause
-$1+equal         $2  bin/new_i3_workspace.sh
-$1+End			 $2  $4 --class floatterm -e bin/ConjureApplication.sh
-$1+Escape            [con_id="__focused__" instance="^(?!__*).*$"] kill
-$1+grave            workspace back_and_forth
-$1+Home          $2  i3-msg exit
-$1+Insert        $2  bin/toggle_trackpad.sh
-$1+Left          $2  playerctl previous
-$1+Next              scratchpad show
-$1+Prior             move scratchpad
-$1+Return        $2  $4 
-$1+Right         $2  playerctl next
-$1+space         $2  rofi -show drun -modi drun -sort
-$1+Tab           $2  rofi -show window    
-$1+Up            $2  playerctl play-pause
+$1+BackSpace $2 dm-tool switch-to-greeter
+$1+Down      $2 playerctl play-pause
+$1+equal     $2 bin/new_i3_workspace.sh
+$1+End	     $2 $4 --class floatterm -e bin/ConjureApplication.sh
+$1+Escape       [con_id="__focused__" instance="^(?!__*).*$"] kill
+$1+grave        workspace back_and_forth
+$1+Home      $2 i3-msg exit
+$1+Insert    $2 bin/toggle_trackpad.sh
+$1+Left      $2 playerctl previous
+$1+Next         scratchpad show
+$1+Prior        move scratchpad
+$1+Return    $2 $4 
+$1+Right     $2 playerctl next
+$1+space     $2 rofi -show drun -modi drun -sort
+$1+Tab       $2 rofi -show window    
+$1+Up        $2 playerctl play-pause
 
-$3+c             $2  bin/rofi_config_menu.sh
-$3+Down			 $2  pactl set-sink-volume @DEFAULT_SINK@ -5%
-$3+Escape        $2  systemctl poweroff -i, mode "default"
-$3+f                 floating toggle
-$3+g             $2  $4 --class floatterm -e ConjureApplication.sh 
-$3+p             $2  $4 --class floatterm -e pulsemixer 
-$3+r                 restart
-$3+space		 $2  bin/fzfopen.sh
-$3+s             $2  bin/scriptsmenu.sh
-$3+Up			 $2  pactl set-sink-volume @DEFAULT_SINK@ +5%
-$3+y             $2  mpv $(xsel -b)
+$3+c         $2 bin/rofi_config_menu.sh
+$3+Down	     $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
+$3+Escape    $2 systemctl poweroff -i, mode "default"
+$3+f            floating toggle
+$3+g         $2 $4 --class floatterm -e ConjureApplication.sh 
+$3+p         $2 $4 --class floatterm -e pulsemixer 
+$3+r            restart
+$3+space     $2 bin/fzfopen.sh
+$3+s         $2 bin/scriptsmenu.sh
+$3+Up	     $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
+$3+y         $2 mpv $(xsel -b)
 
-bindsym Print                    $2  bin/ScreenShot.sh
-bindsym XF86AudioLowerVolume     $2  pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute            $2  pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioRaiseVolume     $2  pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86MonBrightnessDown    $2  brightnessctl set 10%-
-bindsym XF86MonBrightnessUp      $2  brightnessctl set 10%+
+bindsym Print                 $2 bin/ScreenShot.sh
+bindsym XF86AudioLowerVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute         $2 pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86MonBrightnessDown $2 brightnessctl set 10%-
+bindsym XF86MonBrightnessUp   $2 brightnessctl set 10%+
 
 $6 autotiling
 $6 batsignal -b -i
 $2 dunst
-$2 feh                     --bg-scale ~/pictures/wallpaper.jpg
-$2 picom                   --config ~/.config/picom/picom.conf
-$2 xset                    r rate 200 60
-$2 unclutter               -b
+$2 feh                   --bg-scale ~/pictures/wallpaper.jpg
+$2 picom                 --config ~/.config/picom/picom.conf
+$2 xset                  r rate 200 60
+$2 unclutter             -b
 $2 bin/trackpad_off.sh
-$2 parcellite 			   -d
-$2 hoverclock
+$2 parcellite 			 -d
 
-client.focused             #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
-client.focused_inactive    #44475A #44475A #F8F8F2 #44475A #44475A
-client.unfocused           #282A36 #282A36 #BFBFBF #282A36 #282A36
-
+client.focused           #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
+client.focused_inactive  #44475A #44475A #F8F8F2 #44475A #44475A
+client.unfocused         #282A36 #282A36 #BFBFBF #282A36 #282A36
