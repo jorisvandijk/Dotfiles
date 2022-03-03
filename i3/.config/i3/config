@@ -75,7 +75,7 @@ bindsym XF86MonBrightnessUp   $2 brightnessctl set 10%+
 $6 autotiling
 $6 batsignal -b -i
 $2 dunst
-$2 feh                   --bg-scale ~/pictures/wallpaper.jpg
+$2 feh                   --bg-scale ~/Pictures/wall.png
 $2 picom                 --config ~/.config/picom/picom.conf
 $2 xset                  r rate 200 60
 $2 unclutter             -b
