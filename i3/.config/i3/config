@@ -76,12 +76,12 @@ bindsym XF86MonBrightnessUp   $2 brightnessctl set 10%+
 $6 autotiling
 $6 batsignal -b -i
 $2 dunst
-$2 feh                   --bg-scale ~/Pictures/wall.png
-$2 picom                 --config ~/.config/picom/picom.conf
-$2 xset                  r rate 200 60
-$2 unclutter             -b
+$2 feh --bg-scale ~/Pictures/wall.png
+$2 picom --config ~/.config/picom/picom.conf
+$2 xset r rate 200 60
+$2 unclutter -b
 $2 bin/trackpad_off.sh
-$2 parcellite 			 -d
+$2 parcellite -d
 $2 nm-applet
 
 client.focused           #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
