@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-# This script requires wmctrl
+# Open app or switch to it (raise/launch)
+# Joris van Dijk | https://gitlab.com/jorisvandijk
+# Published under GPL-3.0-or-later
+# This script requires wmctrl, i3-msg and kitty.
+
 i3-msg workspace "${1^}"
 
 if [ $1 == newsboat ]; then
