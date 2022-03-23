@@ -24,13 +24,14 @@ $1+1    workspace 1
 $1+2    workspace 2
 $1+3    workspace 3
 $1+d $5 ferdi
+$1+e $5 geary
 $1+f    fullscreen toggle
 $1+g $5 gimp
-$1+m $5 geary
+$1+m $5 spotify
 $1+o $5 libreoffice
 $1+p $5 gnome-passwordsafe 
 $1+r $5 rider
-$1+s $5 spotify
+$1+s $5 steam
 $1+t $5 thunar
 $1+w $5 firefox
 $1+x $2 dunstctl close-all
