@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FINAL FANTASY XII THE ZODIAC AGE
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/595520
+Icon=steam_icon_595520
+Terminal=false
+Type=Application
+Categories=Game;

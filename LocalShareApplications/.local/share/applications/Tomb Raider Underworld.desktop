@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Tomb Raider: Underworld
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/8140
+Icon=steam_icon_8140
+Terminal=false
+Type=Application
+Categories=Game;

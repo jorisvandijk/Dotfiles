@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Tomb Raider: The Last Revelation
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/224980
+Icon=steam_icon_224980
+Terminal=false
+Type=Application
+Categories=Game;
