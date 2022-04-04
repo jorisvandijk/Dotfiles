@@ -5,8 +5,10 @@
 floating_modifier  Mod4
 font pango:        monofur 11
 hide_edge_borders  smart
+gaps inner 20
+gaps outer 5
 
-for_window [class="^.*"]                        border     pixel 2
+for_window [class="^.*"]                        border     pixel 0
 for_window [class="mpv"]                        fullscreen enable
 for_window [class="firefox" urgent="latest"]    focus
 for_window [class="floatterm"] floating enable, resize set 800 600, move \
@@ -76,7 +78,7 @@ bindsym XF86MonBrightnessUp   $2 brightnessctl set 10%+
 $6 autotiling
 $6 batsignal -b -i
 $2 dunst
-$2 feh --bg-scale ~/Pictures/wall.png
+$2 feh --bg-scale ~/Pictures/wall.jpg
 $2 picom --config ~/.config/picom/picom.conf
 $2 xset r rate 200 60
 $2 unclutter -b
@@ -84,6 +86,6 @@ $2 bin/trackpad_off.sh
 $2 parcellite -d
 $2 nm-applet
 
-client.focused           #6272A4 #6272A4 #F8F8F2 #6272A4 #6272A4
+client.focused           #6272A4 #6272A4 #bd93f9 #bd93f9 #bd93f9
 client.focused_inactive  #44475A #44475A #F8F8F2 #44475A #44475A
 client.unfocused         #282A36 #282A36 #BFBFBF #282A36 #282A36
