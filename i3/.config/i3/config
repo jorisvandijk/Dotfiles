@@ -27,6 +27,7 @@ $1+e $5 geary
 $1+f    fullscreen toggle
 $1+g $5 gimp
 $1+m $5 spotify
+$1+n $5 obsidian
 $1+o $5 libreoffice
 $1+r $5 rider
 $1+s $5 steam
