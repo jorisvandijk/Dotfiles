@@ -61,7 +61,7 @@ alias status='git status'
 
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 
-alias dotstow='cd $HOME/dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
+alias dotstow='cd $HOME/Dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
 
 alias jorbuntu="ssh joris@192.168.56.3" # Fontys
 

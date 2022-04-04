@@ -1,0 +1,6 @@
+bat=$(acpi | head -1 | awk {'print $3'})
+    if [[ $bat == Charging, ]]; then
+        echo $(acpi | head -1 | awk '{printf substr($4, 1, length($4)-1)}'; echo '⚡')
+    else
+        echo $(acpi | head -1 | awk '{printf substr($4, 1, length($4)-1)}')
+    fi
