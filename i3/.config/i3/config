@@ -7,7 +7,7 @@ font pango:        monofur 15
 hide_edge_borders  smart
 gaps inner 20
 gaps outer 25
-gaps top 0
+gaps bottom 2
 
 for_window [class="^.*"]                        border     pixel 0
 for_window [class="mpv"]                        fullscreen enable
@@ -79,8 +79,9 @@ bindsym XF86MonBrightnessUp   $2 brightnessctl set 10%+
 $6 autotiling
 $6 batsignal -b -i
 $2 dunst
+#$2 feh --bg-scale ~/Pictures/lake.jpg
 $2 feh --bg-scale ~/Pictures/lake.jpg
-$2 picom --config ~/.config/picom/picom.conf
+$2 picom --config ~/.config/picom/wall.conf
 $2 xset r rate 200 60
 $2 unclutter -b
 $2 bin/trackpad_off.sh
@@ -91,7 +92,7 @@ bar {
 	status_command i3status
 	i3bar_command i3bar --transparency
 	workspace_buttons no
-	position top
+	position bottom
 	colors {
 		background #00000000
 	}
