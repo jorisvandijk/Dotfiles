@@ -18,6 +18,7 @@ order += "tztime local"
 battery all {
         format = " %percentage "
         integer_battery_capacity = true
+        last_full_capacity = true
         align="left"
 }       
         
