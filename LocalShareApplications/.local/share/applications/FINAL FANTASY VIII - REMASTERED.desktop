@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FINAL FANTASY VIII - REMASTERED
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1026680
+Icon=steam_icon_1026680
+Terminal=false
+Type=Application
+Categories=Game;

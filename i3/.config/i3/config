@@ -7,7 +7,7 @@ font pango:        monofur 15
 hide_edge_borders  smart
 gaps inner 20
 gaps outer 25
-gaps bottom 2
+#gaps bottom 2
 
 for_window [class="^.*"]                        border     pixel 0
 for_window [class="mpv"]                        fullscreen enable
@@ -85,15 +85,15 @@ $2 feh --bg-scale ~/Pictures/wall.jpg
 $2 xset r rate 200 60
 $2 unclutter -b
 $2 bin/trackpad_off.sh
-$2 parcellite -d
+$2 parcellite -d -n
 $2 nm-applet
 
-bar {
-	status_command i3status
-	i3bar_command i3bar --transparency
-	workspace_buttons no
-	position bottom
-	colors {
-		background #00000000
-	}
-}
+# bar {
+	# status_command i3status
+	# i3bar_command i3bar --transparency
+	# workspace_buttons no
+	# position bottom
+	# colors {
+		# background #00000000
+	# }
+# }
