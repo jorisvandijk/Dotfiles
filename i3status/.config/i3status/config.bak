@@ -12,23 +12,28 @@ general {
         separator = ""
 }
 
-order += "tztime local"
 order += "battery all"
-
+order += "tztime local"
 
 battery all {
-        format = "%status %percentage "
+        format = " %percentage "
         integer_battery_capacity = true
         last_full_capacity = true
-        status_full =""
-        # status_chr = "⚡"
-        status_chr = "+"
-        status_bat = ""
-}
-
+        align="left"
+}       
+        
 tztime local {
         format = "%H:%M"
-        #format = "%A %d/%m/%Y %H:%Mz"
         align=center
-		min_width=1830
+		min_width=1813
 }
+
+# battery all {
+	# format = " %percentage %status"
+	# integer_battery_capacity = true
+	# last_full_capacity = true
+	# status_full ="☻"
+	# status_chr = "⚡"
+	# status_bat = ""
+	# align="left"
+# }
