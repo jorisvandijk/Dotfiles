@@ -43,7 +43,8 @@ $1+z $2 bin/info.sh
 
 $1+BackSpace $2 dm-tool switch-to-greeter
 $1+Down      $2 playerctl play-pause
-$1+equal        gaps inner all set 20, gaps outer all set 25; gaps \                  bottom all set -5
+$1+equal        gaps inner all set 20, gaps outer all set 25; gaps \
+                bottom all set -5
 $1+End	     $2 $4 --class floatterm -e bin/ConjureApplication.sh
 $1+Escape       [con_id="__focused__" instance="^(?!__*).*$"] kill
 $1+grave        workspace back_and_forth
