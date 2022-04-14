@@ -43,13 +43,15 @@ $1+z $2 bin/info.sh
 
 $1+BackSpace $2 dm-tool switch-to-greeter
 $1+Down      $2 playerctl play-pause
-$1+equal     $2 bin/new_i3_workspace.sh
+$1+equal 	    gaps inner all set 20, gaps outer all set 25; gaps \
+				bottom all set -5
 $1+End	     $2 $4 --class floatterm -e bin/ConjureApplication.sh
 $1+Escape       [con_id="__focused__" instance="^(?!__*).*$"] kill
 $1+grave        workspace back_and_forth
 $1+Home      $2 i3-msg exit
 $1+Insert    $2 bin/toggle_trackpad.sh
 $1+Left      $2 playerctl previous
+$1+minus 		gaps inner all set 0, gaps outer all set 0
 $1+Next         scratchpad show
 $1+Prior        move scratchpad
 $1+Return    $2 $4 
@@ -67,10 +69,11 @@ $3+p         $2 $4 --class floatterm -e pulsemixer
 $3+r            restart
 $3+space     $2 bin/fzfopen.sh
 $3+s         $2 bin/scriptsmenu.sh
+$3+Tab         $2 $4 --class floatterm -e ConjureApplication.sh 
 $3+Up	     $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
 $3+y         $2 mpv $(xsel -b)
 
-bindsym Print                 $2 bin/ScreenShot.sh
+bindsym Print                 $2 gnome-screenshot --interactive
 bindsym XF86AudioLowerVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute         $2 pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioRaiseVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
