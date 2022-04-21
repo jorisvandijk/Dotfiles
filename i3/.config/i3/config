@@ -73,7 +73,7 @@ $3+Tab       $2 $4 --class floatterm -e ConjureApplication.sh
 $3+Up	     $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
 $3+y         $2 mpv $(xsel -b)
 
-bindsym Print                 $2 gnome-screenshot --interactive
+bindsym Print                 $2 bin/ScreenShot.sh
 bindsym XF86AudioLowerVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute         $2 pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioRaiseVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
