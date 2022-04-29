@@ -25,11 +25,11 @@ battery all {
         # status_chr = "⚡"
         status_chr = "+"
         status_bat = ""
-        min_width=930
+        min_width=922
 }
 
 tztime local {
         format = "%H:%M"
         #format = "%A %d/%m/%Y %H:%Mz"
-        min_width=915		
+        min_width=930		
 }
