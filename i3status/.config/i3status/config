@@ -12,8 +12,9 @@ general {
         separator = ""
 }
 
-order += "tztime local"
 order += "battery all"
+order += "tztime local"
+
 
 
 battery all {
@@ -24,11 +25,11 @@ battery all {
         # status_chr = "⚡"
         status_chr = "+"
         status_bat = ""
+        min_width=930
 }
 
 tztime local {
         format = "%H:%M"
         #format = "%A %d/%m/%Y %H:%Mz"
-        align=center
-		min_width=1830
+        min_width=915		
 }

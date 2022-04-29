@@ -85,7 +85,8 @@ $6 batsignal -b -i
 $6 picom --config ~/.config/picom/picom.conf
 $2 dunst
 #$2 feh --bg-scale ~/Pictures/lake.jpg
-$2 feh --bg-scale ~/Pictures/wall.jpg
+#$2 feh --bg-scale ~/Pictures/wall.jpg
+$6 feh --bg-scale ~/Pictures/mountain.jpg
 $2 xset r rate 200 60
 $2 unclutter -b
 $2 bin/trackpad_off.sh
@@ -102,6 +103,6 @@ bar {
 	colors {
 		background #00000000
 	}
-	tray_output none
-	#tray_output primary
+	#tray_output none
+	tray_output primary
 }
