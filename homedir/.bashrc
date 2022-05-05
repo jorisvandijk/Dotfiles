@@ -27,7 +27,8 @@ export TERM=kitty
 export TERMINAL=kitty
 
 export MICRO_TRUECOLOR=1
-export PATH="$HOME/bin:$PATH"
+# export PATH="$HOME/bin:$PATH"
+export PATH="/home/joris/Dotfiles/bin/bin"
 export PATH="$PATH:/usr/sbin/"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
@@ -52,6 +53,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
+alias gut='git.sh'
 alias add='git add .'
 alias commit='git commit -m'
 alias fetch='git fetch'
