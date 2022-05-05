@@ -98,6 +98,7 @@ $2 setxkbmap -option caps:none
 
 bar {
 	status_command i3status
+	output eDP1
 	i3bar_command i3bar --transparency
 	workspace_buttons no
 	position bottom
