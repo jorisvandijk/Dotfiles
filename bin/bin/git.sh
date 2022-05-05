@@ -1,6 +1,6 @@
 #! /bin/bash
 
-COMMIT=$1
+COMMIT=$@
 
 git add .
 git commit -m "$COMMIT"
