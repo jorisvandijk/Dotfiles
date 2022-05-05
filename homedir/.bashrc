@@ -1,6 +1,7 @@
-# bashrc - Bash config file
-# Joris van Dijk | https://gitlab.com/jorisvandijk
-# Published under GPL-3.0-or-later
+#	.bashrc
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
 
 [[ $- != *i* ]] && return
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100
@@ -53,7 +54,7 @@ alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias gut='git.sh'
+alias gut='Git'
 alias add='git add .'
 alias commit='git commit -m'
 alias fetch='git fetch'
