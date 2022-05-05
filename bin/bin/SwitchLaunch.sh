@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #
 # Script name: 	SwitchLaunch.sh
-# Author: 		Joris van Dijk
+# Author:		Joris van Dijk
 # Author URL:	gitlab.com/jorisvandijk 
 # License:		GNU General Public License v3.0
 # 
 # Dependencies: i3, wmctrl, kitty
-# Usage: 		SwitchLaunch.sh <application name>
+# Usage:		SwitchLaunch.sh <application name>
 # Description: 	Launch an application if it is not running, or else switch to it.
 
 i3-msg workspace "${1^}"

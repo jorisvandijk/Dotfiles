@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #
 # Script name: 	toggle_trackpad.sh
-# Author: 		Joris van Dijk
+# Author:		Joris van Dijk
 # Author URL:	gitlab.com/jorisvandijk 
 # License:		GNU General Public License v3.0
 # 
 # Dependencies: 
-# Usage: 		Run script
+# Usage:		Run script
 # Description: 	Toggle keypad on and off.
 
 # Get the id number of the touchpad.

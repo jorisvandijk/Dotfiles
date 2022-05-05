@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 #
-# Usage: Notify-send current system info, called from the
-#        i3 config file by bindsym.
-# Requirements: acpi 
-#
-# Script by Joris van Dijk | gitlab.com/jorisvandijk 
-#
-#          Published under GPL-3.0-or-later
+# Script name: 	info.sh
+# Author:		Joris van Dijk
+# Author URL:	gitlab.com/jorisvandijk 
+# License:		GNU General Public License v3.0
+# 
+# Dependencies: acpi
+# Usage:		Run script
+# Description: 	Show time, date and battery information.
 
 # notify-send -u normal -t 5000 "$(
     # printf "$(date "+%A %-d/%-m/%Y")\n"
