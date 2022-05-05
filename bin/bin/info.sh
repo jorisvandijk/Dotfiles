@@ -2,6 +2,7 @@
 #
 # Usage: Notify-send current system info, called from the
 #        i3 config file by bindsym.
+# Requirements: acpi 
 #
 # Script by Joris van Dijk | gitlab.com/jorisvandijk 
 #
