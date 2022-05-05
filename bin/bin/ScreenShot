@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#	ScreenShot 1.0
+#	Take a screenshot, save to directory and copy to clipboard.
+#	Dependencies: scrot, xclip
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0	
+
+scrot ~/Pictures/ss/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -t image/png -i $f'

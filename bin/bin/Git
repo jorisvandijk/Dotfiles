@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+#	Git 1.0
+#	Quickly push to git with a single command.
+#	Dependencies: git
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+COMMIT=$@
+
+git add .
+git commit -m "$COMMIT"
+git push

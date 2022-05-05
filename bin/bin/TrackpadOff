@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
+
+#	TrackpadOff 1.0
+#	Disables trackpad. Used as a startup script in i3.
+#	Dependencies: none
 #
-# Script name: 	trackpad_off.sh
-# Author:		Joris van Dijk
-# Author URL:	gitlab.com/jorisvandijk 
-# License:		GNU General Public License v3.0
-# 
-# Dependencies: 
-# Usage:		Run script
-# Description: 	Disable trackpad. Used as a startup script in i3.
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
 
 # Get the id number of the touchpad.
 tp_id=`xinput list | grep -i touchpad | awk '{ print $6 }' | sed 's/id=//'`

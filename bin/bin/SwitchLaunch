@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+#	SwitchLaunch 1.0
+#	Launch an application if it is not running, or else switch to it.
+#	Dependencies: i3, wmctrl, kitty
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+i3-msg workspace "${1^}"
+
+if [ $1 == newsboat ]; then
+    wmctrl -x -a "mpv" || wmctrl -x -a "$1" || kitty --hold --detach --class newsboat -e newsboat
+else
+    wmctrl -x -a "$1" || $1
+fi

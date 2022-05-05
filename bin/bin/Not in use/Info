@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+#	Info 1.0
+#	Shows time, date and battery information in a notification.
+#	Dependencies: acpi
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+notify-send -u normal -t 5000 "$(
+    printf "$(date "+%H:%M")\n"
+    printf "$(date "+%A %-d/%-m/%Y")\n"
+    bat=$(acpi | head -1 | awk {'print $3'})
+    if [[ $bat == Charging, ]]; then
+        echo $(acpi | head -1 | awk '{print substr($4, 1, length($4)-1)}'; echo ' charging')
+    else
+        echo $(acpi | head -1 | awk '{print substr($4, 1, length($4)-1)}')
+    fi
+    
+)"

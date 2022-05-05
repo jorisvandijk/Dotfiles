@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+#	WorkspaceName 1.0
+#	Displays the current workspace in a notification.
+#	Dependencies: i3, jq
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+notify-send -u normal -t 5000 "$(
+	printf "Workspace: "
+	i3-msg -t get_workspaces \
+  	| jq '.[] | select(.focused==true).name' \
+  	| cut -d"\"" -f2
+)"

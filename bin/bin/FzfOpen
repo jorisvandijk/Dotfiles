@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#	FzfOpen 1.0
+#	Opens a file on your home system using rofi and fzf.
+#	Dependencies: xdg-open, ripgrep, fzf, rofi
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0	
+
+xdg-open "$(rg --no-messages --files --hidden ~/ \
+    -g "!{*.srt,*.rar,*.txt,*.zip,*.nfo}" | rofi -threads 0 \
+    -theme-str "#window { width: 900;}" \
+    -dmenu -sort -sorting-method fzf -i -p "find")"

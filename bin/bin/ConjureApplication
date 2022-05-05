@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#	ConjureApplication 1.0
+#	Pulls the selected application to the current workspace.
+#	Dependencies: wmctrl, fzf
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+wmctrl -i -R $(wmctrl -l | fzf | cut -d\  -f1)
