@@ -1,6 +1,6 @@
 # i3 config file
 # Joris van Dijk | https://gitlab.com/jorisvandijk
-# Published under GPL-3.0-or-later
+# Published under GNU General Public License v3.0
 
 floating_modifier  Mod4
 font pango:        monofur 15
@@ -106,6 +106,5 @@ bar {
 	colors {
 		background #00000000
 	}
-	#tray_output none
 	tray_output primary
 }
