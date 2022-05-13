@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+#	UpdateWebsite 1.0
+#	Updates my website
+#	Dependencies: git
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+cd $HOME/Website-builder
+npx @11ty/eleventy
+git status
+read -p "Git commit message: " COMMIT
+git add .
+git commit -m "$COMMIT"
+git push
+cp -r _site/* $HOME/Website/
+cd $HOME/Website
+git status
+git add .
+git commit -m "$COMMIT"
+git push
+rsync -rvz -e 'ssh -p 7685' --progress /home/joris/Website/* u82229p77014@web0091.zxcs.nl:/home/u82229p77014/domains/jorisvandijk.com/public_html/
