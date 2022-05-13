@@ -2,7 +2,7 @@
 
 #	UpdateWebsite 1.0
 #	Updates my website
-#	Dependencies: git
+#	Dependencies: npm, eleventy, rsync, git
 #
 #	By Joris van Dijk | gitlab.com/jorisvandijk 
 #	Licensed under the GNU General Public License v3.0
