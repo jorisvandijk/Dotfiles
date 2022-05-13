@@ -7,6 +7,7 @@
 #	By Joris van Dijk | gitlab.com/jorisvandijk 
 #	Licensed under the GNU General Public License v3.0
 
+echo "Updating website!"
 cd $HOME/Website-builder
 npx @11ty/eleventy
 git status
@@ -21,3 +22,4 @@ git add .
 git commit -m "$COMMIT"
 git push
 rsync -rvz -e 'ssh -p 7685' --progress /home/joris/Website/* u82229p77014@web0091.zxcs.nl:/home/u82229p77014/domains/jorisvandijk.com/public_html/
+read -p "Done! Press any key to exit"
