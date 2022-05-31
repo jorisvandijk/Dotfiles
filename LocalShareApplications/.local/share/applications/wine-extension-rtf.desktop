@@ -2,7 +2,7 @@
 Type=Application
 Name=wordpad
 MimeType=application/rtf;
-Exec=env WINEPREFIX="/home/joris/.local/share/Steam/steamapps/compatdata/72850/pfx" wine start /ProgIDOpen rtffile %f
+Exec=env WINEPREFIX="/home/joris/.config/steamtinkerlaunch/vortex/compatdata/pfx" wine start /ProgIDOpen rtffile %f
 NoDisplay=true
 StartupNotify=true
 Icon=3365_wordpad.0
