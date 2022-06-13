@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Lara Croft and the Guardian of Light
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/35130
-Icon=steam_icon_35130
-Terminal=false
-Type=Application
-Categories=Game;

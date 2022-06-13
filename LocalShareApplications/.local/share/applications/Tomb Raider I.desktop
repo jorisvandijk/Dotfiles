@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Tomb Raider I
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/224960
-Icon=steam_icon_224960
-Terminal=false
-Type=Application
-Categories=Game;

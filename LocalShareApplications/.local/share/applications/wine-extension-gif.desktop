@@ -1,8 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Wine Internet Explorer
-MimeType=image/gif;
-Exec=env WINEPREFIX="/home/joris/.local/share/Steam/steamapps/compatdata/72850/pfx" wine start /ProgIDOpen giffile %f
-NoDisplay=true
-StartupNotify=true
-Icon=ECB7_iexplore.0

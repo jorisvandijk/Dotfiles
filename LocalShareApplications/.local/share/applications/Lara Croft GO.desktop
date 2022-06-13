@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Lara Croft GO
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/540840
-Icon=steam_icon_540840
-Terminal=false
-Type=Application
-Categories=Game;

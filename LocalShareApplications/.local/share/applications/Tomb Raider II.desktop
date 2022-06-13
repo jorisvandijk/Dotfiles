@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Tomb Raider II
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/225300
-Icon=steam_icon_225300
-Terminal=false
-Type=Application
-Categories=Game;
