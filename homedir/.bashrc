@@ -45,6 +45,7 @@ alias s='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo p
 alias u='yay -Syyu'
 alias r='pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns'
 alias y='yay -Slq | fzf --multi --preview "yay -Si {1}" | xargs -ro yay -S'
+alias clean='sudo pacman -Rsn $(pacman -Qdtq)'
 
 alias ls='exa -lb --header --color=always --group-directories-first --long --git' 
 alias la='exa -lab --header --color=always --group-directories-first --long --git'  
@@ -72,28 +73,6 @@ function cd() { # Add exa after a cd
   builtin cd "$@" && exa -lb --header --color=always --group-directories-first --long --git
 }
 
-if [ "$TERM" = "linux" ]; then
-  printf %b '\e[40m' '\e[8]' # set default background to color 0 'dracula-bg'
-  printf %b '\e[37m' '\e[8]' # set default foreground to color 7 'dracula-fg'
-  printf %b '\e]P0282a36'    # redefine 'black'          as 'dracula-bg'
-  printf %b '\e]P86272a4'    # redefine 'bright-black'   as 'dracula-comment'
-  printf %b '\e]P1ff5555'    # redefine 'red'            as 'dracula-red'
-  printf %b '\e]P9ff7777'    # redefine 'bright-red'     as '#ff7777'
-  printf %b '\e]P250fa7b'    # redefine 'green'          as 'dracula-green'
-  printf %b '\e]PA70fa9b'    # redefine 'bright-green'   as '#70fa9b'
-  printf %b '\e]P3f1fa8c'    # redefine 'brown'          as 'dracula-yellow'
-  printf %b '\e]PBffb86c'    # redefine 'bright-brown'   as 'dracula-orange'
-  printf %b '\e]P4bd93f9'    # redefine 'blue'           as 'dracula-purple'
-  printf %b '\e]PCcfa9ff'    # redefine 'bright-blue'    as '#cfa9ff'
-  printf %b '\e]P5ff79c6'    # redefine 'magenta'        as 'dracula-pink'
-  printf %b '\e]PDff88e8'    # redefine 'bright-magenta' as '#ff88e8'
-  printf %b '\e]P68be9fd'    # redefine 'cyan'           as 'dracula-cyan'
-  printf %b '\e]PE97e2ff'    # redefine 'bright-cyan'    as '#97e2ff'
-  printf %b '\e]P7f8f8f2'    # redefine 'white'          as 'dracula-fg'
-  printf %b '\e]PFffffff'    # redefine 'bright-white'   as '#ffffff'
-  clear
-fi
-
 function o() {
   IFS=$'\n' out=("$(fzf-tmux --preview='head -$LINES {}' --preview-window=up --query="$1" --exit-0 --expect=ctrl-o,ctrl-e)")
   key=$(head -1 <<< "$out")
@@ -102,9 +81,3 @@ function o() {
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
 }
-
-export MICRO_TRUECOLOR=1
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION

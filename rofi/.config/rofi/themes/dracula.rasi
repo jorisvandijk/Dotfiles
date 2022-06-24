@@ -15,7 +15,7 @@
     font: "monofur 18";
 
     foreground: @drac-fgd;
-    background: @drac-bgd;
+    background-color: @drac-bgd;
     active-background: @drac-pnk;
     urgent-background: @drac-red;
     
@@ -27,9 +27,9 @@
 }
 
 #window {
-    background-color: @background;
-    border:           2;
-    border-radius: 20;
+    background-color: @background-color;
+    border:           0;
+    border-radius: 6;
     border-color: @bordercolor;
     padding:          5;
 }
@@ -38,7 +38,7 @@
     padding: 5;
 }
 #message {
-    border:       1px dash 0px 0px ;
+    border:       0px dash 0px 0px ;
     border-color: @separatorcolor;
     padding:      1px ;
 }
@@ -58,7 +58,7 @@
     padding: 1px ;
 }
 #element.normal.normal {
-    background-color: @background;
+    background-color: @background-color;
     text-color:       @foreground;
 }
 #element.normal.urgent {
@@ -67,7 +67,7 @@
 }
 #element.normal.active {
     background-color: @active-background;
-    text-color:       @background;
+    text-color:       @background-color;
 }
 #element.selected.normal {
     background-color: @selected-background;
@@ -79,10 +79,10 @@
 }
 #element.selected.active {
     background-color: @selected-active-background;
-    text-color:       @background;
+    text-color:       @background-color;
 }
 #element.alternate.normal {
-    background-color: @background;
+    background-color: @background-color;
     text-color:       @foreground;
 }
 #element.alternate.urgent {
@@ -100,7 +100,7 @@
     padding:      0;
 }
 #sidebar {
-    border:       2px dash 0px 0px ;
+    border:       0px dash 0px 0px ;
     border-color: @separatorcolor;
 }
 #button.selected {
@@ -118,18 +118,22 @@
 }
 #entry {
     spacing:    0;
-    text-color: @drac-grn;
+    text-color: @drac-cya;
 }
 #prompt {
     spacing:    0;
-    text-color: @drac-cmt;
+    text-color: @drac-grn;
 }
 #inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        "";
+    str:        ":";
     margin:     0px 0.3em 0em 0em ;
     text-color: @drac-grn;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
 }

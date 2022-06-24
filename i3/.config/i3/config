@@ -5,9 +5,8 @@
 
 floating_modifier  Mod4
 font pango:        monofur 15
-gaps inner 20
-gaps outer 25
-gaps bottom -5
+gaps inner 15
+gaps outer 15
 
 for_window [class="^.*"]                        border     pixel 0
 for_window [class="mpv"]                        fullscreen enable
@@ -30,7 +29,7 @@ $1+d $5 ferdi
 $1+e $5 geary
 $1+f    fullscreen toggle
 $1+g $5 gimp
-$1+i $2 bin/WorkspaceName
+$1+i $2 bin/Info
 $1+m $5 spotify
 $1+n $5 obsidian
 $1+o $5 libreoffice
@@ -43,8 +42,7 @@ $1+y $5 newsboat
 
 $1+BackSpace  $2 dm-tool switch-to-greeter
 $1+Down       $2 playerctl play-pause
-$1+equal         gaps inner all set 20, gaps outer all set 25;  \
-                 gaps bottom all set -5
+$1+equal         gaps inner all set 20, gaps outer all set 20
 $1+Escape        [con_id="__focused__" instance="^(?!__*).*$"] kill
 $1+grave         workspace back_and_forth
 $1+Home       $2 i3-msg exit
@@ -81,22 +79,10 @@ $6 autotiling
 $6 batsignal -b -i
 $6 picom --config ~/.config/picom/picom.conf
 $2 dunst
-$6 feh --bg-scale ~/Pictures/mountain.jpg
+$6 feh --bg-scale ~/Pictures/everforest.jpg
 $2 xset r rate 200 60
 $2 unclutter -b
 $2 bin/TrackpadOff
 $2 parcellite -d -n
 $2 nm-applet
 $2 setxkbmap -option caps:none
-
-bar {
-	status_command i3status
-	output eDP1
-	i3bar_command i3bar --transparency
-	workspace_buttons no
-	position bottom
-	mode dock
-	colors {
-		background #00000000
-	}
-}
