@@ -79,7 +79,7 @@ $6 autotiling
 $6 batsignal -b -i
 $6 picom --config ~/.config/picom/picom.conf
 $2 dunst
-$6 feh --bg-scale ~/Pictures/everforest.jpg
+$6 feh --bg-scale ~/Pictures/forest.png
 $2 xset r rate 200 60
 $2 unclutter -b
 $2 bin/TrackpadOff
