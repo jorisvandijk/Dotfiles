@@ -11,6 +11,8 @@ i3-msg workspace "${1^}"
 
 if [ $1 == newsboat ]; then
     wmctrl -x -a "mpv" || wmctrl -x -a "$1" || kitty --hold --detach --class newsboat -e newsboat
+elif [ $1 == ranger ]; then
+    wmctrl -x -a "ranger" || wmctrl -x -a "$1" || kitty --hold --detach --class ranger -e ranger
 else
     wmctrl -x -a "$1" || $1
 fi
