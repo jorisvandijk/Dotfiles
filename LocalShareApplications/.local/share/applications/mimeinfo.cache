@@ -1,0 +1,6 @@
+[MIME Cache]
+application/x-nzb=newshosting.desktop;
+x-scheme-handler/newshosting=newshosting.desktop;
+x-scheme-handler/nxm=ModOrganizer-steamtinkerlaunch-dl.desktop;vortex-downloads-handler.desktop;
+x-scheme-handler/nxm-protocol=ModOrganizer-steamtinkerlaunch-dl.desktop;vortex-downloads-handler.desktop;
+x-scheme-handler/nzblnk=newshosting.desktop;
