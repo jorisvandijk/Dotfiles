@@ -63,6 +63,7 @@ $3+Escape     $2 systemctl poweroff -i, mode "default"
 $3+f             floating toggle
 $3+p          $2 $4 --class floatterm -e pulsemixer 
 $3+r             restart
+$3+Return     $2 $4 --class floatterm
 $3+space      $2 bin/FzfOpen
 $3+u          $2 $4 bin/UpdateWebsite
 $3+Up         $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
