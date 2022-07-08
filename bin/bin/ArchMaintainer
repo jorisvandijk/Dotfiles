@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+#	ArchMaintainer 1.0
+#	Preforms maintenance and removes excess stuff from Arch. 
+#	Dependencies: pacman, git
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+#
+# 	TODO: Add mirrorlist checking
+
+GRN='\033[0;32m'
+NC='\033[0m'
+
+printf "\n${GRN}>> Checking failed services:${NC}\n"
+systemctl --failed
+printf "\n${GRN}>> Removing orphaned packages if any.${NC}\n"
+sudo pacman -Rs $(pacman -Qqtd) --noconfirm
+printf "If 'no targets specified', no orphaned packages were found.\n"
+printf "\n${GRN}>> Removing Pacman cache.${NC}"
+printf "\nCurrent size: "
+du -sh /var/cache/pacman/pkg/
+sudo pacman -Scc --noconfirm
+printf "\nNew size: "
+du -sh /var/cache/pacman/pkg/
+printf "\n${GRN}>> Emptying ~/.cache.${NC}"
+printf "\nCurrent size: "
+du -sh ~/.cache
+rm -rf ~/.cache/*
+printf "\nNew size: "
+du -sh ~/.cache
+printf "\n${GRN}>> Saving list of installed packages.${NC}\n"
+pacman -Qqe > $HOME/Dotfiles/pkglist.txt
+cd $HOME/Dotfiles
+git add pkglist.txt
+git commit -m "Updating pkglist.txt"
+git push
+cd $HOME
+printf "\n${GRN}>> Done!${NC}\n"

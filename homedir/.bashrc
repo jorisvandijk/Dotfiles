@@ -45,7 +45,7 @@ alias s='pacman -Slq | fzf --multi --preview "pacman -Si {1}" | xargs -ro sudo p
 alias u='yay -Syyu'
 alias r='pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns'
 alias y='yay -Slq | fzf --multi --preview "yay -Si {1}" | xargs -ro yay -S'
-alias clean='sudo pacman -Rsn $(pacman -Qdtq)'
+alias maint='sh $HOME/bin/ArchMaintainer'
 
 alias ls='exa -lb --header --color=always --group-directories-first --long --git' 
 alias la='exa -lab --header --color=always --group-directories-first --long --git'  
