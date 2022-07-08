@@ -12,23 +12,32 @@
 GRN='\033[0;32m'
 NC='\033[0m'
 
+# Check for failed systemd services 
 printf "\n${GRN}>> Checking failed services:${NC}\n"
 systemctl --failed
+
+# Remove orphaned packages
 printf "\n${GRN}>> Removing orphaned packages if any.${NC}\n"
 sudo pacman -Rs $(pacman -Qqtd) --noconfirm
 printf "If 'no targets specified', no orphaned packages were found.\n"
-printf "\n${GRN}>> Removing Pacman cache.${NC}"
+
+# Delete Pacman cache
+printf "\n${GRN}>> Deleting Pacman cache.${NC}"
 printf "\nCurrent size: "
 du -sh /var/cache/pacman/pkg/
 sudo pacman -Scc --noconfirm
 printf "\nNew size: "
 du -sh /var/cache/pacman/pkg/
+
+# Empty ~/.cache
 printf "\n${GRN}>> Emptying ~/.cache.${NC}"
 printf "\nCurrent size: "
-du -sh ~/.cache
-rm -rf ~/.cache/*
+du -sh $HOME/.cache
+rm -rf $HOME/.cache/*
 printf "\nNew size: "
-du -sh ~/.cache
+du -sh $HOME/.cache
+
+# Saving a list of installed packages
 printf "\n${GRN}>> Saving list of installed packages.${NC}\n"
 pacman -Qqe > $HOME/Dotfiles/pkglist.txt
 cd $HOME/Dotfiles
@@ -36,4 +45,6 @@ git add pkglist.txt
 git commit -m "Updating pkglist.txt"
 git push
 cd $HOME
+
+# Done
 printf "\n${GRN}>> Done!${NC}\n"
