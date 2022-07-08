@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-#	ArchMaintainer 1.1
+#	ArchMaintainer 1.2
 #	Preforms maintenance and removes excess stuff from Arch. 
 #	Dependencies: pacman, git
 #
 #	By Joris van Dijk | gitlab.com/jorisvandijk 
 #	Licensed under the GNU General Public License v3.0
-#
-# 	TODO: Add mirrorlist checking
 
 GRN='\033[0;32m'
 NC='\033[0m'
@@ -44,7 +42,13 @@ cd $HOME/Dotfiles
 git add pkglist.txt
 git commit -m "Updating pkglist.txt"
 git push
+
+# Updating and ranking mirrors
+printf "\n${GRN}>> Updating and ranking mirrors in mirrorlist.${NC}\n"
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 cd $HOME
+curl -s "https://archlinux.org/mirrorlist/?country=NL&country=DE&country=FR&country=BE&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > mirrorlist
+sudo mv mirrorlist /etc/pacman.d/mirrorlist
 
 # Done
 printf "\n${GRN}>> Done!${NC}\n"
