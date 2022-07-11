@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#	UpdateTLCWebsite 1.0
+#	Updates thelinuxcast.org website
+#	Dependencies: npm, eleventy,git
+#
+#	By Joris van Dijk | gitlab.com/jorisvandijk 
+#	Licensed under the GNU General Public License v3.0
+
+# Set the right directories for your system
+UNBUILT="$HOME/TLC/TLC-builder"
+BUILT="$HOME/TLC/thelinuxcastweb/public/"
+
+echo "Updating website!"
+cd $UNBUILT
+npx @11ty/eleventy
+git status
+read -p "Git commit message: " COMMIT
+git add .
+git commit -m "$COMMIT"
+git push
+cp -r _site/* $BUILT
+cd $BUILT
+git status
+git add .
+git commit -m "$COMMIT"
+git push
+read -p "Done! Press any key to exit"
