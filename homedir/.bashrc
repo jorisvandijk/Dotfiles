@@ -82,3 +82,5 @@ function o() {
     [ "$key" = ctrl-o ] && open "$file" || ${EDITOR:-vim} "$file"
   fi
 }
+
+eval "$(thefuck --alias)"
