@@ -135,6 +135,7 @@ ntp
 nvidia
 nvidia-prime
 nvidia-settings
+nzbget
 obsidian-appimage
 ocl-icd
 openal
