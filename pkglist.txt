@@ -182,9 +182,11 @@ systemd
 systemd-sysvcompat
 tar
 texinfo
+thefuck
 thunar
 thunar-archive-plugin
 thunar-volman
+tldr
 transmission-gtk
 ttf-andika
 ttf-comic-mono-git
