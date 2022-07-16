@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#	ArchMaintainer 1.2
+#	ArchMaintainer 1.3
 #	Preforms maintenance and removes excess stuff from Arch. 
 #	Dependencies: pacman, git
 #
@@ -16,14 +16,14 @@ systemctl --failed
 
 # Remove orphaned packages
 printf "\n${GRN}>> Removing orphaned packages if any.${NC}\n"
-sudo pacman -Rs $(pacman -Qqtd) --noconfirm
+sudo pacman -Rs $(pacman -Qqtd)
 printf "If 'no targets specified', no orphaned packages were found.\n"
 
 # Delete Pacman cache
 printf "\n${GRN}>> Deleting Pacman cache.${NC}"
 printf "\nCurrent size: "
 du -sh /var/cache/pacman/pkg/
-sudo pacman -Scc --noconfirm
+sudo pacman -Scc
 printf "\nNew size: "
 du -sh /var/cache/pacman/pkg/
 
