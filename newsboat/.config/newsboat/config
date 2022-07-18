@@ -2,7 +2,8 @@ show-read-feeds  yes
 refresh-on-startup  yes
 auto-reload yes
 reload-threads 100
- 
+feed-sort-order lastupdated
+
 browser "mpv %u"
 
 # unbind keys
