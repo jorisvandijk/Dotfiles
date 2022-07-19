@@ -57,6 +57,7 @@ $1+Right      $2 playerctl next
 $1+space      $2 rofi -show drun -modi drun -sort
 $1+Tab        $2 rofi -show window    
 $1+Up         $2 playerctl play-pause
+$1+VoidSymbol $2 $4 --class floatterm -e ConjureApplication
 
 $3+Down       $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
 $3+Escape     $2 systemctl poweroff -i, mode "default"
@@ -68,8 +69,7 @@ $3+space      $2 bin/FzfOpen
 $3+u          $2 $4 bin/UpdateWebsite
 $3+Up         $2 pactl set-sink-volume @DEFAULT_SINK@ +5%
 $3+y		  $2 mpv $(xsel -b)
-$1+VoidSymbol $2 $4 --class floatterm -e ConjureApplication
- 
+
 bindsym Print                 $2 bin/ScreenShot
 bindsym XF86AudioLowerVolume  $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute         $2 pactl set-sink-mute @DEFAULT_SINK@ toggle

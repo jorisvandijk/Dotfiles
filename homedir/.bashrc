@@ -62,8 +62,9 @@ alias fetch='git fetch'
 alias pull='git pull origin'
 alias push='git push origin'
 alias status='git status'
-alias 11='npx @11ty/eleventy --serve'
 
+alias 11='npx @11ty/eleventy --serve'
+alias w='curl wttr.in'
 alias gpu='glxinfo|egrep "OpenGL vendor|OpenGL renderer"'
 
 alias dotstow='cd $HOME/Dotfiles && for d in *; do stow -v -t ~ "$d" ;done'
