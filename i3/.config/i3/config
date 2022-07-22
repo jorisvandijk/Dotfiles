@@ -31,6 +31,7 @@ $1+e $5 geary
 $1+f    fullscreen toggle
 $1+g $5 gimp
 $1+j $5 rider
+$1+k $2 xinput reattach 19 3
 $1+m $5 spotify
 $1+n $5 obsidian
 $1+o $5 libreoffice
@@ -60,6 +61,7 @@ $1+Up         $2 playerctl play-pause
 $3+Down       $2 pactl set-sink-volume @DEFAULT_SINK@ -5%
 $3+Escape     $2 systemctl poweroff -i, mode "default"
 $3+f             floating toggle
+$3+k		  $2 xinput float 19
 $3+p          $2 $4 --class floatterm -e pulsemixer 
 $3+r             restart
 $3+Return     $2 $4 --class floatterm
@@ -87,6 +89,7 @@ $2 bin/TrackpadOff
 $2 parcellite -d -n
 $2 nm-applet
 $2 setxkbmap -option caps:none
+$2 xinput float 19 # disable keyboard
 
 bar {
 	status_command i3status
