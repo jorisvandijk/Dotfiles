@@ -118,6 +118,7 @@ mesa-utils
 micro
 mpv
 neofetch
+nerd-fonts-monofur
 network-manager-applet
 networkmanager
 networkmanager-openconnect
@@ -143,6 +144,7 @@ openconnect
 openvpn
 otf-cascadia-code
 otis-theme-git
+p7zip
 pacman
 pacman-contrib
 parcellite
@@ -195,6 +197,7 @@ ttf-monofur
 ttf-nerd-fonts-symbols
 tumbler
 unclutter
+unrar
 unzip
 util-linux
 vim
