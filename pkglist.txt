@@ -19,6 +19,7 @@ bluez-utils
 brightnessctl
 btrfs-progs
 bzip2
+calc
 cmatrix
 code
 coreutils
@@ -59,6 +60,7 @@ gettext
 gimp
 git
 glibc
+gparted
 gpick
 grep
 groff
