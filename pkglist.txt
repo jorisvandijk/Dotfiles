@@ -183,6 +183,7 @@ spotify
 steam
 steamtinkerlaunch
 stow
+streamlink
 sudo
 systemd
 systemd-sysvcompat
@@ -257,6 +258,7 @@ xorg-xvinfo
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
+xwinwrap-baitinq-git
 xz
 yay
 yt-dlp
