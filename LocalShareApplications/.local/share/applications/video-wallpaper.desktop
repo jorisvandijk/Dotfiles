@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Video Wallpaper
+Exec=video-wallpaper.py
+Icon=wallpaper
+Comment=Set video files as your desktop wallpaper.
+Categories=Utility
+Terminal=false
