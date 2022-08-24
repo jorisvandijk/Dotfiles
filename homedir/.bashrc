@@ -7,6 +7,7 @@
 [[ -z "$FUNCNEST" ]] && export FUNCNEST=100
 
 PS1='\n\[\e[1;34m\] \W \[\e[m\]'
+PATH="$HOME/bin:${PATH:+:${PATH}}"
 
 bind '"\e[A":history-search-backward'
 bind '"\e[B":history-search-forward'
@@ -28,7 +29,6 @@ export TERM=kitty
 export TERMINAL=kitty
 
 export MICRO_TRUECOLOR=1
-# export PATH="$HOME/bin:$PATH"
 export PATH="/home/joris/Dotfiles/bin/bin"
 export PATH="$PATH:/usr/sbin/"
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
