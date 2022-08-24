@@ -165,6 +165,7 @@ pulseaudio-alsa
 pulsemixer
 python-distro
 python-pillow
+python-pyqt5
 ranger
 rhythmbox
 rider
