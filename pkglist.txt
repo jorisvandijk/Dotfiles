@@ -25,6 +25,7 @@ cmatrix
 code
 coreutils
 cpupower
+cuda
 cups
 datagrip
 datagrip-jre
@@ -80,6 +81,7 @@ i3lock
 i3status
 inetutils
 innoextract
+intel-hybrid-codec-driver
 intel-ucode
 iproute2
 iputils
