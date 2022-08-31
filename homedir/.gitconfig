@@ -1,6 +1,6 @@
 [user]
 	email = joris@jorisvandijk.com
-	name = joris
+	name = Joris van Dijk
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

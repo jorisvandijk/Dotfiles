@@ -8,18 +8,18 @@
 #	Licensed under the GNU General Public License v3.0
 
 echo "Updating website!"
-cd $HOME/Website-builder
+cd $HOME/Webstuff/Website-builder
 npx @11ty/eleventy
 git status
 read -p "Git commit message: " COMMIT
 git add .
 git commit -m "$COMMIT"
 git push
-cp -r _site/* $HOME/Website/
-cd $HOME/Website
+cp -r _site/* $HOME/Webstuff/Website/
+cd $HOME/Webstuff/Website
 git status
 git add .
 git commit -m "$COMMIT"
 git push
-rsync -rvz -e 'ssh -p 7685' --progress /home/joris/Website/* u82229p77014@web0091.zxcs.nl:/home/u82229p77014/domains/jorisvandijk.com/public_html/
+rsync -rvz -e 'ssh -p 7685' --progress /home/joris/Webstuff/Website/* u82229p77014@web0091.zxcs.nl:/home/u82229p77014/domains/jorisvandijk.com/public_html/
 read -p "Done! Press any key to exit"
