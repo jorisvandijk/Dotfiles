@@ -48,6 +48,7 @@ alias push='git push origin'
 alias r='pacman -Qq | fzf --multi --preview "pacman -Qi {1}" | xargs -ro sudo pacman -Rns'
 alias status='git status'
 alias u='yay -Syyu'
+alias ur='UpdateRepositories'
 alias w='curl wttr.in'
 
 function cd() { # Add exa after a cd
