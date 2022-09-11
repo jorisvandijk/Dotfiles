@@ -216,6 +216,7 @@ wget
 which
 wine-staging
 wireless_tools
+wkhtmltopdf
 wmctrl
 wpa_supplicant
 xclip
