@@ -8,7 +8,7 @@
 
 changes(){
 #dir="$1" #current dir
-dir="$HOME/Git/"
+dir="$HOME/.git/"
 
 # No directory has been provided, use current
 if [ -z "$dir" ]
@@ -93,7 +93,7 @@ choices(){
 }
 updates(){
     REPO=$(echo $result | sed 's:/*$::')
-    cd $HOME/Git/$REPO
+    cd $HOME/.git/$REPO
 		git pull
     git add .
     git status

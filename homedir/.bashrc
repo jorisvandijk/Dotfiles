@@ -51,7 +51,7 @@ alias u='yay -Syyu'
 alias w='curl wttr.in'
 
 function cd() { # Add exa after a cd
-  builtin cd "$@" && exa -lb --header --color=always --group-directories-first --long --git
+  builtin cd "$@" && exa -lb --header --color=always --group-directories-first --long --git --icons
 }
 
 eval "$(thefuck --alias)"
