@@ -49,8 +49,8 @@ $1+BackSpace  $2 dm-tool switch-to-greeter
 $1+comma         move scratchpad
 $1+Down       $2 playerctl play-pause
 $1+equal         gaps inner all set 20, gaps outer all set 20
-#$1+Escape        [con_id="__focused__" instance="^(?!__*).*$"] kill
-$1+Escape [con_id="__focused__" instance="^(?!floatterm).*$"] kill
+$1+Escape        [con_id="__focused__" instance="^(?!__*).*$"] kill
+#$1+Escape [con_id="__focused__" instance="^(?!floatterm).*$"] kill
 $1+Home       $2 i3-msg exit
 $1+Insert     $2 bin/ToggleTrackpad
 $1+Left       $2 playerctl previous

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Stellaris
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/281990
+Icon=steam_icon_281990
+Terminal=false
+Type=Application
+Categories=Game;
